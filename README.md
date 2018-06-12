@@ -9,7 +9,7 @@ These samples all use Version 2.0+ of the iOS SDK.
 * If the entire repository is not cloned or downloaded, be sure to download the bundle (LocusLabsSDK.bundle) and framework (LocusLabsSDK.framework) in the main directory in order to ensure that individual samples will compile.
 
 **iOS Documentation**  
-The  documentation that references this sample code can be viewed [here](https://ios.maps.locuslabs.com/docs/getting-started).
+The  documentation that references this sample code can be viewed [here](https://ios.maps.locuslabs.com/v2.0/docs).
 
 **Support**  
 Should you require any support or would like to find out more about LocusLabs, please [email us](mailto:help@locuslabs.com).
