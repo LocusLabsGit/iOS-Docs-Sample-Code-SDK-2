@@ -109,7 +109,6 @@
 
 #pragma mark Delegates - LLFloor
 
-
 - (void)floor:(LLFloor *)floor mapLoaded:(LLMap *)map {
     
     self.mapView.map = map;
@@ -118,13 +117,17 @@
 
 #pragma mark Delegates - LLMapView
 
+- (void)mapViewDidClickBack:(LLMapView *)mapView {
+    
+}
+
 - (void)mapViewReady:(LLMapView *)mapView {
 
     // Set the navigation source to internal & send timed navigation points
     [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_SET_POSITIONING_SENSOR_ALGORITHM
                                                         object:nil
                                                       userInfo:@{@"positioningSensorAlgorithm":@(LLPositioningSensorAlgorithmExternal)}];
-    
+    NSLog(@"FFF");
     // Position 1 (Initial - DFS Duty Free)
     NSDictionary *locationDict = [self locationDictWithLat:@33.941485 lon:@-118.40195];
     [self performSelector:@selector(postUserPosition:) withObject:locationDict afterDelay:0.0];

@@ -15,7 +15,6 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate
     var venue:              LLVenue?
     var floor:              LLFloor?
     var mapView:            LLMapView?
-    //var navPoint:           LLNavp?
     
     // MARK: Lifecycle
     
@@ -42,20 +41,22 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate
         mapView!.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
         mapView!.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         
-        venueDatabase.loadAirport("lax")
+        venueDatabase.loadVenue("lax")
     }
     
     // MARK: Custom
-    func createCircleCenteredAt(latLng: LLLatLng!, onFloor floorId: String!, radius: NSNumber, color: UIColor!) {
+    func createCircleWith(position: LLPosition!, radius: NSNumber, color: UIColor!) {
         
-        let circle = LLCircle(center: latLng, radius: radius)
-        circle?.fillColor = color
-        circle?.floorView = mapView?.getFloorView(forId: floorId)
+        let circle = LLCircle();
+        circle.fillColor = color
+        circle.radius = radius
+        circle.position = position
+        circle.map = mapView?.map
     }
     
     func drawRoute(waypoints: [LLWaypoint], startFloor: String!) {
         
-        let path = LLMutablePath()
+        let path = LLPath()
         for waypoint in waypoints {
             
             // Add this latLng to the LLPath
@@ -64,14 +65,16 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate
             // Add a black circle at the destination
             if waypoint.isDestination == true {
                 
-                createCircleCenteredAt(latLng: waypoint.latLng, onFloor: waypoint.floorId, radius: 5, color: UIColor.black)
+                let position = LLPosition(floorId: startFloor, latLng: waypoint.latLng)
+                createCircleWith(position: position, radius: 5, color: UIColor.black)
             }
         }
         
         // Create a new LLPolyline object and set its path
         let polyLine = LLPolyline()
         polyLine.path = path
-        polyLine.floorView = mapView?.getFloorView(forId: startFloor)
+        polyLine.floorId = startFloor
+        polyLine.map = mapView?.map
     }
     
     func showSampleRoute() {
@@ -79,33 +82,33 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate
         let point1LatLon = LLLatLng(lat: 33.940627, lng: -118.401892)
         let point2LatLon = LLLatLng(lat: 33.9410700, lng: -118.399598)
         
-        let point1 = LLPosition(floor: floor, latLng: point1LatLon)
-        let point2 = LLPosition(floor: floor, latLng: point2LatLon)
+        let point1 = LLPosition(floorId: floor?.identifier, latLng: point1LatLon)
+        let point2 = LLPosition(floorId: floor?.identifier, latLng: point2LatLon)
         
-        airport?.navigate(from: point1, to: point2)
+        venue?.navigate(from: point1, to: point2)
     }
 
-    // MARK: Delegates - LLAirport
+    // MARK: Delegates - LLVenue
     
-    func airport(_ airport: LLAirport!, navigationPath: LLNavigationPath!, from startPosition: LLPosition!, toDestinations destinations: [Any]!) {
+    func venue(_ venue: LLVenue!, navigationPath: LLNavigationPath!, from startPosition: LLPosition!, toDestinations destinations: [Any]!) {
         
         drawRoute(waypoints: navigationPath.waypoints as! [LLWaypoint], startFloor: startPosition.floorId)
     }
     
     // MARK: Delegates - LLVenueDatabase
     
-    func venueDatabase(_ venueDatabase: LLVenueDatabase!, airportLoadFailed venueId: String!, code errorCode: LLDownloaderError, message: String!) {
+    func venueDatabase(_ venueDatabase: LLVenueDatabase!, venueLoadFailed venueId: String!, code errorCode: LLDownloaderError, message: String!) {
         
         // Handle failures here
     }
     
     // Implement the airportLoaded delegate method
-    func venueDatabase(_ venueDatabase: LLVenueDatabase!, airportLoaded airport: LLAirport!) {
+    func venueDatabase(_ venueDatabase: LLVenueDatabase!, venueLoaded venue: LLVenue!) {
         
-        self.airport = airport
-        self.airport?.delegate = self
+        self.venue = venue
+        self.venue?.delegate = self
         
-        let building = self.airport?.loadBuilding("lax-south")
+        let building = self.venue?.loadBuilding("lax-south")
         floor = building?.loadFloor("lax-south-departures")
         
         // Set the floor delegate and load its map - mapLoaded is called when loading is complete

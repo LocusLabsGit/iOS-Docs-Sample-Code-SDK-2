@@ -49,7 +49,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate
 
     // MARK: Delegates - LLVenueDatabase
     
-    func venueDatabase(_ venueDatabase: LLVenueDatabase!, airportLoadFailed venueId: String!, code errorCode: LLDownloaderError, message: String!) {
+    func venueDatabase(_ venueDatabase: LLVenueDatabase!, venueLoadFailed venueId: String!, code errorCode: LLDownloaderError, message: String!) {
         
         // Handle failures here
     }

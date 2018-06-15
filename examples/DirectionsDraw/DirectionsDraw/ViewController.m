@@ -14,9 +14,8 @@
 @property (nonatomic, strong) LLVenueDatabase   *venueDatabase;
 @property (nonatomic, strong) LLFloor           *floor;
 @property (nonatomic, weak)   LLMapView         *mapView;
-@property (nonatomic, strong) LLNavPoint        *navPoint;
 
-- (LLCircle *)createCircleCenteredAt:(LLLatLng*)latLng onFloor:(NSString*)floorId withRadius:(NSNumber*)radius andColor:(UIColor*)color;
+- (LLCircle *)createCircleWithPosition:(LLPosition *)position withRadius:(NSNumber*)radius andColor:(UIColor*)color;
 - (void)drawRouteWithWaypoints:(NSArray *)waypoints startFloor:(NSString *)floorID;
 - (void)showSampleRoute;
 
@@ -62,14 +61,15 @@
     circle.position = position;
     circle.fillColor = color;
     circle.radius = radius;
-    circle.map = self.mapView.map
+    circle.map = self.mapView.map;
     
     return circle;
 }
 
 - (void)drawRouteWithWaypoints:(NSArray *)waypoints startFloor:(NSString *)floorID {
- 
+    
     LLPath *path = [[LLPath alloc] init];
+    
     for (LLWaypoint *waypoint in waypoints) {
         
         [path addLatLng:waypoint.latLng];
@@ -77,14 +77,16 @@
         // Add a black circle at the destination
         if ([waypoint.isDestination boolValue]) {
             
-            [self createCircleCenteredAt:waypoint.latLng onFloor:waypoint.floorId withRadius:@5 andColor:[UIColor blackColor]];
+            LLPosition *position = [[LLPosition alloc] initWithFloorId:floorID latLng:waypoint.latLng];
+            [self createCircleWithPosition:position withRadius:@5 andColor:[UIColor blackColor]];
         }
     }
     
     // Create a new LLPolyline object and set its path
     LLPolyline *polyline = [[LLPolyline alloc] init];
-    [polyline setPath:path];
-    polyline.floorView = [self.mapView getFloorViewForId:floorID];
+    polyline.path = path;
+    polyline.floorId = floorID;
+    polyline.map = self.mapView.map;
 }
 
 - (void)showSampleRoute {
@@ -92,27 +94,29 @@
     LLLatLng *point1LatLon = [[LLLatLng alloc] initWithLat:@33.940627 lng:@-118.401892];
     LLLatLng *point2LatLon = [[LLLatLng alloc] initWithLat:@33.9410700 lng:@-118.399598];
     
-    LLPosition *point1 = [[LLPosition alloc] initWithFloor:self.floor latLng:point1LatLon];
-    LLPosition *point2 = [[LLPosition alloc] initWithFloor:self.floor latLng:point2LatLon];
+    LLPosition *point1 = [[LLPosition alloc] initWithFloorId:self.floor.identifier latLng:point1LatLon];
+    LLPosition *point2 = [[LLPosition alloc] initWithFloorId:self.floor.identifier latLng:point2LatLon];
     
     [self.venue navigateFrom:point1 to:point2];
 }
 
-#pragma mark Delegates - LLAirport
+#pragma mark Delegates - LLVenue
 
-- (void)airport:(LLAirport *)airport navigationPath:(LLNavigationPath *)navigationPath from:(LLPosition *)startPosition toDestinations:(NSArray *)destinations  {
+- (void)venue:(LLVenue *)venue navigationPath:(LLNavigationPath *)navigationPath from:(LLPosition *)startPosition toDestinations:(NSArray *)destinations  {
     
     [self drawRouteWithWaypoints:navigationPath.waypoints startFloor:startPosition.floorId];
 }
 
-- (void)venueDatabase:(LLVenueDatabase *)venueDatabase airportLoadFailed:(NSString *)venueId code:(LLDownloaderError)errorCode message:(NSString *)message {
+#pragma mark Delegates - LLVenueDatabase
+
+- (void)venueDatabase:(LLVenueDatabase *)venueDatabase venueLoadFailed:(NSString *)venueId code:(LLDownloaderError)errorCode message:(NSString *)message {
     
     // Handle failures here
 }
 
-- (void)venueDatabase:(LLVenueDatabase *)venueDatabase airportLoaded:(LLAirport *)airport {
+- (void)venueDatabase:(LLVenueDatabase *)venueDatabase venueLoaded:(LLVenue *)venue {
     
-    self.venue = airport;
+    self.venue = venue;
     self.venue.delegate = self;
     
     LLBuilding *building  = [self.venue loadBuilding:@"lax-south"];

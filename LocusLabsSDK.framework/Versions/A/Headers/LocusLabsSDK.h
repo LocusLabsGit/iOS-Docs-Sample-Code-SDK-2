@@ -33,6 +33,7 @@
 #import <LocusLabsSDK/LLMarker.h>
 #import <LocusLabsSDK/LLMultiTermSearchResults.h>
 #import <LocusLabsSDK/LLMutablePath.h>
+#import <LocusLabsSDK/LLNavigation.h>
 #import <LocusLabsSDK/LLNavigationPath.h>
 #import <LocusLabsSDK/LLOverlay.h>
 #import <LocusLabsSDK/LLPath.h>

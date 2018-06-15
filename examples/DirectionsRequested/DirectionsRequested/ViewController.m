@@ -10,8 +10,8 @@
 
 @interface ViewController ()
 
-@property (nonatomic, strong) LLAirport         *airport;
-@property (nonatomic, strong) LLAirportDatabase *airportDatabase;
+@property (nonatomic, strong) LLVenue           *venue;
+@property (nonatomic, strong) LLVenueDatabase   *venueDatabase;
 @property (nonatomic, strong) LLFloor           *floor;
 @property (nonatomic, weak)   LLMapView         *mapView;
 @property (nonatomic, strong) LLNavigation      *navigation;
@@ -29,9 +29,9 @@
     // Initialize the LocusLabs SDK with the accountId provided by LocusLabs
     [LLLocusLabs setup].accountId = @"A11F4Y6SZRXH4X";
     
-    // Get an instance of the LLAirportDatabase and register as its delegate
-    self.airportDatabase = [LLAirportDatabase airportDatabase];
-    self.airportDatabase.delegate = self;
+    // Get an instance of the LLVenueDatabase and register as its delegate
+    self.venueDatabase = [LLVenueDatabase venueDatabase];
+    self.venueDatabase.delegate = self;
     
     // Create a new LLMapView, register as its delegate and add it as a subview
     LLMapView *mapView = [[LLMapView alloc] init];
@@ -47,26 +47,26 @@
     [mapView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
     
     // Load the venue LAX
-    [self.airportDatabase loadAirport:@"lax"];
+    [self.venueDatabase loadVenue:@"lax"];
     
     self.navigation = [LLNavigation initTracking];
     self.navigation.delegate = self;
 }
 
-#pragma mark Delegates - LLAirportDatabase
+#pragma mark Delegates - LLVenueDatabase
 
-- (void)airportDatabase:(LLAirportDatabase *)airportDatabase airportLoadFailed:(NSString *)venueId code:(LLDownloaderError)errorCode message:(NSString *)message {
+- (void)venueDatabase:(LLVenueDatabase *)venueDatabase airportLoadFailed:(NSString *)venueId code:(LLDownloaderError)errorCode message:(NSString *)message {
     
     // Handle failures here
 }
 
-- (void)airportDatabase:(LLAirportDatabase *)airportDatabase airportLoaded:(LLAirport *)airport {
+- (void)venueDatabase:(LLVenueDatabase *)venueDatabase venueLoaded:(LLVenue *)venue {
     
-    self.airport = airport;
+    self.venue = venue;
     
     // Get a list of buildings in this airport and load the first one
-    LLBuildingInfo *buildingInfo = [self.airport listBuildings][0];
-    LLBuilding *building  = [self.airport loadBuilding:buildingInfo.buildingId];
+    LLBuildingInfo *buildingInfo = [self.venue listBuildings][0];
+    LLBuilding *building  = [self.venue loadBuilding:buildingInfo.buildingId];
     
     // Get a list of floors for the building and load the first one
     LLFloorInfo *floorInfo = [building listFloors][0];

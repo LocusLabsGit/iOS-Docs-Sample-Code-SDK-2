@@ -17,7 +17,6 @@
 @property (strong,nonatomic) NSString *alphaAssetsBase;
 @property (strong,nonatomic) NSString *betaAssetsBase;
 @property (strong,nonatomic) NSString *gammaAssetsBase;
-@property (strong,nonatomic) NSString *directAssetsBase;
 @property (strong,nonatomic) NSString *accountId;
 @property (strong,nonatomic) NSString *alphaAccountId;
 @property (strong,nonatomic) NSString *formatVersion;
