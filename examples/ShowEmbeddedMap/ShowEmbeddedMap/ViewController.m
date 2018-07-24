@@ -28,29 +28,28 @@
     // Initialize the LocusLabs SDK with the accountId provided by LocusLabs
     [LLLocusLabs setup].accountId = @"A11F4Y6SZRXH4X";
     
-    // Get an instance of the LLVenueDatabase and register as its delegate
-    self.venueDatabase = [LLVenueDatabase venueDatabase];
-    self.venueDatabase.delegate = self;
-    
     // Create a new LLMapView, register as its delegate and add it as a subview
-    LLMapView *mapView = [[LLMapView alloc] init];
-    self.mapView = mapView;
-    self.mapView.delegate = self;
+    LLMapView *mapView = [[LLMapView alloc] initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, 220)];
+    mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    mapView.delegate = self;
     [self.view addSubview:mapView];
     
-    // Set the mapview's layout constraints
-    mapView.translatesAutoresizingMaskIntoConstraints = NO;
-    [mapView.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
-    [mapView.rightAnchor constraintEqualToAnchor:self.view.rightAnchor].active = YES;
-    [mapView.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
-    [mapView.heightAnchor constraintEqualToConstant:220].active = YES;
+    self.mapView = mapView;
     
     // Hide selected UI elements - these are likely not required when embedding
-    mapView.searchBarHidden = YES;
-    mapView.bottomBarHidden = YES;
+    self.mapView.searchBarHidden = YES;
+    self.mapView.bottomBarHidden = YES;
     
-    // Load the venue LAX
-    [self.venueDatabase loadVenue:@"lax"];
+    // Get an instance of the LLAirportDatabase, set it's mapview and register as its delegate
+    self.venueDatabase = [LLVenueDatabase venueDatabaseWithMapView:self.mapView];
+    self.venueDatabase.delegate = self;
+    
+    // Load the venue LAX async
+    [self.venueDatabase loadVenueAndMap:@"lax" block:^(LLVenue *venue, LLMap *map, LLFloor *floor, LLMarker *marker) {
+        
+        self.mapView.map = map;
+        self.floor = floor;
+    }];
 }
 
 #pragma mark Delegates - LLVenueDatabase
@@ -58,30 +57,6 @@
 - (void)venueDatabase:(LLVenueDatabase *)venueDatabase venueLoadFailed:(NSString *)venueId code:(LLDownloaderError)errorCode message:(NSString *)message {
     
     // Handle failures here
-}
-
-- (void)venueDatabase:(LLVenueDatabase *)venueDatabase venueLoaded:(LLVenue *)venue {
-    
-    self.venue = venue;
-    
-    // Get a list of buildings in this airport and load the first one
-    LLBuildingInfo *buildingInfo = [self.venue listBuildings][0];
-    LLBuilding *building  = [self.venue loadBuilding:buildingInfo.buildingId];
-    
-    // Get a list of floors for the building and load the first one
-    LLFloorInfo *floorInfo = [building listFloors][0];
-    self.floor = [building loadFloor:floorInfo.floorId];
-    
-    // Set the floor delegate and load its map - mapLoaded is called when loading is complete
-    self.floor.delegate = self;
-    [self.floor loadMap];
-}
-
-#pragma mark Delegates - LLFloor
-
-- (void)floor:(LLFloor *)floor mapLoaded:(LLMap *)map {
-    
-    self.mapView.map = map;
 }
 
 #pragma mark Delegates - LLMapView

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate, LLMapViewDelegate, LLPOIDatabaseDelegate, LLSearchDelegate {
+class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelegate, LLPOIDatabaseDelegate, LLSearchDelegate {
 
     // Vars
     var venueDatabase:      LLVenueDatabase!
@@ -26,23 +26,30 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate
         // Initialize the LocusLabs SDK with the accountId provided by LocusLabs
         LLLocusLabs.setup().accountId = "A11F4Y6SZRXH4X"
         
+        // Create a new LLMapView, register as its delegate and add it as a subview
+        mapView = LLMapView(frame: view.bounds)
+        mapView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView?.delegate = self
+        view.addSubview(mapView!)
+        
         // Get an instance of the LLVenueDatabase, register as its delegate and load the venue LAX
         venueDatabase = LLVenueDatabase()
         venueDatabase.delegate = self
         
-        // Create a new LLMapView, register as its delegate and add it as a subview
-        mapView = LLMapView()
-        mapView!.delegate = self
-        view.addSubview(mapView!)
-        
-        // Set the mapview's layout constraints
-        mapView!.translatesAutoresizingMaskIntoConstraints = false
-        mapView!.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
-        mapView!.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
-        mapView!.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        mapView!.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-        
-        venueDatabase.loadVenue("lax")
+        // Load the venue LAX async
+        venueDatabase.loadVenueAndMap("lax") { (_venue: LLVenue?, _map: LLMap?, _floor: LLFloor?, _marker: LLMarker?) in
+            
+            self.mapView?.map = _map
+            self.venue = _venue
+            
+            // Get an instance of the POI Database and register as its delegate
+            self.poiDatabase = self.venue!.poiDatabase()
+            self.poiDatabase?.delegate = self
+            
+            // Get a search instance and register as its delegate
+            self.search = self.venue!.search()
+            self.search?.delegate = self;
+        }
     }
 
     // MARK: Custom
@@ -62,43 +69,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate
         
         // Handle failures here
     }
-    
-    func venueDatabase(_ venueDatabase: LLVenueDatabase!, venueLoaded venue: LLVenue!) {
-        
-        self.venue = venue
-        
-        // Get a list of buildings in this airport and load the first one
-        if let buildingInfo = self.venue?.listBuildings().first as? LLBuildingInfo {
-            
-            let building = self.venue?.loadBuilding(buildingInfo.buildingId)
-            
-            // Get a list of floors for the building and load the first one
-            if let floorInfo = building?.listFloors().first as? LLFloorInfo {
-                
-                floor = building?.loadFloor(floorInfo.floorId)
-                
-                // Set the floor delegate and load its map - mapLoaded is called when loading is complete
-                floor?.delegate = self
-                floor?.loadMap()
-                
-                // Get an instance of the POI Database and register as its delegate
-                poiDatabase = venue.poiDatabase()
-                poiDatabase?.delegate = self
-                
-                // Get a search instance and register as its delegate
-                search = venue.search()
-                search?.delegate = self;
-            }
-        }
-    }
 
-    // MARK: Delegates - LLFloor
-    
-    func floor(_ floor: LLFloor!, mapLoaded map: LLMap!) {
-        
-        mapView?.map = map
-    }
-    
     // MARK: Delegates - LLMapView
     
     func mapViewDidClickBack(_ mapView: LLMapView!) {
