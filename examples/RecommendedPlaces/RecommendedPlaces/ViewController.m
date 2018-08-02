@@ -48,7 +48,7 @@
     [mapView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
     
     // Load the venue LAX
-    [self.venueDatabase loadAirport:@"lax"];
+    [self.venueDatabase loadVenue:@"lax"];
 }
 
 #pragma mark Custom
@@ -133,13 +133,13 @@
     // return @[places[0]];
 
     // Show default recommended places
-    // return places;
+     return places;
 
     // Show only the tray button (when tapped - it will open the tray showing all recommended places)
     // return [@[[NSNull null]] arrayByAddingObjectsFromArray:places];
 
     // Show custom recommended places
-    return [self customRecommendedPlaces];
+    //return [self customRecommendedPlaces];
 }
 
 - (NSArray<NSString*> *)mapView:(LLMapView *)mapView willPresentSearchSuggestions:(NSArray<NSString*> *)suggestions {
