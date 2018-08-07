@@ -12,7 +12,6 @@
 
 @property (nonatomic, strong) LLVenue           *venue;
 @property (nonatomic, strong) LLVenueDatabase   *venueDatabase;
-@property (nonatomic, strong) LLFloor           *floor;
 @property (nonatomic, weak)   LLMapView         *mapView;
 
 @end
@@ -36,7 +35,7 @@
     
     self.mapView = mapView;
     
-    // Get an instance of the LLAirportDatabase, set it's mapview and register as its delegate
+    // Get an instance of LLVenueDatabase, set it's mapview and register as its delegate
     self.venueDatabase = [LLVenueDatabase venueDatabaseWithMapView:self.mapView];
     self.venueDatabase.delegate = self;
     

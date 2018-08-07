@@ -12,7 +12,6 @@
 
 @property (nonatomic, strong) LLVenue           *venue;
 @property (nonatomic, strong) LLVenueDatabase   *venueDatabase;
-@property (nonatomic, strong) LLFloor           *floor;
 @property (nonatomic, weak)   LLMapView         *mapView;
 
 - (LLCircle *)createCircleWithPosition:(LLPosition *)position withRadius:(NSNumber*)radius andColor:(UIColor*)color;
@@ -32,25 +31,24 @@
     // Initialize the LocusLabs SDK with the accountId provided by LocusLabs
     [LLLocusLabs setup].accountId = @"A11F4Y6SZRXH4X";
     
-    // Get an instance of the LLVenueDatabase and register as its delegate
-    self.venueDatabase = [LLVenueDatabase venueDatabase];
-    self.venueDatabase.delegate = self;
-    
     // Create a new LLMapView, register as its delegate and add it as a subview
-    LLMapView *mapView = [[LLMapView alloc] init];
-    self.mapView = mapView;
-    self.mapView.delegate = self;
+    LLMapView *mapView = [[LLMapView alloc] initWithFrame:self.view.bounds];
+    mapView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+    mapView.delegate = self;
     [self.view addSubview:mapView];
     
-    // Set the mapview's layout constraints
-    mapView.translatesAutoresizingMaskIntoConstraints = NO;
-    [mapView.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
-    [mapView.rightAnchor constraintEqualToAnchor:self.view.rightAnchor].active = YES;
-    [mapView.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
-    [mapView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
+    self.mapView = mapView;
     
-    // Load the venue LAX
-    [self.venueDatabase loadVenue:@"lax"];
+    // Get an instance of LLVenueDatabase, set it's mapview and register as its delegate
+    self.venueDatabase = [LLVenueDatabase venueDatabaseWithMapView:self.mapView];
+    self.venueDatabase.delegate = self;
+    
+    // Load the venue LAX async
+    [self.venueDatabase loadVenueAndMap:@"lax" block:^(LLVenue *venue, LLMap *map, LLFloor *floor, LLMarker *marker) {
+        
+        self.mapView.map = map;
+        self.venue = venue;
+    }];
 }
 
 #pragma mark Custom
@@ -94,9 +92,10 @@
     LLLatLng *point1LatLon = [[LLLatLng alloc] initWithLat:@33.940627 lng:@-118.401892];
     LLLatLng *point2LatLon = [[LLLatLng alloc] initWithLat:@33.9410700 lng:@-118.399598];
     
-    LLPosition *point1 = [[LLPosition alloc] initWithFloorId:self.floor.identifier latLng:point1LatLon];
-    LLPosition *point2 = [[LLPosition alloc] initWithFloorId:self.floor.identifier latLng:point2LatLon];
+    LLPosition *point1 = [[LLPosition alloc] initWithFloorId:self.mapView.map.floorId latLng:point1LatLon];
+    LLPosition *point2 = [[LLPosition alloc] initWithFloorId:self.mapView.map.floorId latLng:point2LatLon];
     
+    self.venue.delegate = self;
     [self.venue navigateFrom:point1 to:point2];
 }
 
@@ -107,31 +106,12 @@
     [self drawRouteWithWaypoints:navigationPath.waypoints startFloor:startPosition.floorId];
 }
 
+
 #pragma mark Delegates - LLVenueDatabase
 
 - (void)venueDatabase:(LLVenueDatabase *)venueDatabase venueLoadFailed:(NSString *)venueId code:(LLDownloaderError)errorCode message:(NSString *)message {
     
     // Handle failures here
-}
-
-- (void)venueDatabase:(LLVenueDatabase *)venueDatabase venueLoaded:(LLVenue *)venue {
-    
-    self.venue = venue;
-    self.venue.delegate = self;
-    
-    LLBuilding *building  = [self.venue loadBuilding:@"lax-south"];
-    self.floor = [building loadFloor:@"lax-south-departures"];
-    
-    // Set the floor delegate and load its map - mapLoaded is called when loading is complete
-    self.floor.delegate = self;
-    [self.floor loadMap];
-}
-
-#pragma mark Delegates - LLFloor
-
-- (void)floor:(LLFloor *)floor mapLoaded:(LLMap *)map {
-    
-    self.mapView.map = map;
 }
 
 #pragma mark Delegates - LLMapView
@@ -143,7 +123,7 @@
 
 - (void)mapViewReady:(LLMapView *)mapView {
     
-    // Pan & zoom the map
+    // Pan & zoom the map after selecting lax-south-departures
     [self.mapView levelSelected:@"lax-south-departures"];
     self.mapView.mapCenter = [[LLLatLng alloc] initWithLat:@33.941384 lng:@-118.402057];
     self.mapView.mapRadius = @190.0;

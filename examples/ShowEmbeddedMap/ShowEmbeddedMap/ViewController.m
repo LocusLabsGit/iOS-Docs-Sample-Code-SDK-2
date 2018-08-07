@@ -12,7 +12,6 @@
 
 @property (nonatomic, strong) LLVenue           *venue;
 @property (nonatomic, strong) LLVenueDatabase   *venueDatabase;
-@property (nonatomic, strong) LLFloor           *floor;
 @property (nonatomic, weak)   LLMapView         *mapView;
 
 @end
@@ -40,7 +39,7 @@
     self.mapView.searchBarHidden = YES;
     self.mapView.bottomBarHidden = YES;
     
-    // Get an instance of the LLAirportDatabase, set it's mapview and register as its delegate
+    // Get an instance of LLVenueDatabase, set it's mapview and register as its delegate
     self.venueDatabase = [LLVenueDatabase venueDatabaseWithMapView:self.mapView];
     self.venueDatabase.delegate = self;
     
@@ -48,7 +47,7 @@
     [self.venueDatabase loadVenueAndMap:@"lax" block:^(LLVenue *venue, LLMap *map, LLFloor *floor, LLMarker *marker) {
         
         self.mapView.map = map;
-        self.floor = floor;
+        self.venue = venue;
     }];
 }
 

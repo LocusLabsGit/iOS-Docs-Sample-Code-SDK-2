@@ -13,11 +13,9 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     // Vars
     var venueDatabase:      LLVenueDatabase!
     var venue:              LLVenue?
-    var floor:              LLFloor?
     var mapView:            LLMapView?
     
     // MARK: Lifecycle
-
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -32,7 +30,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         view.addSubview(mapView!)
         
         
-        // Get an instance of the LLVenueDatabase, register as its delegate and load the venue LAX
+        // Get an instance of LLVenueDatabase, register as its delegate and load the venue LAX
         venueDatabase = LLVenueDatabase()
         venueDatabase.delegate = self
 
@@ -45,14 +43,12 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     }
     
     // MARK: Delegates - LLVenueDatabase
-    
     func venueDatabase(_ venueDatabase: LLVenueDatabase!, venueLoadFailed venueId: String!, code errorCode: LLDownloaderError, message: String!) {
         
         // Handle failures here
     }
     
     // MARK: Delegates - LLMapView
-    
     func mapViewDidClickBack(_ mapView: LLMapView!) {
         
         // The user tapped the "Cancel" button while the map was loading. Dismiss the app or take other appropriate action here
