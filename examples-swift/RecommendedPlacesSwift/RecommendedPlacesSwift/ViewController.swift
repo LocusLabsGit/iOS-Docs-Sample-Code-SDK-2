@@ -8,12 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate, LLMapViewDelegate {
+class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelegate {
 
     // Vars
     var venueDatabase:      LLVenueDatabase!
     var venue:              LLVenue?
-    var floor:              LLFloor?
     var mapView:            LLMapView?
     
     // MARK: Lifecycle
@@ -24,25 +23,25 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate
         // Initialize the LocusLabs SDK with the accountId provided by LocusLabs
         LLLocusLabs.setup().accountId = "A11F4Y6SZRXH4X"
         
+        // Enable recommended places
         LLConfiguration.shared().recommendedPlacesEnabled = true
         
-        // Get an instance of the LLVenueDatabase, register as its delegate and load the venue LAX
-        venueDatabase = LLVenueDatabase()
-        venueDatabase.delegate = self
-        
         // Create a new LLMapView, register as its delegate and add it as a subview
-        mapView = LLMapView()
-        mapView!.delegate = self
+        mapView = LLMapView(frame: view.bounds)
+        mapView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView?.delegate = self
         view.addSubview(mapView!)
         
-        // Set the mapview's layout constraints
-        mapView!.translatesAutoresizingMaskIntoConstraints = false
-        mapView!.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
-        mapView!.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
-        mapView!.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        mapView!.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        // Get an instance of LLVenueDatabase, register as its delegate and load the venue LAX
+        venueDatabase = LLVenueDatabase(mapView: mapView)
+        venueDatabase.delegate = self
         
-        venueDatabase.loadVenue("lax")
+        // Load the venue LAX async
+        venueDatabase.loadVenueAndMap("lax") { (_venue: LLVenue?, _map: LLMap?, _floor: LLFloor?, _marker: LLMarker?) in
+            
+            self.mapView?.map = _map
+            self.venue = _venue
+        }
     }
     
     // MARK: Custom
@@ -51,19 +50,24 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate
         var customRecommendedPlaces = [Any]()
         
         // Create a custom Recommended Place to show a POI
-        let ui = LLPlaceUI.default()
-        ui?.icon = "bottombar-icon-nav.png"
-        ui?.normalIconColor = UIColor.white
-        ui?.selectedIconColor = UIColor.white
-        ui?.marker = "images/nav-badge-bus.svg"
-        
-        // POI 519 is gate 68A at lax
-        let customPOIRecommendedPlace = LLPlace(behavior: .POI, values: ["519"], displayName: "Departure Gate", andUI: ui)
-        customRecommendedPlaces.append(customPOIRecommendedPlace as Any)
+//        let ui = LLPlaceUI.default()
+//        ui?.icon = "bottombar-icon-nav.png"  // Supply any solid fill png. This one chosen as it is already in the bundle - you can supply your own
+//        ui?.normalIconColor = UIColor.white
+//        ui?.selectedIconColor = UIColor.white
+//
+//        // POI 519 is gate 68A at lax
+//        let customPOIRecommendedPlace = LLPlace(behavior: .POI, values: ["519"], displayName: "Departure Gate", andUI: ui)
+//        customRecommendedPlaces.append(customPOIRecommendedPlace as Any)
         
         // Create a custom Recommended Place to trigger a search
-//        let customSearchRecommendedPlace = LLPlace(behavior: .search, values: ["magazines"], displayName: "Magazines", andUI: ui)
-//        customRecommendedPlaces.append(customSearchRecommendedPlace as Any)
+        let uiSearch = LLPlaceUI.default()
+        uiSearch?.icon = "bottombar-icon-nav.png"  // Supply any solid fill png. This one chosen as it is already in the bundle - you can supply your own
+        uiSearch?.normalIconColor = UIColor.white
+        uiSearch?.selectedIconColor = UIColor.white
+        uiSearch?.marker = "images/pin-plane-landing.svg"; // Supply any size-embedded svg of your choice. This ins chosen as it is already in the bundle
+        
+        let customSearchRecommendedPlace = LLPlace(behavior: .search, values: ["magazines"], displayName: "Magazines", andUI: uiSearch)
+        customRecommendedPlaces.append(customSearchRecommendedPlace as Any)
         
         return customRecommendedPlaces
     }
@@ -73,33 +77,6 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate
     func venueDatabase(_ venueDatabase: LLVenueDatabase!, venueLoadFailed venueId: String!, code errorCode: LLDownloaderError, message: String!) {
         
         // Handle failures here
-    }
-    
-    func venueDatabase(_ venueDatabase: LLVenueDatabase!, venueLoaded venue: LLVenue!) {
-        
-        self.venue = venue
-        
-        /// Get a list of buildings in this airport and load the first one
-        if let buildingInfo = self.venue?.listBuildings().first as? LLBuildingInfo {
-            
-            let building = self.venue?.loadBuilding(buildingInfo.buildingId)
-            
-            // Get a list of floors for the building and load the first one
-            if let floorInfo = building?.listFloors().first as? LLFloorInfo {
-                
-                floor = building?.loadFloor(floorInfo.floorId)
-                
-                // Set the floor delegate and load its map - mapLoaded is called when loading is complete
-                floor?.delegate = self
-                floor?.loadMap()
-            }
-        }
-    }
-    
-    // MARK: Delegates - LLFloor
-    func floor(_ floor: LLFloor!, mapLoaded map: LLMap!) {
-        
-        mapView?.map = map
     }
     
     // MARK: Delegates - LLMapView
@@ -126,7 +103,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate
 //        }
         
         // Show default recommended places
-        // return places;
+//         return places;
         
         // Show only the tray button (when tapped - it will open the tray showing all recommended places)
 //        var nullFirstArray = [Any]()

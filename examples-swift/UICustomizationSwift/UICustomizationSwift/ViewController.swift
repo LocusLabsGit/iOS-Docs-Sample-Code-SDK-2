@@ -8,12 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate, LLMapViewDelegate {
+class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelegate {
 
     // Vars
     var venueDatabase:      LLVenueDatabase!
     var venue:              LLVenue?
-    var floor:              LLFloor?
     var mapView:            LLMapView?
     
     // MARK: Lifecycle
@@ -24,23 +23,22 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate
         // Initialize the LocusLabs SDK with the accountId provided by LocusLabs
         LLLocusLabs.setup().accountId = "A11F4Y6SZRXH4X"
         
-        // Get an instance of the LLVenueDatabase, register as its delegate and load the venue LAX
-        venueDatabase = LLVenueDatabase()
-        venueDatabase.delegate = self
-        
         // Create a new LLMapView, register as its delegate and add it as a subview
-        mapView = LLMapView()
-        mapView!.delegate = self
+        mapView = LLMapView(frame: view.bounds)
+        mapView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView?.delegate = self
         view.addSubview(mapView!)
         
-        // Set the mapview's layout constraints
-        mapView!.translatesAutoresizingMaskIntoConstraints = false
-        mapView!.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
-        mapView!.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
-        mapView!.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        mapView!.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        // Get an instance of LLVenueDatabase, register as its delegate and load the venue LAX
+        venueDatabase = LLVenueDatabase(mapView: mapView)
+        venueDatabase.delegate = self
         
-        venueDatabase.loadVenue("lax")
+        // Load the venue LAX async
+        venueDatabase.loadVenueAndMap("lax") { (_venue: LLVenue?, _map: LLMap?, _floor: LLFloor?, _marker: LLMarker?) in
+            
+            self.mapView?.map = _map
+            self.venue = _venue
+        }
     }
 
     // MARK: Custom
@@ -62,52 +60,11 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate
     }
     
     // MARK: Delegates - LLVenueDatabase
-    
     func venueDatabase(_ venueDatabase: LLVenueDatabase!, venueLoadFailed venueId: String!, code errorCode: LLDownloaderError, message: String!) {
         
         // Handle failures here
     }
-    
-    // Implement the airportLoaded delegate method
-    func venueDatabase(_ venueDatabase: LLVenueDatabase!, venueLoaded venue: LLVenue!) {
-        
-        self.venue = venue
-        
-        /// Get a list of buildings in this airport and load the first one
-        if let buildingInfo = self.venue?.listBuildings().first as? LLBuildingInfo {
-            
-            let building = self.venue?.loadBuilding(buildingInfo.buildingId)
-            
-            // Get a list of floors for the building and load the first one
-            if let floorInfo = building?.listFloors().first as? LLFloorInfo {
-                
-                floor = building?.loadFloor(floorInfo.floorId)
-                
-                // Set the floor delegate and load its map - mapLoaded is called when loading is complete
-                floor?.delegate = self
-                floor?.loadMap()
-            }
-        }
-    }
 
-    // MARK: Delegates - LLFloor
-    
-    func floor(_ floor: LLFloor!, mapLoaded map: LLMap!) {
-        
-        mapView?.map = map
-        
-        // Change the font
-        //mapView?.theme = themeWithCustomFont(customFont: UIFont(name: "American Typewriter", size: 12)!)
-        
-        // Set a custom back button title
-        //mapView?.setBackButtonText(NSLocalizedString("Back", comment: ""))
-        
-        // Change the search bar background color
-        //mapView?.setSearchBarBackgroundColor(UIColor.orange)
-        
-        // Change the bottom bar background and button title colors
-        mapView?.theme = themeWithCustomBottomBar()
-    }
     
     // MARK: Delegates - LLMapView
     
@@ -118,7 +75,17 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLFloorDelegate
     
     func mapViewReady(_ mapView: LLMapView!) {
         
-        // The map is ready to be used in calls e.g. zooming, showing poi, etc.
+        // Change the font
+        // mapView?.theme = themeWithCustomFont(customFont: UIFont(name: "American Typewriter", size: 12)!)
+        
+        // Set a custom back button title
+        //mapView?.setBackButtonText(NSLocalizedString("Back", comment: ""))
+        
+        // Change the search bar background color
+        //mapView?.setSearchBarBackgroundColor(UIColor.orange)
+        
+        // Change the bottom bar background and button title colors
+        mapView?.theme = themeWithCustomBottomBar()
     }
 }
 

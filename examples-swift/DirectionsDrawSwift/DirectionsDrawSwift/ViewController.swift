@@ -29,9 +29,8 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         mapView?.delegate = self
         view.addSubview(mapView!)
         
-        
         // Get an instance of LLVenueDatabase, register as its delegate and load the venue LAX
-        venueDatabase = LLVenueDatabase()
+        venueDatabase = LLVenueDatabase(mapView: mapView)
         venueDatabase.delegate = self
         
         // Load the venue LAX async

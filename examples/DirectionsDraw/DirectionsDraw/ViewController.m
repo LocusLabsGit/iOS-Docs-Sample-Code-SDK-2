@@ -92,9 +92,10 @@
     LLLatLng *point1LatLon = [[LLLatLng alloc] initWithLat:@33.940627 lng:@-118.401892];
     LLLatLng *point2LatLon = [[LLLatLng alloc] initWithLat:@33.9410700 lng:@-118.399598];
     
+    // Note that you could also get LLPosition diretly from an instance of LLPOI
     LLPosition *point1 = [[LLPosition alloc] initWithFloorId:self.mapView.map.floorId latLng:point1LatLon];
     LLPosition *point2 = [[LLPosition alloc] initWithFloorId:self.mapView.map.floorId latLng:point2LatLon];
-    
+   
     self.venue.delegate = self;
     [self.venue navigateFrom:point1 to:point2];
 }

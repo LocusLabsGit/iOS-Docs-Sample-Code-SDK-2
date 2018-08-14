@@ -13,7 +13,6 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     // Vars
     var venueDatabase:      LLVenueDatabase!
     var venue:              LLVenue?
-    var floor:              LLFloor?
     var mapView:            LLMapView?
     var search:             LLSearch?
     
@@ -32,7 +31,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         view.addSubview(mapView!)
         
         // Get an instance of the LLVenueDatabase, register as its delegate and load the venue LAX
-        venueDatabase = LLVenueDatabase()
+        venueDatabase = LLVenueDatabase(mapView: mapView)
         venueDatabase.delegate = self
         
         // Load the venue LAX async
@@ -48,7 +47,6 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     }
 
     // MARK: Custom
-    
     func createCircle(position: LLPosition, radius: Float, color: UIColor) {
         
         let circle = LLCircle()
@@ -59,14 +57,12 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     }
     
     // MARK: Delegates - LLVenueDatabase
-    
     func venueDatabase(_ venueDatabase: LLVenueDatabase!, venueLoadFailed venueId: String!, code errorCode: LLDownloaderError, message: String!) {
         
         // Handle failures here
     }
 
     // MARK: Delegates - LLMapView
-    
     func mapViewDidClickBack(_ mapView: LLMapView!) {
         
         // The user tapped the "Cancel" button while the map was loading. Dismiss the app or take other appropriate action here
@@ -82,7 +78,6 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     }
     
     // MARK: Delegates - LLSearch
-    
     func search(_ search: LLSearch!, results searchResults: LLSearchResults!) {
         
         let searchTerm = searchResults.query

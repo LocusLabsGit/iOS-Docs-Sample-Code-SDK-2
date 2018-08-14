@@ -12,7 +12,6 @@
 
 @property (nonatomic, strong) LLVenue           *venue;
 @property (nonatomic, strong) LLVenueDatabase   *venueDatabase;
-@property (nonatomic, strong) LLFloor           *floor;
 @property (nonatomic, weak)   LLMapView         *mapView;
 @property (nonatomic, strong) LLPOIDatabase     *poiDatabase;
 @property (nonatomic, strong) LLSearch          *search;

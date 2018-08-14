@@ -308,4 +308,10 @@
  */
 - (void)refreshPlaces;
 
+/**
+ * When highlighting POIs the map is grayed out using this parameter to control the greyscale intensity to make it darker or lighter.
+ * It can take any value from [0, 1], where 0 makes the background black.
+ */
+@property (nonatomic, strong) NSNumber *desaturationGreyscale;
+
 @end
