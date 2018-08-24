@@ -39,6 +39,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
             self.mapView?.map = _map
             self.venue = _venue
         }
+
     }
     
     // MARK: Delegates - LLVenueDatabase
