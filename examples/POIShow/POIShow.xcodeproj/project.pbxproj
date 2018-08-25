@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9CB2CBD22021AF50002E8BD7 /* ShowFullscreenMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowFullscreenMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CB2CBD22021AF50002E8BD7 /* POIShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POIShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB2CBD52021AF50002E8BD7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9CB2CBD62021AF50002E8BD7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9CB2CBD82021AF50002E8BD7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		9CB2CBC92021AF50002E8BD7 = {
 			isa = PBXGroup;
 			children = (
-				9CB2CBD42021AF50002E8BD7 /* ShowFullscreenMap */,
+				9CB2CBD42021AF50002E8BD7 /* POIShow */,
 				9CB2CBD32021AF50002E8BD7 /* Products */,
 				9CB2CBEB2021AF59002E8BD7 /* Frameworks */,
 			);
@@ -62,12 +62,12 @@
 		9CB2CBD32021AF50002E8BD7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9CB2CBD22021AF50002E8BD7 /* ShowFullscreenMap.app */,
+				9CB2CBD22021AF50002E8BD7 /* POIShow.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9CB2CBD42021AF50002E8BD7 /* ShowFullscreenMap */ = {
+		9CB2CBD42021AF50002E8BD7 /* POIShow */ = {
 			isa = PBXGroup;
 			children = (
 				9CB2CBD52021AF50002E8BD7 /* AppDelegate.h */,
@@ -81,7 +81,7 @@
 				9CB2CBF22021AF95002E8BD7 /* LocusLabsSDK.bundle */,
 				9CB2CBE42021AF50002E8BD7 /* main.m */,
 			);
-			path = ShowFullscreenMap;
+			path = POIShow;
 			sourceTree = "<group>";
 		};
 		9CB2CBEB2021AF59002E8BD7 /* Frameworks */ = {
@@ -97,9 +97,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9CB2CBD12021AF50002E8BD7 /* ShowFullscreenMap */ = {
+		9CB2CBD12021AF50002E8BD7 /* POIShow */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9CB2CBE82021AF50002E8BD7 /* Build configuration list for PBXNativeTarget "ShowFullscreenMap" */;
+			buildConfigurationList = 9CB2CBE82021AF50002E8BD7 /* Build configuration list for PBXNativeTarget "POIShow" */;
 			buildPhases = (
 				9CB2CBCE2021AF50002E8BD7 /* Sources */,
 				9CB2CBCF2021AF50002E8BD7 /* Frameworks */,
@@ -109,9 +109,9 @@
 			);
 			dependencies = (
 			);
-			name = ShowFullscreenMap;
+			name = POIShow;
 			productName = ShowFullscreenMap;
-			productReference = 9CB2CBD22021AF50002E8BD7 /* ShowFullscreenMap.app */;
+			productReference = 9CB2CBD22021AF50002E8BD7 /* POIShow.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -129,7 +129,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9CB2CBCD2021AF50002E8BD7 /* Build configuration list for PBXProject "ShowFullscreenMap" */;
+			buildConfigurationList = 9CB2CBCD2021AF50002E8BD7 /* Build configuration list for PBXProject "POIShow" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -142,7 +142,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9CB2CBD12021AF50002E8BD7 /* ShowFullscreenMap */,
+				9CB2CBD12021AF50002E8BD7 /* POIShow */,
 			);
 		};
 /* End PBXProject section */
@@ -313,7 +313,7 @@
 					"$(PROJECT_DIR)",
 					"$(SRCROOT)/../../**",
 				);
-				INFOPLIST_FILE = ShowFullscreenMap/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/POIShow/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.locuslabs.ShowFullscreenMap;
@@ -333,7 +333,7 @@
 					"$(PROJECT_DIR)",
 					"$(SRCROOT)/../../**",
 				);
-				INFOPLIST_FILE = ShowFullscreenMap/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/POIShow/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.locuslabs.ShowFullscreenMap;
@@ -345,7 +345,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9CB2CBCD2021AF50002E8BD7 /* Build configuration list for PBXProject "ShowFullscreenMap" */ = {
+		9CB2CBCD2021AF50002E8BD7 /* Build configuration list for PBXProject "POIShow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9CB2CBE62021AF50002E8BD7 /* Debug */,
@@ -354,7 +354,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9CB2CBE82021AF50002E8BD7 /* Build configuration list for PBXNativeTarget "ShowFullscreenMap" */ = {
+		9CB2CBE82021AF50002E8BD7 /* Build configuration list for PBXNativeTarget "POIShow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9CB2CBE92021AF50002E8BD7 /* Debug */,

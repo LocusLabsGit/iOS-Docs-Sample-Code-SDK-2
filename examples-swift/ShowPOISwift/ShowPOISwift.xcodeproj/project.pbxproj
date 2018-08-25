@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9C1B000D2021E2F30077CC26 /* ShowFullScreenMapSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowFullScreenMapSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1B000D2021E2F30077CC26 /* ShowPOISwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowPOISwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1B00102021E2F30077CC26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C1B00122021E2F30077CC26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9C1B00152021E2F30077CC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		9C1B00042021E2F30077CC26 = {
 			isa = PBXGroup;
 			children = (
-				9C1B000F2021E2F30077CC26 /* ShowFullScreenMapSwift */,
+				9C1B000F2021E2F30077CC26 /* ShowPOISwift */,
 				9C1B000E2021E2F30077CC26 /* Products */,
 				9C1B00222021E2FF0077CC26 /* Frameworks */,
 			);
@@ -59,12 +59,12 @@
 		9C1B000E2021E2F30077CC26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C1B000D2021E2F30077CC26 /* ShowFullScreenMapSwift.app */,
+				9C1B000D2021E2F30077CC26 /* ShowPOISwift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9C1B000F2021E2F30077CC26 /* ShowFullScreenMapSwift */ = {
+		9C1B000F2021E2F30077CC26 /* ShowPOISwift */ = {
 			isa = PBXGroup;
 			children = (
 				9C1B00102021E2F30077CC26 /* AppDelegate.swift */,
@@ -76,7 +76,7 @@
 				9C1B00292021E3240077CC26 /* LocusLabsSDK.bundle */,
 				9C1B002B2021E3A70077CC26 /* Swift-Bridge.h */,
 			);
-			path = ShowFullScreenMapSwift;
+			path = ShowPOISwift;
 			sourceTree = "<group>";
 		};
 		9C1B00222021E2FF0077CC26 /* Frameworks */ = {
@@ -92,9 +92,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9C1B000C2021E2F30077CC26 /* ShowFullScreenMapSwift */ = {
+		9C1B000C2021E2F30077CC26 /* ShowPOISwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C1B001F2021E2F30077CC26 /* Build configuration list for PBXNativeTarget "ShowFullScreenMapSwift" */;
+			buildConfigurationList = 9C1B001F2021E2F30077CC26 /* Build configuration list for PBXNativeTarget "ShowPOISwift" */;
 			buildPhases = (
 				9C1B00092021E2F30077CC26 /* Sources */,
 				9C1B000A2021E2F30077CC26 /* Frameworks */,
@@ -104,9 +104,9 @@
 			);
 			dependencies = (
 			);
-			name = ShowFullScreenMapSwift;
+			name = ShowPOISwift;
 			productName = ShowFullScreenMapSwift;
-			productReference = 9C1B000D2021E2F30077CC26 /* ShowFullScreenMapSwift.app */;
+			productReference = 9C1B000D2021E2F30077CC26 /* ShowPOISwift.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -125,7 +125,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9C1B00082021E2F30077CC26 /* Build configuration list for PBXProject "ShowFullScreenMapSwift" */;
+			buildConfigurationList = 9C1B00082021E2F30077CC26 /* Build configuration list for PBXProject "ShowPOISwift" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -138,7 +138,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9C1B000C2021E2F30077CC26 /* ShowFullScreenMapSwift */,
+				9C1B000C2021E2F30077CC26 /* ShowPOISwift */,
 			);
 		};
 /* End PBXProject section */
@@ -307,7 +307,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../..";
-				INFOPLIST_FILE = ShowFullScreenMapSwift/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ShowPOISwift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.locuslabs.ShowFullScreenMapSwift;
@@ -325,7 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../..";
-				INFOPLIST_FILE = ShowFullScreenMapSwift/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ShowPOISwift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.locuslabs.ShowFullScreenMapSwift;
@@ -339,7 +339,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C1B00082021E2F30077CC26 /* Build configuration list for PBXProject "ShowFullScreenMapSwift" */ = {
+		9C1B00082021E2F30077CC26 /* Build configuration list for PBXProject "ShowPOISwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C1B001D2021E2F30077CC26 /* Debug */,
@@ -348,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C1B001F2021E2F30077CC26 /* Build configuration list for PBXNativeTarget "ShowFullScreenMapSwift" */ = {
+		9C1B001F2021E2F30077CC26 /* Build configuration list for PBXNativeTarget "ShowPOISwift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C1B00202021E2F30077CC26 /* Debug */,
