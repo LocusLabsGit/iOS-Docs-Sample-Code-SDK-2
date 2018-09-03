@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C1B008C202315EA0077CC26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1B008B202315EA0077CC26 /* AppDelegate.swift */; };
+		9C1B008E202315EA0077CC26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1B008D202315EA0077CC26 /* ViewController.swift */; };
+		9C1B0091202315EA0077CC26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1B008F202315EA0077CC26 /* Main.storyboard */; };
+		9C1B0093202315EA0077CC26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1B0092202315EA0077CC26 /* Assets.xcassets */; };
+		9C1B0096202315EA0077CC26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1B0094202315EA0077CC26 /* LaunchScreen.storyboard */; };
+		9C1B009F202315F40077CC26 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B009E202315F40077CC26 /* SystemConfiguration.framework */; };
+		9C1B00A1202315F90077CC26 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B00A0202315F90077CC26 /* WebKit.framework */; };
+		9C1B00A3202316020077CC26 /* LocusLabsSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9C1B00A2202316010077CC26 /* LocusLabsSDK.bundle */; };
+		9C1B00A5202316070077CC26 /* LocusLabsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B00A4202316070077CC26 /* LocusLabsSDK.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9C1B0088202315EA0077CC26 /* MapBasicsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapBasicsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C1B008B202315EA0077CC26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9C1B008D202315EA0077CC26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9C1B0090202315EA0077CC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C1B0092202315EA0077CC26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C1B0095202315EA0077CC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9C1B0097202315EA0077CC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C1B009E202315F40077CC26 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9C1B00A0202315F90077CC26 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		9C1B00A2202316010077CC26 /* LocusLabsSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LocusLabsSDK.bundle; path = ../../../LocusLabsSDK.bundle; sourceTree = "<group>"; };
+		9C1B00A4202316070077CC26 /* LocusLabsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocusLabsSDK.framework; path = ../../LocusLabsSDK.framework; sourceTree = "<group>"; };
+		9C1B00A6202316150077CC26 /* Swift-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridge.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9C1B0085202315EA0077CC26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1B00A5202316070077CC26 /* LocusLabsSDK.framework in Frameworks */,
+				9C1B00A1202315F90077CC26 /* WebKit.framework in Frameworks */,
+				9C1B009F202315F40077CC26 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9C1B007F202315EA0077CC26 = {
+			isa = PBXGroup;
+			children = (
+				9C1B008A202315EA0077CC26 /* MapBasicsSwift */,
+				9C1B0089202315EA0077CC26 /* Products */,
+				9C1B009D202315F40077CC26 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9C1B0089202315EA0077CC26 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C1B0088202315EA0077CC26 /* MapBasicsSwift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C1B008A202315EA0077CC26 /* MapBasicsSwift */ = {
+			isa = PBXGroup;
+			children = (
+				9C1B008B202315EA0077CC26 /* AppDelegate.swift */,
+				9C1B008D202315EA0077CC26 /* ViewController.swift */,
+				9C1B008F202315EA0077CC26 /* Main.storyboard */,
+				9C1B0092202315EA0077CC26 /* Assets.xcassets */,
+				9C1B0094202315EA0077CC26 /* LaunchScreen.storyboard */,
+				9C1B0097202315EA0077CC26 /* Info.plist */,
+				9C1B00A2202316010077CC26 /* LocusLabsSDK.bundle */,
+				9C1B00A6202316150077CC26 /* Swift-Bridge.h */,
+			);
+			path = MapBasicsSwift;
+			sourceTree = "<group>";
+		};
+		9C1B009D202315F40077CC26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9C1B00A4202316070077CC26 /* LocusLabsSDK.framework */,
+				9C1B00A0202315F90077CC26 /* WebKit.framework */,
+				9C1B009E202315F40077CC26 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9C1B0087202315EA0077CC26 /* MapBasicsSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C1B009A202315EA0077CC26 /* Build configuration list for PBXNativeTarget "MapBasicsSwift" */;
+			buildPhases = (
+				9C1B0084202315EA0077CC26 /* Sources */,
+				9C1B0085202315EA0077CC26 /* Frameworks */,
+				9C1B0086202315EA0077CC26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapBasicsSwift;
+			productName = CenterAndZoomMapSwift;
+			productReference = 9C1B0088202315EA0077CC26 /* MapBasicsSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9C1B0080202315EA0077CC26 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = LocusLabs;
+				TargetAttributes = {
+					9C1B0087202315EA0077CC26 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9C1B0083202315EA0077CC26 /* Build configuration list for PBXProject "MapBasicsSwift" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9C1B007F202315EA0077CC26;
+			productRefGroup = 9C1B0089202315EA0077CC26 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9C1B0087202315EA0077CC26 /* MapBasicsSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9C1B0086202315EA0077CC26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1B0096202315EA0077CC26 /* LaunchScreen.storyboard in Resources */,
+				9C1B00A3202316020077CC26 /* LocusLabsSDK.bundle in Resources */,
+				9C1B0093202315EA0077CC26 /* Assets.xcassets in Resources */,
+				9C1B0091202315EA0077CC26 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9C1B0084202315EA0077CC26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C1B008E202315EA0077CC26 /* ViewController.swift in Sources */,
+				9C1B008C202315EA0077CC26 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9C1B008F202315EA0077CC26 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C1B0090202315EA0077CC26 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9C1B0094202315EA0077CC26 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C1B0095202315EA0077CC26 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9C1B0098202315EA0077CC26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9C1B0099202315EA0077CC26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C1B009B202315EA0077CC26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../..";
+				INFOPLIST_FILE = "$(SRCROOT)/MapBasicsSwift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.locuslabs.CenterAndZoomMapSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./$PROJECT_NAME/Swift-Bridge.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C1B009C202315EA0077CC26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../..";
+				INFOPLIST_FILE = "$(SRCROOT)/MapBasicsSwift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.locuslabs.CenterAndZoomMapSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./$PROJECT_NAME/Swift-Bridge.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9C1B0083202315EA0077CC26 /* Build configuration list for PBXProject "MapBasicsSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C1B0098202315EA0077CC26 /* Debug */,
+				9C1B0099202315EA0077CC26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C1B009A202315EA0077CC26 /* Build configuration list for PBXNativeTarget "MapBasicsSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C1B009B202315EA0077CC26 /* Debug */,
+				9C1B009C202315EA0077CC26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9C1B0080202315EA0077CC26 /* Project object */;
+}
