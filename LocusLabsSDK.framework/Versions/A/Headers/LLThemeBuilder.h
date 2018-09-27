@@ -31,6 +31,12 @@
 + (nonnull LLThemeBuilder *)themeBuilderWithTheme:(nullable LLTheme *)theme;
 
 /**
+ * Appends all properties from given theme to the current theme. Overrides any existing properties.
+ * @param theme
+ */
+- (nonnull LLThemeBuilder *)loadPropertiesFromTheme:(nonnull LLTheme *)theme;
+
+/**
  * Change a theme property.
  * @param the name of the property
  * @param the new value, must be a NSNumber, NSString, UIFont or a UIColor

@@ -37,7 +37,6 @@
 @end
 
 @class LLBuilding;
-@class LLFloorDelegate;
 @class LLSection;
 
 /**
@@ -45,8 +44,8 @@
  */
 @interface LLFloor : LLLocation
 
-@property (weak,nonatomic) id<LLFloorDelegate> delegate;
-@property (nonatomic,readonly) NSArray *sectionIds;
+@property (nonatomic, weak) id <LLFloorDelegate> delegate;
+@property (nonatomic, readonly) NSArray *sectionIds;
 
 /**
  *  The unique identifier for this floor.
@@ -101,7 +100,7 @@
  *
  * @param completion
  */
-- (void)listBeaconsCompletion:(void (^ __nullable)(NSArray<LLBeacon *> *beacons))completion;
+- (void)listBeaconsCompletion:(void (^)(NSArray<LLBeacon *> *beacons))completion;
 
 - (LLSection *)getSectionWithId:(NSString *)sectionId;
 

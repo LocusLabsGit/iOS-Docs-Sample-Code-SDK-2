@@ -76,6 +76,17 @@ typedef NS_ENUM(NSInteger, LLLogTopic) {
 + (instancetype)defaultLogger;
 
 /**
+ * Whether the logs should also be appended to the logfile
+ * By default it's NO
+ */
+@property (nonatomic) BOOL fileLoggingEnabled;
+
+/**
+ * Path of logfile where the logs are added when fileLoggingEnabled == YES
+ */
+@property (nonatomic, readonly) NSString *logFilePath;
+
+/**
  *  Prints out the formatted logs to the console.
  *
  *  @param logLevel The level of this log.

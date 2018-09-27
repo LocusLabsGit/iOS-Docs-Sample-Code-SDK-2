@@ -188,10 +188,6 @@
 - (void)removeUserPOI:(LLPOI*)poi;
 // TODO [api] document as it's probably used in 1.6
 - (void)navigateFromStart:(LLPosition*)start end:(LLPosition*)end;
-// TODO [api] document as it's probably used in 1.6
-- (NSString*)getBuildingIdFromLatLng:(LLLatLng*)latLng;
-- (NSString*)getFloorIdFromCLFloor:(NSNumber*)clFloor andLatLng:(LLLatLng*)latLng;
-- (NSString*)getFloorIdFromMapFloorAndLatLng:(LLLatLng*)latLng;
 
 /**
  * Programmatically open the navigation dialog passing in (optional) start and end positions

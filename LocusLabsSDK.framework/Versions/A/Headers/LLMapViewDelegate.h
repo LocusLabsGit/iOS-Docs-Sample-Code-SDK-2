@@ -143,6 +143,15 @@ typedef NS_ENUM(NSInteger, LLMapViewPresentationContext)
  */
 - (UIViewController *)presentingControllerForMapView:(LLMapView *)mapView forContext:(LLMapViewPresentationContext)context;
 
+/**
+ * This method might be used to provide alternate recommended places configuration file.
+ *
+ * By default path = [<LocusLabsSDKBundle> pathForResource:@"DefaultPlaces" ofType:@"json"];
+ *
+ * @param mapView the mapView that generated the event
+ * @returns path to JSON file with places configuration
+ */
+- (NSString *)mapViewPathForPlacesConfiguration:(LLMapView *)mapView;
 
 /**
  * @brief This method is called when the map is about to display any featured places.

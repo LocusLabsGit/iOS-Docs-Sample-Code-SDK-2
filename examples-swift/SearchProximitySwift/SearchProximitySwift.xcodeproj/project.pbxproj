@@ -305,7 +305,10 @@
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../..";
 				INFOPLIST_FILE = "$(SRCROOT)/SearchProximitySwift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.locuslabs.ShowFullScreenMapSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./$PROJECT_NAME/Swift-Bridge.h";
@@ -323,7 +326,10 @@
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../..";
 				INFOPLIST_FILE = "$(SRCROOT)/SearchProximitySwift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lc++",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.locuslabs.ShowFullScreenMapSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./$PROJECT_NAME/Swift-Bridge.h";

@@ -35,7 +35,7 @@
  */
 - (void)search:(NSString *)query;
 
-- (void)search:(NSString *)query completion:(void (^ __nonnull)(LLSearchResults *))completion;
+- (void)search:(NSString *)query completion:(void (^)(LLSearchResults *))completion;
 
 /**
  *  Search the database for the set of POIs that meet all of the given terms.

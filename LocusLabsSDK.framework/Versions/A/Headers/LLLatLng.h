@@ -42,7 +42,7 @@
  *
  *  @return the distance (in meteres)
  */
-- (NSNumber *)distance:(nonnull LLLatLng *)latLng;
+- (NSNumber *)distance:(LLLatLng *)latLng;
 
 /**
  *  Calculates the bearing between this position and another one.

@@ -17,7 +17,7 @@ typedef void (^PoisLoadedBlock) (NSArray *pois);
  */
 @interface LLPOIDatabase : NSObject
 
-@property (weak,nonatomic) id<LLPOIDatabaseDelegate> delegate;
+@property (nonatomic, weak) id<LLPOIDatabaseDelegate> delegate;
 
 /**
  *  Load data about a specific POI.
@@ -26,7 +26,7 @@ typedef void (^PoisLoadedBlock) (NSArray *pois);
  */
 - (void)loadPOI:(NSString *)poiId;
 
-- (void)loadPOI:(NSString *)poiId completion:(void (^)(LLPOI * __nullable poi))completion;
+- (void)loadPOI:(NSString *)poiId completion:(void (^)(LLPOI *poi))completion;
 
 /**
  *  Load data about the poiIds passed in

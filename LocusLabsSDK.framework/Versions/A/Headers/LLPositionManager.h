@@ -215,13 +215,10 @@
  *  Due to this restriction it is recommended that you use a separate Position Manager for each venue individually.
  *
  *  @return the new instance
- *
- * **Deprecated**: use initWithVenues:
  */
 - (id)initWithVenues:(NSArray*)venues;
 
 /**
- * **Deprecated**: use initWithVenuesBeaconsOnly:
  */
 - (id)initWithVenuesBeaconsOnly:(NSArray*)venues;
 

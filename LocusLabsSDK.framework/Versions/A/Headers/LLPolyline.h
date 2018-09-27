@@ -18,15 +18,6 @@
  */
 @interface LLPolyline : LLOverlay
 
-/**
- *  Creates a new polyline object which follows the given path.
- *
- *  @param path the path
- *
- *  @return the new polyline
- */
-+ (LLPolyline *)polylineWithPath:(LLPath *)path;
-
 // redeclare floorId from overlay Internal header, so we can access it here as a property too (but it's @dynamic)
 /**
  *  The FloorId for this marker.

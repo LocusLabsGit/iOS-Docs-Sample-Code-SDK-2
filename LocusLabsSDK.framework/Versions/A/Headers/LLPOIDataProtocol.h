@@ -12,10 +12,10 @@
 
 @protocol LLPOIData <NSObject>
 
-@property (strong,nonatomic) NSString *poiId;
-@property (strong,nonatomic) NSString *name;
-@property (strong,nonatomic) LLPosition *position;
-@property (strong,nonatomic) NSString *gate;
-@property (strong,nonatomic) NSString *terminal;
+@property (nonatomic, readonly) NSString *poiId;
+@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, readonly) LLPosition *position;
+@property (nonatomic, readonly) NSString *gate;
+@property (nonatomic, readonly) NSString *terminal;
 
 @end

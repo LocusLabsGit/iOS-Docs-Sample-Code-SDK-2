@@ -20,8 +20,6 @@
 #import <LocusLabsSDK/LLFloorInfo.h>
 #import <LocusLabsSDK/LLFloorView.h>
 #import <LocusLabsSDK/LLIconButton.h>
-// TODO [api] document removal of LLIconSequence
-//#import <LocusLabsSDK/LLIconSequence.h>
 #import <LocusLabsSDK/LLImages.h>
 #import <LocusLabsSDK/LLLatLng.h>
 #import <LocusLabsSDK/LLLocation.h>
@@ -35,6 +33,7 @@
 #import <LocusLabsSDK/LLMutablePath.h>
 #import <LocusLabsSDK/LLNavigation.h>
 #import <LocusLabsSDK/LLNavigationPath.h>
+#import <LocusLabsSDK/LLOperatingHours.h>
 #import <LocusLabsSDK/LLOverlay.h>
 #import <LocusLabsSDK/LLPath.h>
 #import <LocusLabsSDK/LLPerson.h>
@@ -57,10 +56,6 @@
 #import <LocusLabsSDK/LLSearchDelegate.h>
 #import <LocusLabsSDK/LLSearchResult.h>
 #import <LocusLabsSDK/LLSearchResults.h>
-// TODO [api] mark as removed
-//#import <LocusLabsSDK/LLSecurityWaitTimeMonitor.h>
-// TODO [api] document removal of LLIconSequence
-//#import <LocusLabsSDK/LLSymbol.h>
 #import <LocusLabsSDK/LLTheme.h>
 #import <LocusLabsSDK/LLThemeBuilder.h>
 #import <LocusLabsSDK/LLVenue.h>

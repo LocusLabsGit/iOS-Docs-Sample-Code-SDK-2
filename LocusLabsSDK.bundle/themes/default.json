@@ -6,6 +6,7 @@
         "gray" : { "red" : 0.4, "green" : 0.4, "blue" : 0.4, "alpha" : 1.0 },
         "russetRed" : { "red" : 0.78, "green" : 0.27, "blue" : 0.0, "alpha" : 1.0 },
         "lightGray" : { "red" : 0.6, "green" : 0.6, "blue" : 0.6, "alpha" : 1.0 },
+        "lighterGray" : { "red" : 0.86274509803922, "green" : 0.86274509803922, "blue" : 0.86274509803922, "alpha" : 1.0 },
         "veryLightGray" : { "red" : 0.94901960784314, "green" : 0.94901960784314, "blue" : 0.94901960784314, "alpha" : 1.0 },
         "blueGreen" : { "red" : 0.17254901960784, "green" : 0.56862745098039, "blue" : 0.69803921568627, "alpha" : 1.0 },
         "lightBlueGreen" : { "red" : 0.86274509803922, "green" : 0.92156862745098, "blue" : 0.94117647058824, "alpha" : 1.0 },
@@ -248,7 +249,17 @@
 			}
 		},
         "POIView" : {
+            "cornerRadius" : 0,
             "backgroundColor" : "@colors.translucentBackground",
+            "ExpanderView" : {
+                "height" : 20,
+                "IconUp" : {
+                    "name" : "querywin-icon-arrow-up"
+                },
+                "IconDown" : {
+                    "name" : "querywin-icon-arrow-down"
+                }
+            },
             "HeaderView" : {
                 "backgroundColor" : "@colors.background",
                 "Title" : {
@@ -287,6 +298,12 @@
                     }
                 }
             },
+            "ImagesView" : {
+                "MessageView" : {
+                    "backgroundColor" : "@colors.lighterGray",
+                    "tintColor" : "@colors.lightGray"
+                }
+            },
             "ButtonBar" : {
                 "Button" : {
                     "Icon" : {
@@ -305,6 +322,9 @@
             },
             "KeywordsView" : {
                 "Keyword" : {
+                    "borderWidth": 1,
+                    "borderColor": "@colors.keywordBackground",
+                    "cornerRadius" : 4,
                     "backgroundColor" : "@colors.keywordBackground",
                     "font" : "@fonts.normal",
                     "font.size" : 14.0,
@@ -406,8 +426,11 @@
             }
         },
         "TopBar" : {
+            "shadowEnabled": true,
             "SearchBar" : {
                 "backgroundColor" : "@colors.background",
+                "borderWidth": 0,
+                "borderColor": "@colors.russetRed",
                 "Text" : {
                     "font" : "@fonts.normal",
                     "font.size" : 16.0,
@@ -427,6 +450,8 @@
             },
             "CancelButton" : {
                 "Title" : {
+                    "font" : "@fonts.normal",
+                    "font.size" : 16.0,
                     "textColor" : "@colors.topBarText"
                 }
             }

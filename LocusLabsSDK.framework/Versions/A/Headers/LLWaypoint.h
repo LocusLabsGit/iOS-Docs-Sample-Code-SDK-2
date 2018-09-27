@@ -63,14 +63,4 @@
  */
 @property (nonatomic, readonly) NSNumber *securityCheckpoint;
 
-/**
- * LatLng
- */
-@property (nonatomic, readonly) LLLatLng *latLng;
-
-/**
- *  The floorId.
- */
-@property (nonatomic, readonly) NSString *floorId;
-
 @end

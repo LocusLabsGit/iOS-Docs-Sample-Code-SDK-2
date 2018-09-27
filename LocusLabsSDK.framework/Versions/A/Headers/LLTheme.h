@@ -20,6 +20,8 @@
  */
 + (nonnull LLTheme *)defaultTheme;
 
++ (nullable LLTheme *)themeFromPath:(nonnull NSString *)path;
+
 - (nullable NSString *)getPropertyAsString:(nullable NSString *)property;
 - (nullable NSNumber *)getPropertyAsNumber:(nullable NSString *)property;
 - (nullable UIFont *)getPropertyAsFont:(nullable NSString *)property;

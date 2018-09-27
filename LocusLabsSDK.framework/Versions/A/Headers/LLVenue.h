@@ -298,7 +298,7 @@ typedef enum LLPositioningSensorAlgorithm {
  *  @param endPosition   the end point
  *  @param completion    the completion callback that will receive the result
  */
-- (void)timeEstimateFrom:(LLPosition *)startPosition to:(LLPosition *)endPosition completion:(void (^ __nonnull)(NSNumber *))completion;
+- (void)timeEstimateFrom:(LLPosition *)startPosition to:(LLPosition *)endPosition completion:(void (^)(NSNumber *))completion;
 
 /**
  *  Creates a search object for quering the database within this search context.
