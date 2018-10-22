@@ -17,6 +17,7 @@
 		9C1B00282021E3200077CC26 /* LocusLabsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B00272021E3200077CC26 /* LocusLabsSDK.framework */; };
 		9C1B002A2021E3240077CC26 /* LocusLabsSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9C1B00292021E3240077CC26 /* LocusLabsSDK.bundle */; };
 		9CD49998203ADD0B000374B3 /* starbucks_selected.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9CD49996203ADD0B000374B3 /* starbucks_selected.svg */; };
+		9CDF3588217E1CD500607F6D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF3587217E1CD500607F6D /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		9C1B00292021E3240077CC26 /* LocusLabsSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LocusLabsSDK.bundle; path = ../../../LocusLabsSDK.bundle; sourceTree = "<group>"; };
 		9C1B002B2021E3A70077CC26 /* Swift-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridge.h"; sourceTree = "<group>"; };
 		9CD49996203ADD0B000374B3 /* starbucks_selected.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = starbucks_selected.svg; sourceTree = "<group>"; };
+		9CDF3587217E1CD500607F6D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDF3588217E1CD500607F6D /* libz.tbd in Frameworks */,
 				9C1B00282021E3200077CC26 /* LocusLabsSDK.framework in Frameworks */,
 				9C1B00262021E3040077CC26 /* WebKit.framework in Frameworks */,
 				9C1B00242021E3000077CC26 /* SystemConfiguration.framework in Frameworks */,
@@ -85,6 +88,7 @@
 		9C1B00222021E2FF0077CC26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CDF3587217E1CD500607F6D /* libz.tbd */,
 				9C1B00272021E3200077CC26 /* LocusLabsSDK.framework */,
 				9C1B00252021E3040077CC26 /* WebKit.framework */,
 				9C1B00232021E2FF0077CC26 /* SystemConfiguration.framework */,

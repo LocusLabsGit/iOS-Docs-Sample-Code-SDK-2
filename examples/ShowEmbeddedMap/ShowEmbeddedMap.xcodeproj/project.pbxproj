@@ -17,6 +17,7 @@
 		9C1BFFF52021C6260077CC26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BFFF42021C6260077CC26 /* main.m */; };
 		9C1BFFFD2021C6330077CC26 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1BFFFC2021C6330077CC26 /* SystemConfiguration.framework */; };
 		9C1BFFFF2021C6380077CC26 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1BFFFE2021C6380077CC26 /* WebKit.framework */; };
+		9CDF3572217E1B9F00607F6D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF3571217E1B9F00607F6D /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9C1BFFF42021C6260077CC26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9C1BFFFC2021C6330077CC26 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9C1BFFFE2021C6380077CC26 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		9CDF3571217E1B9F00607F6D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDF3572217E1B9F00607F6D /* libz.tbd in Frameworks */,
 				9C1B00012021C6420077CC26 /* LocusLabsSDK.framework in Frameworks */,
 				9C1BFFFF2021C6380077CC26 /* WebKit.framework in Frameworks */,
 				9C1BFFFD2021C6330077CC26 /* SystemConfiguration.framework in Frameworks */,
@@ -87,6 +90,7 @@
 		9C1BFFFB2021C6330077CC26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CDF3571217E1B9F00607F6D /* libz.tbd */,
 				9C1B00002021C6420077CC26 /* LocusLabsSDK.framework */,
 				9C1BFFFE2021C6380077CC26 /* WebKit.framework */,
 				9C1BFFFC2021C6330077CC26 /* SystemConfiguration.framework */,

@@ -17,6 +17,7 @@
 		9CB2CBEF2021AF5E002E8BD7 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB2CBEE2021AF5E002E8BD7 /* WebKit.framework */; };
 		9CB2CBF12021AF80002E8BD7 /* LocusLabsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB2CBF02021AF80002E8BD7 /* LocusLabsSDK.framework */; };
 		9CB2CBF32021AF96002E8BD7 /* LocusLabsSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9CB2CBF22021AF95002E8BD7 /* LocusLabsSDK.bundle */; };
+		9CDF3568217E1AEA00607F6D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF3567217E1AEA00607F6D /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9CB2CBEE2021AF5E002E8BD7 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9CB2CBF02021AF80002E8BD7 /* LocusLabsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocusLabsSDK.framework; path = ../../LocusLabsSDK.framework; sourceTree = "<group>"; };
 		9CB2CBF22021AF95002E8BD7 /* LocusLabsSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LocusLabsSDK.bundle; path = ../../../LocusLabsSDK.bundle; sourceTree = "<group>"; };
+		9CDF3567217E1AEA00607F6D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDF3568217E1AEA00607F6D /* libz.tbd in Frameworks */,
 				9CB2CBF12021AF80002E8BD7 /* LocusLabsSDK.framework in Frameworks */,
 				9CB2CBEF2021AF5E002E8BD7 /* WebKit.framework in Frameworks */,
 				9CB2CBED2021AF59002E8BD7 /* SystemConfiguration.framework in Frameworks */,
@@ -87,6 +90,7 @@
 		9CB2CBEB2021AF59002E8BD7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CDF3567217E1AEA00607F6D /* libz.tbd */,
 				9CB2CBF02021AF80002E8BD7 /* LocusLabsSDK.framework */,
 				9CB2CBEE2021AF5E002E8BD7 /* WebKit.framework */,
 				9CB2CBEC2021AF59002E8BD7 /* SystemConfiguration.framework */,

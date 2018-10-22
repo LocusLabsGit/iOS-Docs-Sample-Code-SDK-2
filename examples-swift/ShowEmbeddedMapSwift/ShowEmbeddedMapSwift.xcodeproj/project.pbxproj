@@ -16,6 +16,7 @@
 		9C1B004E2021E7830077CC26 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B004D2021E7830077CC26 /* WebKit.framework */; };
 		9C1B00502021E78A0077CC26 /* LocusLabsSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9C1B004F2021E78A0077CC26 /* LocusLabsSDK.bundle */; };
 		9C1B00522021E78F0077CC26 /* LocusLabsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B00512021E78F0077CC26 /* LocusLabsSDK.framework */; };
+		9CDF3596217E1D4700607F6D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF3595217E1D4700607F6D /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		9C1B004F2021E78A0077CC26 /* LocusLabsSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LocusLabsSDK.bundle; path = ../../../LocusLabsSDK.bundle; sourceTree = "<group>"; };
 		9C1B00512021E78F0077CC26 /* LocusLabsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocusLabsSDK.framework; path = ../../LocusLabsSDK.framework; sourceTree = "<group>"; };
 		9C1B00532021E7A60077CC26 /* Swift-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridge.h"; sourceTree = "<group>"; };
+		9CDF3595217E1D4700607F6D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDF3596217E1D4700607F6D /* libz.tbd in Frameworks */,
 				9C1B00522021E78F0077CC26 /* LocusLabsSDK.framework in Frameworks */,
 				9C1B004E2021E7830077CC26 /* WebKit.framework in Frameworks */,
 				9C1B004C2021E77F0077CC26 /* SystemConfiguration.framework in Frameworks */,
@@ -82,6 +85,7 @@
 		9C1B004A2021E77F0077CC26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CDF3595217E1D4700607F6D /* libz.tbd */,
 				9C1B00512021E78F0077CC26 /* LocusLabsSDK.framework */,
 				9C1B004D2021E7830077CC26 /* WebKit.framework */,
 				9C1B004B2021E77F0077CC26 /* SystemConfiguration.framework */,

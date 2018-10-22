@@ -18,19 +18,12 @@
 
 /**
  * Designated initializer of LLPositon
- *
- * @param floorId
- * @param latLng
- * @return
  */
 - (instancetype)initWithFloorId:(NSString *)floorId latLng:(LLLatLng *)latLng;
 
 /**
  *
  * Deprecated. Use initWithFloorId:latLng: instead
- * @param floor
- * @param latLng
- * @return
  * @deprecated
  */
 - (id)initWithFloor:(LLFloor *)floor latLng:(LLLatLng *)latLng __deprecated;

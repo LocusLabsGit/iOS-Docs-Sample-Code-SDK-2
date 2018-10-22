@@ -20,6 +20,7 @@
 		9CCADA73213CF2DD00BD2CE1 /* custom_icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CCADA70213CF2DD00BD2CE1 /* custom_icon_1.png */; };
 		9CCADA74213CF2DD00BD2CE1 /* custom_icon_1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CCADA71213CF2DD00BD2CE1 /* custom_icon_1@3x.png */; };
 		9CCADA75213CF2DD00BD2CE1 /* custom_icon_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CCADA72213CF2DD00BD2CE1 /* custom_icon_1@2x.png */; };
+		9CDF3566217E1AD500607F6D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF3565217E1AD500607F6D /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		9CCADA70213CF2DD00BD2CE1 /* custom_icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = custom_icon_1.png; sourceTree = "<group>"; };
 		9CCADA71213CF2DD00BD2CE1 /* custom_icon_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "custom_icon_1@3x.png"; sourceTree = "<group>"; };
 		9CCADA72213CF2DD00BD2CE1 /* custom_icon_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "custom_icon_1@2x.png"; sourceTree = "<group>"; };
+		9CDF3565217E1AD500607F6D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDF3566217E1AD500607F6D /* libz.tbd in Frameworks */,
 				9CB2CBF12021AF80002E8BD7 /* LocusLabsSDK.framework in Frameworks */,
 				9CB2CBEF2021AF5E002E8BD7 /* WebKit.framework in Frameworks */,
 				9CB2CBED2021AF59002E8BD7 /* SystemConfiguration.framework in Frameworks */,
@@ -96,6 +99,7 @@
 		9CB2CBEB2021AF59002E8BD7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CDF3565217E1AD500607F6D /* libz.tbd */,
 				9CB2CBF02021AF80002E8BD7 /* LocusLabsSDK.framework */,
 				9CB2CBEE2021AF5E002E8BD7 /* WebKit.framework */,
 				9CB2CBEC2021AF59002E8BD7 /* SystemConfiguration.framework */,

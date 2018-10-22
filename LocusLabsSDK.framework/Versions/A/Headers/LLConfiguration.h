@@ -30,7 +30,7 @@
 @property (nonatomic) BOOL hours24format;
 
 /**
- * Enable/disable recommended places feature. The default value is <code>NO<code>
+ * Enable/disable recommended places feature. The default value is <code>NO</code>
  */
 @property (nonatomic) BOOL recommendedPlacesEnabled;
 

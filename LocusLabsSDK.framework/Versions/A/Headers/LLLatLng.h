@@ -15,9 +15,6 @@
 
 /**
  * Designated initializer
- * @param lat
- * @param lng
- * @return
  */
 - (instancetype)initWithLat:(NSNumber *)lat lng:(NSNumber *)lng;
 

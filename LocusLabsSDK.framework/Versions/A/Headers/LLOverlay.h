@@ -28,7 +28,6 @@
  * **Deprecated**: use init with no parameters and set map as the last step of overlay configuration"
  *
  * @param map the map this overlay is on
- * @return
  *
  */
 - (instancetype) initWithMap:(LLMap*)map __attribute__((deprecated("use init with no parameters and set map as the last step of overlay configuration")));

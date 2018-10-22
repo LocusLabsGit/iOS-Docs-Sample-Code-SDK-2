@@ -17,6 +17,7 @@
 		9C1B00282021E3200077CC26 /* LocusLabsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B00272021E3200077CC26 /* LocusLabsSDK.framework */; };
 		9C1B002A2021E3240077CC26 /* LocusLabsSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9C1B00292021E3240077CC26 /* LocusLabsSDK.bundle */; };
 		9CD49988203A8016000374B3 /* Localization.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CD4998A203A8016000374B3 /* Localization.strings */; };
+		9CDF3584217E1CB900607F6D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF3583217E1CB900607F6D /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9C1B002B2021E3A70077CC26 /* Swift-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridge.h"; sourceTree = "<group>"; };
 		9CD49989203A8016000374B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localization.strings; sourceTree = "<group>"; };
 		9CD4998B203A8040000374B3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localization.strings; sourceTree = "<group>"; };
+		9CDF3583217E1CB900607F6D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDF3584217E1CB900607F6D /* libz.tbd in Frameworks */,
 				9C1B00282021E3200077CC26 /* LocusLabsSDK.framework in Frameworks */,
 				9C1B00262021E3040077CC26 /* WebKit.framework in Frameworks */,
 				9C1B00242021E3000077CC26 /* SystemConfiguration.framework in Frameworks */,
@@ -86,6 +89,7 @@
 		9C1B00222021E2FF0077CC26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CDF3583217E1CB900607F6D /* libz.tbd */,
 				9C1B00272021E3200077CC26 /* LocusLabsSDK.framework */,
 				9C1B00252021E3040077CC26 /* WebKit.framework */,
 				9C1B00232021E2FF0077CC26 /* SystemConfiguration.framework */,

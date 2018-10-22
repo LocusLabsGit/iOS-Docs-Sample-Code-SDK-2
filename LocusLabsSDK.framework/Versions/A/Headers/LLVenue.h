@@ -63,7 +63,6 @@
  *  @param venue  			the object which performed the navigation
  *  @param navigationPath	the resulting navigation path
  *  @param startPosition 	the start position of the navigation
- *  @param destinations		the array of LLPosition destinations
  */
 - (void)venue:(LLVenue *)venue updatePath:(LLNavigationPath *)navigationPath from:(LLPosition *)startPosition to:(LLPosition *)endPosition;
 
@@ -123,7 +122,6 @@ __attribute__((deprecated("use LLVenueDelegate")))
  *  @param venue  			the object which performed the navigation
  *  @param navigationPath	the resulting navigation path
  *  @param startPosition 	the start position of the navigation
- *  @param destinations		the array of LLPosition destinations
  *
  * **Deprecated**: use LLVenueDelegate
  */
@@ -302,8 +300,6 @@ typedef enum LLPositioningSensorAlgorithm {
 
 /**
  *  Creates a search object for quering the database within this search context.
- *
- *  @param query the query string
  *
  *  @return the LLSearch object
  */

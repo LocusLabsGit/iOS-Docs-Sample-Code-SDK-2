@@ -51,7 +51,7 @@ typedef void (^POICheckinFailureBlock) (NSString *failureTitle, NSString *failur
 
 /**
  * @param poiCode The POI code to use for checking in.
- * @param guesCount number of guests to check in.
+ * @param guestCount number of guests to check in.
  * This method will callback on the block the result of checking in the user.
  */
 - (void)poiCheckin:(NSString*)poiCode guests:(int)guestCount onPOICheckinSuccess:(POICheckinSuccessBlock)success onPOICheckinFailure:(POICheckinFailureBlock)failure;

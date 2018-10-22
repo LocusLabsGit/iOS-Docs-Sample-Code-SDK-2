@@ -18,6 +18,7 @@
 		9CD49983203A7E09000374B3 /* LocusLabsSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9CD49982203A7E09000374B3 /* LocusLabsSDK.bundle */; };
 		9CD49985203A7E15000374B3 /* LocusLabsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD49984203A7E15000374B3 /* LocusLabsSDK.framework */; };
 		9CDE1A102031D4C500C25678 /* Localizations.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE1A122031D4C500C25678 /* Localizations.strings */; };
+		9CDF3560217E1AA000607F6D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF355F217E1AA000607F6D /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		9CD49984203A7E15000374B3 /* LocusLabsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocusLabsSDK.framework; path = ../../LocusLabsSDK.framework; sourceTree = "<group>"; };
 		9CDE1A112031D4C500C25678 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizations.strings; sourceTree = "<group>"; };
 		9CDE1A142031D80000C25678 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizations.strings; sourceTree = "<group>"; };
+		9CDF355F217E1AA000607F6D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDF3560217E1AA000607F6D /* libz.tbd in Frameworks */,
 				9CD49985203A7E15000374B3 /* LocusLabsSDK.framework in Frameworks */,
 				9C1101BE2028B21E009D1ECD /* WebKit.framework in Frameworks */,
 				9C1101BC2028B219009D1ECD /* SystemConfiguration.framework in Frameworks */,
@@ -91,6 +94,7 @@
 		9C1101BA2028B219009D1ECD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CDF355F217E1AA000607F6D /* libz.tbd */,
 				9CD49984203A7E15000374B3 /* LocusLabsSDK.framework */,
 				9C1101BD2028B21E009D1ECD /* WebKit.framework */,
 				9C1101BB2028B219009D1ECD /* SystemConfiguration.framework */,

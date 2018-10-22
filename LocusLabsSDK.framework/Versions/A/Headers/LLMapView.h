@@ -175,7 +175,6 @@
 
 /**
  * Returns floor view for given floor id
- * @param floorId
  * @return floor view
  *
  * **Deprecated**: LLFloorView is deprecated, use floorId for overlays"

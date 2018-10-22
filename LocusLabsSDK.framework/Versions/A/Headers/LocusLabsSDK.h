@@ -10,6 +10,7 @@
 
 #import <LocusLabsSDK/LLAirline.h>
 #import <LocusLabsSDK/LLBeacon.h>
+#import <LocusLabsSDK/LLBeaconDetection.h>
 #import <LocusLabsSDK/LLBuilding.h>
 #import <LocusLabsSDK/LLBuildingInfo.h>
 #import <LocusLabsSDK/LLCircle.h>

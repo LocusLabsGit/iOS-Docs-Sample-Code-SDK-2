@@ -98,7 +98,7 @@
  *
  * The delegate method <code>floor:beaconList:</code> is run too.
  *
- * @param completion
+ * @param completion the callback with list of beacons
  */
 - (void)listBeaconsCompletion:(void (^)(NSArray<LLBeacon *> *beacons))completion;
 

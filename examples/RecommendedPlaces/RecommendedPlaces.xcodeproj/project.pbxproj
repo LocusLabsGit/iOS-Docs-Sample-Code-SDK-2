@@ -16,6 +16,7 @@
 		9C5B94E120105C5000EC7C2D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5B94E020105C5000EC7C2D /* SystemConfiguration.framework */; };
 		9C5B94E320105C5600EC7C2D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C5B94E220105C5600EC7C2D /* WebKit.framework */; };
 		9C5B94E720105CB400EC7C2D /* LocusLabsSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9C5B94E620105CB400EC7C2D /* LocusLabsSDK.bundle */; };
+		9CDF356A217E1B4000607F6D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF3569217E1B4000607F6D /* libz.tbd */; };
 		9CE04E5E20105EB100AE071C /* LocusLabsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE04E5D20105EB100AE071C /* LocusLabsSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		9C5B94E020105C5000EC7C2D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9C5B94E220105C5600EC7C2D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		9C5B94E620105CB400EC7C2D /* LocusLabsSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LocusLabsSDK.bundle; path = ../../../LocusLabsSDK.bundle; sourceTree = "<group>"; };
+		9CDF3569217E1B4000607F6D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		9CE04E5D20105EB100AE071C /* LocusLabsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocusLabsSDK.framework; path = ../../LocusLabsSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CDF356A217E1B4000607F6D /* libz.tbd in Frameworks */,
 				9CE04E5E20105EB100AE071C /* LocusLabsSDK.framework in Frameworks */,
 				9C5B94E320105C5600EC7C2D /* WebKit.framework in Frameworks */,
 				9C5B94E120105C5000EC7C2D /* SystemConfiguration.framework in Frameworks */,
@@ -87,6 +90,7 @@
 		9C5B94DF20105C5000EC7C2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CDF3569217E1B4000607F6D /* libz.tbd */,
 				9CE04E5D20105EB100AE071C /* LocusLabsSDK.framework */,
 				9C5B94E220105C5600EC7C2D /* WebKit.framework */,
 				9C5B94E020105C5000EC7C2D /* SystemConfiguration.framework */,
