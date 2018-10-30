@@ -60,7 +60,6 @@
             // Load the map - note that future map updates will automatically be downloaded by the SDK
             [self.venueDatabase loadVenueAndMap:@"lax" block:^(LLVenue *venue, LLMap *map, LLFloor *floor, LLMarker *marker) {
                 
-                self.mapView.map = map;
                 self.venue = venue;
             }];
         }

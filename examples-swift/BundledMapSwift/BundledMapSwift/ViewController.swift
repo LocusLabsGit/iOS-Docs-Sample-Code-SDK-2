@@ -53,7 +53,6 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
                 // Load the map - note that future map updates will automatically be downloaded by the SDK
                 self.venueDatabase.loadVenueAndMap("lax") { (_venue: LLVenue?, _map: LLMap?, _floor: LLFloor?, _marker: LLMarker?) in
                     
-                    self.mapView?.map = _map
                     self.venue = _venue
                 }
             }   

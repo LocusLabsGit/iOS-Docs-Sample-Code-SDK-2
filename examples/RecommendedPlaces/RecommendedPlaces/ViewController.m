@@ -45,7 +45,6 @@
     // Load the venue LAX async
     [self.venueDatabase loadVenueAndMap:@"lax" block:^(LLVenue *venue, LLMap *map, LLFloor *floor, LLMarker *marker) {
         
-        self.mapView.map = map;
         self.venue = venue;
     }];
 }

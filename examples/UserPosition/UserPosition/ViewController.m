@@ -44,9 +44,7 @@
     // Load the venue LAX async
     [self.venueDatabase loadVenueAndMap:@"lhr" block:^(LLVenue *venue, LLMap *map, LLFloor *floor, LLMarker *marker) {
         
-        self.mapView.map = map;
         self.venue = venue;
-        self.mapView.positioningEnabled = YES;
     }];
 }
 
@@ -67,6 +65,7 @@
 - (void)mapViewReady:(LLMapView *)mapView {
     
     // The map is ready to be used in calls e.g. zooming, showing poi, etc.
+    self.mapView.positioningEnabled = YES;
 }
 
 @end

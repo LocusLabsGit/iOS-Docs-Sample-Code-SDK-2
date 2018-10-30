@@ -44,7 +44,6 @@
     // Load the venue LAX async
     [self.venueDatabase loadVenueAndMap:@"lax" block:^(LLVenue *venue, LLMap *map, LLFloor *floor, LLMarker *marker) {
         
-        self.mapView.map = map;
         self.venue = venue;
         
         // Get an instance of the POI Database and register as its delegate

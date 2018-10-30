@@ -38,9 +38,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         // Load the venue LAX async
         venueDatabase.loadVenueAndMap("lax") { (_venue: LLVenue?, _map: LLMap?, _floor: LLFloor?, _marker: LLMarker?) in
             
-            self.mapView?.map = _map
             self.venue = _venue
-            self.mapView?.positioningEnabled = true
         }
     }
 
@@ -77,6 +75,8 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     }
     
     func mapViewReady(_ mapView: LLMapView!) {
+        
+        mapView?.positioningEnabled = true
         
         // Set the navigation source to internal & send timed navigation points
         let algorithm = NSNumber(value: Int8(LLPositioningSensorAlgorithmExternal.rawValue))

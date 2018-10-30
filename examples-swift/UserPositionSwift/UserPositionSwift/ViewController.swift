@@ -36,9 +36,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         // Load the venue LAX async
         venueDatabase.loadVenueAndMap("lax") { (_venue: LLVenue?, _map: LLMap?, _floor: LLFloor?, _marker: LLMarker?) in
             
-            self.mapView?.map = _map
             self.venue = _venue
-            self.mapView?.positioningEnabled = true
         }
     }
     
@@ -57,6 +55,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     func mapViewReady(_ mapView: LLMapView!) {
         
         // The map is ready to be used in calls e.g. zooming, showing poi, etc.
+        mapView?.positioningEnabled = true
     }
 }
 

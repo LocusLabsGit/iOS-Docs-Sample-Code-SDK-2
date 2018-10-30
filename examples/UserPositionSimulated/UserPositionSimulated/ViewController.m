@@ -44,9 +44,7 @@
     // Load the venue LAX async
     [self.venueDatabase loadVenueAndMap:@"lax" block:^(LLVenue *venue, LLMap *map, LLFloor *floor, LLMarker *marker) {
         
-        self.mapView.map = map;
         self.venue = venue;
-        self.mapView.positioningEnabled = YES;
     }];
 }
 
@@ -86,6 +84,8 @@
 
 - (void)mapViewReady:(LLMapView *)mapView {
 
+    self.mapView.positioningEnabled = YES;
+    
     // Set the navigation source to internal & send timed navigation points
     [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_SET_POSITIONING_SENSOR_ALGORITHM
                                                         object:nil
