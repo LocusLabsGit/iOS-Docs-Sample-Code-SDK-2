@@ -48,7 +48,7 @@
 @property (nonatomic, readonly) NSString *url;
 
 /**
- *  The visible value to display for the URL property. This could be the domain name or a proper name. Absence of this property will display the URL as "Web Site".
+ *  The visible value to display for the URL property. This could be the domain name or a proper name. Absence of this property will display the URL as "Website".
  */
 @property (nonatomic, readonly) NSString *urlDisplay;
 

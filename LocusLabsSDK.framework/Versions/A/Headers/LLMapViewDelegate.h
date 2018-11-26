@@ -13,6 +13,7 @@
 @class LLLatLng;
 @class LLPosition;
 @class LLPoint;
+@class LLPOI;
 
 typedef enum _LLMapViewMode
 {
@@ -114,6 +115,13 @@ typedef NS_ENUM(NSInteger, LLMapViewPresentationContext)
 - (void)mapViewDidClickBack:(LLMapView *)mapView;
 - (void)mapView:(LLMapView *)mapView floorChanged:(NSString *)floorId;
 - (void)mapView:(LLMapView *)mapView modeChanged:(LLMapViewMode)mode;
+
+/**
+ * Provide an alternate marker icon URL for the LLMapView to use for specific POIs.
+ * @param mapView the mapView that generated the event
+ * @param poi     the POI
+ */
+- (NSString *)mapView:(LLMapView *)mapView markerIconUrlForPOI:(LLPOI *)poi;
 
 /**
  * Provide an alternate marker icon URL for the LLMapView to use for specific POIs.

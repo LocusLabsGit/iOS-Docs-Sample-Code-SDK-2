@@ -31,9 +31,17 @@
 @interface LLMapView : UIView
 
 /**
- *  The map to render.
+ *  Set the map to render.
+ *
+ * **Deprecated**: Setting the map property is deprecated and not fully supported. To display a map view create [LLVenueDatabase venueDatabaseWithMapView:]
+ * and use [LLVenueDatabase loadVenueAndMap:block:] or [LLVenueDatabase loadVenueAndMap:initialSearch:iconUrl:block:]. This will configure the LLMapView map properly.
  */
-@property (strong,nonatomic) LLMap *map;
+- (void)setMap:(LLMap *)map;
+
+/**
+ *  The rendered map.
+ */
+- (LLMap *)map;
 
 // TODO [api] document as it's probably used in 1.6
 @property (strong,nonatomic) UILabel *backLabel;
@@ -243,6 +251,14 @@
 - (void) runMemoryTests;
 
 /**
+ * If set to YES, whenever the user is first located the follow me mode will be enabled and the map will be centered on the user position.
+ * If set to NO, there will be no jump to user position when it's first found, but user will be still able to enable follow me mode manually.
+ *
+ * Default is YES.
+ */
+@property (nonatomic) BOOL startInFollowMeMode;
+
+/**
  * Toggles the use of positioning to display the user's current position on the map.  Default is FALSE.
  */
 @property (nonatomic) BOOL positioningEnabled;
@@ -257,6 +273,11 @@
  * Hide/show the bottom bar.  Default is NO.
  */
 @property (nonatomic) BOOL bottomBarHidden;
+
+/**
+ * Hide/show the recommended places buttons.  Default is NO.
+ */
+@property (nonatomic) BOOL recommendedPlacesHidden;
 
 /**
  * Loading map state.

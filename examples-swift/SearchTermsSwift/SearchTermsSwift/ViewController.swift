@@ -54,7 +54,17 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         circle.position = position
         circle.fillColor = color
         circle.radius = radius as NSNumber
-        circle.map = mapView?.map
+        circle.map = mapView?.map()
+    }
+    
+    func performANDSearch() {
+        
+        search?.multiTermSearch(["Beer","Burger"])
+    }
+    
+    func performORSearch() {
+        
+        search?.search(withTerms: ["Beer","Burger"])
     }
     
     // MARK: Delegates - LLVenueDatabase
@@ -73,11 +83,23 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     
     func mapViewReady(_ mapView: LLMapView!) {
         
-        // Perform a search for all POIs that match either Sandwich or Burger
-        search?.search(withTerms: ["Sandwich", "Burger"])
+        // Perform a search for all POIs that match either Beer OR Burger
+        performORSearch()
+        
+        // Perform a search for all POIs that match Beer AND Burger
+        //performANDSearch()
     }
     
     // MARK: Delegates - LLSearch
+    func search(_ search: LLSearch!, multiTermSearchResults searchResults: LLMultiTermSearchResults!) {
+        
+        for searchResult in searchResults.results as! [LLSearchResult] {
+            
+            let position = searchResult.position
+            createCircle(position: position!, radius: 10, color: UIColor.blue)
+        }
+    }
+    
     func search(withTerms search: LLSearch!, results searchResults: LLSearchResults!) {
         
         for searchResult in searchResults.results as! [LLSearchResult] {

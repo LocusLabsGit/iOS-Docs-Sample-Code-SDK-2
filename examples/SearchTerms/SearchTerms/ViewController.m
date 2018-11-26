@@ -16,6 +16,8 @@
 @property (nonatomic, strong) LLSearch          *search;
 
 - (void)createCircleWithPosition:(LLPosition *)position withRadius:(NSNumber*)radius andColor:(UIColor*)color;
+- (void)performANDSearch;
+- (void)performORSearch;
 
 @end
 
@@ -62,6 +64,16 @@
     circle.map = self.mapView.map;
 }
 
+- (void)performANDSearch {
+
+    [self.search multiTermSearch:@[@"Beer", @"Burger"]];
+}
+
+- (void)performORSearch {
+    
+    [self.search searchWithTerms:@[@"Beer", @"Burger"]];
+}
+
 #pragma mark Delegates - LLVenueDatabase
 
 - (void)venueDatabase:(LLVenueDatabase *)venueDatabase venueLoadFailed:(NSString *)venueId code:(LLDownloaderError)errorCode message:(NSString *)message {
@@ -78,14 +90,26 @@
 
 - (void)mapViewReady:(LLMapView *)mapView {
     
-    // Perform a search for all POIs that match either Sandwich or Burger
-    [self.search searchWithTerms:@[@"Sandwich", @"Burger"]];
+    // Perform a search for all POIs that match either Beer OR Burger
+    [self performORSearch];
+    
+    // Perform a search for all POIs that match Beer AND Burger
+    //[self performANDSearch];
 }
 
 #pragma mark Delegates - LLSearch
 
-- (void)searchWithTerms:(LLSearch *)search results:(LLSearchResults *)searchResults {
+- (void)search:(LLSearch *)search multiTermSearchResults:(LLMultiTermSearchResults *)searchResults {
     
+    //print("count",searchResults.results.count)
+    for (LLSearchResult *searchResult in searchResults.results) {
+        
+        [self createCircleWithPosition:searchResult.position withRadius:@10 andColor:[UIColor blueColor]];
+    }
+}
+
+- (void)searchWithTerms:(LLSearch *)search results:(LLSearchResults *)searchResults {
+    //print("count",searchResults.results.count)
     for (LLSearchResult *searchResult in searchResults.results) {
         
         [self createCircleWithPosition:searchResult.position withRadius:@10 andColor:[UIColor blueColor]];

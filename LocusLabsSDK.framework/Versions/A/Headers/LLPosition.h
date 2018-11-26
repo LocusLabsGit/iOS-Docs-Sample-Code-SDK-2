@@ -39,7 +39,7 @@
  *
  * **Deprecated**: use nearVenue
  */
-@property (retain,nonatomic) NSNumber *nearAirport DEPRECATED_MSG_ATTRIBUTE("user nearVenue");
+@property (retain,nonatomic) NSNumber *nearAirport DEPRECATED_MSG_ATTRIBUTE("use nearVenue");
 
 /**
  *  Boolean which is true if the position within the proximity of a venue.

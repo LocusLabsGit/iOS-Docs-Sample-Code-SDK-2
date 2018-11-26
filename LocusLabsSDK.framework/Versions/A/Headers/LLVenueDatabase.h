@@ -210,8 +210,9 @@ typedef IsVenueAvailableOnDeviceBlock IsAirportAvailableOnDeviceBlock;
  * **Deprecated**: use venueDatabase
  */
 + (LLVenueDatabase *)airportDatabase __attribute__((deprecated("use venueDatabase")));
+
 /**
- *  Create an instance of LLVenueDatabase
+ *  Create an instance of LLVenueDatabase to operate on a venue in a "headless" mode = if no map view is to be displayed.
  *
  *  @return the new venue database object
  */
@@ -226,7 +227,7 @@ typedef IsVenueAvailableOnDeviceBlock IsAirportAvailableOnDeviceBlock;
  */
 + (LLVenueDatabase *)airportDatabaseWithMapView:(LLMapView*)mapView;
 /**
- *  Create an instance of LLVenueDatabase for a specific MapView
+ *  Create an instance of LLVenueDatabase for a specific LLMapView
  *
  *  @return the new venue database object
  */
@@ -259,18 +260,22 @@ typedef IsVenueAvailableOnDeviceBlock IsAirportAvailableOnDeviceBlock;
  *
  *  @param venueId identifies the venue to load
  *
- * **Deprecated**: use loadVenue:
+ * **Deprecated**: use loadVenueAndMap:
  */
-- (void)loadAirport:(NSString *)venueId __attribute__((deprecated("use loadVenue:")));
+- (void)loadAirport:(NSString *)venueId __attribute__((deprecated("use loadVenueAndMap:")));
 
 /**
  *  Load a specific venue.  The result will be returned to the delegate via venueDatabase:venueLoaded:
  *  Only 4 concurrent loadVenues can be handled simultaneously.  Doing more than 4 could result in load failures.
  *
+ *  **Warning**: this method should only be used for "headless" mode of interaction with the SDK. So it only should be used
+ *  if **LLMapView is not used**. If the intention is to display the map in the LLMapView use [LLVenueDatabase loadVenueAndMap:block:] or
+ *  [LLVenueDatabase loadVenueAndMap:initialSearch:iconUrl:block:] instead.
+ *  Using this method when LLVenueDatabase was initiated with [LLVenueDatabase venueDatabaseWithMapView:] is not supported.
+ *
  *  @param venueId identifies the venue to load
  */
-- (void)loadVenue:(NSString *)venueId;
-
+- (void)loadVenue:(NSString *)venueId __attribute__((deprecated("use loadVenueAndMap:")));
 
 /**
  * Has the map data for the specified venueId already been downloaded to the phone?
@@ -320,6 +325,9 @@ typedef LLVenueDownloadConstraint LLAirportDownloadConstraint;
 - (void)loadVenueAndMap:(NSString *)venueId initialSearch:(NSString *)initialSearch iconUrl:(NSString*)iconUrl block:(VenueAndMapLoadedBlock)block;
 
 /**
+ *  Load a specific venue.  The result will be returned to the delegate via venueDatabase:venueLoaded:
+ *  Only 4 concurrent loadVenues can be handled simultaneously.  Doing more than 4 could result in load failures.
+ *
  *  @param venueId identifies the venue to load; zooms to venue's default center and radius
  */
 - (void)loadVenueAndMap:(NSString *)venueId block:(VenueAndMapLoadedBlock)block;
