@@ -91,14 +91,10 @@
     //self.mapView.backButtonText = NSLocalizedString(@"Back", nil);
     
     // Change the search bar background color
-    //[self.mapView setSearchBarBackgroundColor:[UIColor orangeColor]];
+    // [self.mapView setSearchBarBackgroundColor:[UIColor orangeColor]];
     
     // Change the bottom bar background and button title colors
-    //self.mapView.theme = [self themeWithCustomBottomBar];
-    
-    LLThemeBuilder *themeBuilder = [LLThemeBuilder themeBuilderWithTheme:[LLTheme defaultTheme]];
-    [themeBuilder setProperty:@"MapView.TopBar.SearchBar.Text.textColor" value:[UIColor magentaColor]];
-    self.mapView.theme = themeBuilder.theme;
+    self.mapView.theme = [self themeWithCustomBottomBar];
 }
 
 @end

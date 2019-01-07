@@ -76,8 +76,6 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     
     func mapViewReady(_ mapView: LLMapView!) {
         
-        mapView?.positioningEnabled = true
-        
         // Set the navigation source to internal & send timed navigation points
         let algorithm = NSNumber(value: Int8(LLPositioningSensorAlgorithmExternal.rawValue))
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: NOTIFICATION_SET_POSITIONING_SENSOR_ALGORITHM), object: nil, userInfo: ["positioningSensorAlgorithm": algorithm])

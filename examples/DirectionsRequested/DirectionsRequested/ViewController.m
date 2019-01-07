@@ -52,8 +52,8 @@
 
 #pragma mark Delegates - LLVenueDatabase
 
-- (void)venueDatabase:(LLVenueDatabase *)venueDatabase airportLoadFailed:(NSString *)venueId code:(LLDownloaderError)errorCode message:(NSString *)message {
-    
+- (void)venueDatabase:(LLVenueDatabase *)venueDatabase venueLoadFailed:(NSString *)venueId code:(LLDownloaderError)errorCode message:(NSString *)message {
+
     // Handle failures here
 }
 

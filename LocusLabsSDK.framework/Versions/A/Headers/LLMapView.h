@@ -31,17 +31,12 @@
 @interface LLMapView : UIView
 
 /**
- *  Set the map to render.
+ *  The map to render.
  *
  * **Deprecated**: Setting the map property is deprecated and not fully supported. To display a map view create [LLVenueDatabase venueDatabaseWithMapView:]
  * and use [LLVenueDatabase loadVenueAndMap:block:] or [LLVenueDatabase loadVenueAndMap:initialSearch:iconUrl:block:]. This will configure the LLMapView map properly.
  */
-- (void)setMap:(LLMap *)map;
-
-/**
- *  The rendered map.
- */
-- (LLMap *)map;
+@property (strong, nonatomic) LLMap *map;
 
 // TODO [api] document as it's probably used in 1.6
 @property (strong,nonatomic) UILabel *backLabel;
@@ -259,7 +254,7 @@
 @property (nonatomic) BOOL startInFollowMeMode;
 
 /**
- * Toggles the use of positioning to display the user's current position on the map.  Default is FALSE.
+ * Toggles the use of positioning to display the user's current position on the map.  Default is YES.
  */
 @property (nonatomic) BOOL positioningEnabled;
 @property (nonatomic) BOOL shouldShowClosestBeacon;

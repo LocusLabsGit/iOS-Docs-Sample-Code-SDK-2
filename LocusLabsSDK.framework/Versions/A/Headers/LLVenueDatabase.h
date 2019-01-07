@@ -275,7 +275,7 @@ typedef IsVenueAvailableOnDeviceBlock IsAirportAvailableOnDeviceBlock;
  *
  *  @param venueId identifies the venue to load
  */
-- (void)loadVenue:(NSString *)venueId __attribute__((deprecated("use loadVenueAndMap:")));
+- (void)loadVenue:(NSString *)venueId;
 
 /**
  * Has the map data for the specified venueId already been downloaded to the phone?

@@ -31,7 +31,8 @@ typedef NS_ENUM(NSInteger, LLMapViewPresentationContext)
 {
 	LLMapViewPresentationContextAlert,
 	LLMapViewPresentationContextCheckIn,
-	LLMapViewPresentationContextVouchers
+	LLMapViewPresentationContextVouchers,
+	LLMapViewPresentationContextPOI
 };
 
 @protocol LLMapViewDelegate <NSObject>

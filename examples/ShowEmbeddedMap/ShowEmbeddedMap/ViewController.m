@@ -28,7 +28,7 @@
     [LLLocusLabs setup].accountId = @"A11F4Y6SZRXH4X";
     
     // Create a new LLMapView, register as its delegate and add it as a subview
-    LLMapView *mapView = [[LLMapView alloc] initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, 220)];
+    LLMapView *mapView = [[LLMapView alloc] initWithFrame:CGRectMake(0, 50, self.view.bounds.size.width, 220)];
     mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     mapView.delegate = self;
     [self.view addSubview:mapView];

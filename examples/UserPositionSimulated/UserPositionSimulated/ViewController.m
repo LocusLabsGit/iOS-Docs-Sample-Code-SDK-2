@@ -83,8 +83,6 @@
 }
 
 - (void)mapViewReady:(LLMapView *)mapView {
-
-    self.mapView.positioningEnabled = YES;
     
     // Set the navigation source to internal & send timed navigation points
     [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_SET_POSITIONING_SENSOR_ALGORITHM
