@@ -12,12 +12,23 @@
 		9C1B003E2021E7760077CC26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1B003C2021E7760077CC26 /* Main.storyboard */; };
 		9C1B00402021E7760077CC26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1B003F2021E7760077CC26 /* Assets.xcassets */; };
 		9C1B00432021E7760077CC26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1B00412021E7760077CC26 /* LaunchScreen.storyboard */; };
-		9C1B004C2021E77F0077CC26 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B004B2021E77F0077CC26 /* SystemConfiguration.framework */; };
-		9C1B004E2021E7830077CC26 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B004D2021E7830077CC26 /* WebKit.framework */; };
-		9C1B00502021E78A0077CC26 /* LocusLabsSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9C1B004F2021E78A0077CC26 /* LocusLabsSDK.bundle */; };
 		9C1B00522021E78F0077CC26 /* LocusLabsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B00512021E78F0077CC26 /* LocusLabsSDK.framework */; };
-		9CDF3596217E1D4700607F6D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF3595217E1D4700607F6D /* libz.tbd */; };
+		9C4B2C3E21EF0FF200D4A643 /* LocusLabsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B00512021E78F0077CC26 /* LocusLabsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9C4B2C3F21EF0FF200D4A643 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9C4B2C3E21EF0FF200D4A643 /* LocusLabsSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9C1B00352021E7760077CC26 /* ShowEmbeddedMapSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowEmbeddedMapSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,12 +38,8 @@
 		9C1B003F2021E7760077CC26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C1B00422021E7760077CC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C1B00442021E7760077CC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C1B004B2021E77F0077CC26 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		9C1B004D2021E7830077CC26 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		9C1B004F2021E78A0077CC26 /* LocusLabsSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LocusLabsSDK.bundle; path = ../../../LocusLabsSDK.bundle; sourceTree = "<group>"; };
 		9C1B00512021E78F0077CC26 /* LocusLabsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocusLabsSDK.framework; path = ../../LocusLabsSDK.framework; sourceTree = "<group>"; };
 		9C1B00532021E7A60077CC26 /* Swift-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridge.h"; sourceTree = "<group>"; };
-		9CDF3595217E1D4700607F6D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,10 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDF3596217E1D4700607F6D /* libz.tbd in Frameworks */,
 				9C1B00522021E78F0077CC26 /* LocusLabsSDK.framework in Frameworks */,
-				9C1B004E2021E7830077CC26 /* WebKit.framework in Frameworks */,
-				9C1B004C2021E77F0077CC26 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +80,6 @@
 				9C1B003F2021E7760077CC26 /* Assets.xcassets */,
 				9C1B00412021E7760077CC26 /* LaunchScreen.storyboard */,
 				9C1B00442021E7760077CC26 /* Info.plist */,
-				9C1B004F2021E78A0077CC26 /* LocusLabsSDK.bundle */,
 				9C1B00532021E7A60077CC26 /* Swift-Bridge.h */,
 			);
 			path = ShowEmbeddedMapSwift;
@@ -85,10 +88,7 @@
 		9C1B004A2021E77F0077CC26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9CDF3595217E1D4700607F6D /* libz.tbd */,
 				9C1B00512021E78F0077CC26 /* LocusLabsSDK.framework */,
-				9C1B004D2021E7830077CC26 /* WebKit.framework */,
-				9C1B004B2021E77F0077CC26 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -103,6 +103,8 @@
 				9C1B00312021E7760077CC26 /* Sources */,
 				9C1B00322021E7760077CC26 /* Frameworks */,
 				9C1B00332021E7760077CC26 /* Resources */,
+				9C4B2C3F21EF0FF200D4A643 /* Embed Frameworks */,
+				9C4B2C4021EF0FFA00D4A643 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -120,11 +122,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = LocusLabs;
 				TargetAttributes = {
 					9C1B00342021E7760077CC26 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -153,13 +156,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C1B00432021E7760077CC26 /* LaunchScreen.storyboard in Resources */,
-				9C1B00502021E78A0077CC26 /* LocusLabsSDK.bundle in Resources */,
 				9C1B00402021E7760077CC26 /* Assets.xcassets in Resources */,
 				9C1B003E2021E7760077CC26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C4B2C4021EF0FFA00D4A643 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Signs a framework with the provided identity\ncode_sign() {\n# Use the current code_sign_identitiy\necho \"Code Signing $1 with Identity ${EXPANDED_CODE_SIGN_IDENTITY_NAME}\"\necho \"/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements $1\"\n/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"$1\"\n}\n\n# Set working directory to product’s embedded frameworks \ncd \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\nif [ \"$ACTION\" = \"install\" ]; then\necho \"Copy .bcsymbolmap files to .xcarchive\"\nfind . -name '*.bcsymbolmap' -type f -exec mv {} \"${CONFIGURATION_BUILD_DIR}\" \\;\nelse\n# Delete *.bcsymbolmap files from framework bundle unless archiving\nfind . -name '*.bcsymbolmap' -type f -exec rm -rf \"{}\" +\\;\nfi\n\necho \"Stripping frameworks\"\n\nfor file in $(find . -type f -perm +111); do\n# Skip non-dynamic libraries\nif ! [[ \"$(file \"$file\")\" == *\"dynamically linked shared library\"* ]]; then\ncontinue\nfi\n# Get architectures for current file\narchs=\"$(lipo -info \"${file}\" | rev | cut -d ':' -f1 | rev)\"\nstripped=\"\"\nfor arch in $archs; do\nif ! [[ \"${VALID_ARCHS}\" == *\"$arch\"* ]]; then\n# Strip non-valid architectures in-place\nlipo -remove \"$arch\" -output \"$file\" \"$file\" || exit 1\nstripped=\"$stripped $arch\"\nfi\ndone\nif [[ \"$stripped\" != \"\" ]]; then\necho \"Stripped $file of architectures:$stripped\"\nif [ \"${CODE_SIGNING_REQUIRED}\" == \"YES\" ]; then\ncode_sign \"${file}\"\nfi\nfi\ndone\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9C1B00312021E7760077CC26 /* Sources */ = {
@@ -207,6 +230,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -214,6 +238,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -264,6 +289,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -271,6 +297,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -316,7 +343,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.locuslabs.ShowEmbeddedMapSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./$PROJECT_NAME/Swift-Bridge.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -337,7 +364,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.locuslabs.ShowEmbeddedMapSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./$PROJECT_NAME/Swift-Bridge.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

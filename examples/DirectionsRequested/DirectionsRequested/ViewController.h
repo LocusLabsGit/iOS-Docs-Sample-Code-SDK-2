@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <LocusLabsSDK/LocusLabsSDK.h>
 
-@interface ViewController : UIViewController <LLAirportDatabaseDelegate, LLMapViewDelegate ,LLNavigationDelegate>
+@interface ViewController : UIViewController <LLVenueDatabaseDelegate, LLMapViewDelegate ,LLNavigationDelegate>
 
 
 @end

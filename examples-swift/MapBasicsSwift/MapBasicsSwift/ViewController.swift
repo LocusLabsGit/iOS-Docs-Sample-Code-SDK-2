@@ -49,7 +49,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     
     private func positionAndZoomMap() {
         
-        // Set the center of the map to Terminal 6 and zoom in. You can find lat/lng etc. either by logging into your VMS, or using the "didTapPOI" and "didTapAtPosition" delegate calls from LLMapView
+        // Set the center of the map to Terminal 6 and zoom in. You can find lat/lng etc. by implementing the "didTapPOI" and "didTapAtPosition" delegate calls from LLMapView
         mapView?.mapCenter = LLLatLng(lat: 33.941384, lng: -118.402057)
         mapView?.mapRadius = 190.0
         

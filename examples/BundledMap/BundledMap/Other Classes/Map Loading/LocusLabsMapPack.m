@@ -112,7 +112,7 @@
         return;
     }
 
-    LLLogDebug(@"starting install");
+    //LLLogDebug(@"starting install");
     [[NVHTarGzip sharedInstance] unTarGzipFileAtPath:self.path toPath:self.cache.cachePath completion:^(NSError* error) {
         if (error != nil) {
             completionBlock(false,error);

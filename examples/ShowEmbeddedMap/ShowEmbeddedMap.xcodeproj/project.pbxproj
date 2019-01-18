@@ -7,22 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C1B00012021C6420077CC26 /* LocusLabsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B00002021C6420077CC26 /* LocusLabsSDK.framework */; };
-		9C1B00032021C6470077CC26 /* LocusLabsSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9C1B00022021C6470077CC26 /* LocusLabsSDK.bundle */; };
 		9C1BFFE72021C6260077CC26 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BFFE62021C6260077CC26 /* AppDelegate.m */; };
 		9C1BFFEA2021C6260077CC26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BFFE92021C6260077CC26 /* ViewController.m */; };
 		9C1BFFED2021C6260077CC26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BFFEB2021C6260077CC26 /* Main.storyboard */; };
 		9C1BFFEF2021C6260077CC26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BFFEE2021C6260077CC26 /* Assets.xcassets */; };
 		9C1BFFF22021C6260077CC26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1BFFF02021C6260077CC26 /* LaunchScreen.storyboard */; };
 		9C1BFFF52021C6260077CC26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1BFFF42021C6260077CC26 /* main.m */; };
-		9C1BFFFD2021C6330077CC26 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1BFFFC2021C6330077CC26 /* SystemConfiguration.framework */; };
-		9C1BFFFF2021C6380077CC26 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1BFFFE2021C6380077CC26 /* WebKit.framework */; };
-		9CDF3572217E1B9F00607F6D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF3571217E1B9F00607F6D /* libz.tbd */; };
+		9C4B2BC921EF053500D4A643 /* LocusLabsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B00002021C6420077CC26 /* LocusLabsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9C4B2BCA21EF053500D4A643 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9C4B2BC921EF053500D4A643 /* LocusLabsSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C4B2BCB21EF054200D4A643 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9C1B00002021C6420077CC26 /* LocusLabsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocusLabsSDK.framework; path = ../../LocusLabsSDK.framework; sourceTree = "<group>"; };
-		9C1B00022021C6470077CC26 /* LocusLabsSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LocusLabsSDK.bundle; path = ../../../LocusLabsSDK.bundle; sourceTree = "<group>"; };
 		9C1BFFE22021C6260077CC26 /* ShowEmbeddedMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowEmbeddedMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1BFFE52021C6260077CC26 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9C1BFFE62021C6260077CC26 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,9 +51,6 @@
 		9C1BFFF12021C6260077CC26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C1BFFF32021C6260077CC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C1BFFF42021C6260077CC26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9C1BFFFC2021C6330077CC26 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		9C1BFFFE2021C6380077CC26 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		9CDF3571217E1B9F00607F6D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,10 +58,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDF3572217E1B9F00607F6D /* libz.tbd in Frameworks */,
-				9C1B00012021C6420077CC26 /* LocusLabsSDK.framework in Frameworks */,
-				9C1BFFFF2021C6380077CC26 /* WebKit.framework in Frameworks */,
-				9C1BFFFD2021C6330077CC26 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +93,6 @@
 				9C1BFFF02021C6260077CC26 /* LaunchScreen.storyboard */,
 				9C1BFFF32021C6260077CC26 /* Info.plist */,
 				9C1BFFF42021C6260077CC26 /* main.m */,
-				9C1B00022021C6470077CC26 /* LocusLabsSDK.bundle */,
 			);
 			path = ShowEmbeddedMap;
 			sourceTree = "<group>";
@@ -90,10 +100,7 @@
 		9C1BFFFB2021C6330077CC26 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9CDF3571217E1B9F00607F6D /* libz.tbd */,
 				9C1B00002021C6420077CC26 /* LocusLabsSDK.framework */,
-				9C1BFFFE2021C6380077CC26 /* WebKit.framework */,
-				9C1BFFFC2021C6330077CC26 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,6 +115,9 @@
 				9C1BFFDE2021C6260077CC26 /* Sources */,
 				9C1BFFDF2021C6260077CC26 /* Frameworks */,
 				9C1BFFE02021C6260077CC26 /* Resources */,
+				9C4B2BCA21EF053500D4A643 /* Embed Frameworks */,
+				9C4B2BCB21EF054200D4A643 /* CopyFiles */,
+				9C4B2BCC21EF054600D4A643 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -124,7 +134,7 @@
 		9C1BFFDA2021C6260077CC26 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = LocusLabs;
 				TargetAttributes = {
 					9C1BFFE12021C6260077CC26 = {
@@ -157,13 +167,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C1BFFF22021C6260077CC26 /* LaunchScreen.storyboard in Resources */,
-				9C1B00032021C6470077CC26 /* LocusLabsSDK.bundle in Resources */,
 				9C1BFFEF2021C6260077CC26 /* Assets.xcassets in Resources */,
 				9C1BFFED2021C6260077CC26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C4B2BCC21EF054600D4A643 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Signs a framework with the provided identity\ncode_sign() {\n# Use the current code_sign_identitiy\necho \"Code Signing $1 with Identity ${EXPANDED_CODE_SIGN_IDENTITY_NAME}\"\necho \"/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements $1\"\n/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"$1\"\n}\n\n# Set working directory to product’s embedded frameworks \ncd \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\nif [ \"$ACTION\" = \"install\" ]; then\necho \"Copy .bcsymbolmap files to .xcarchive\"\nfind . -name '*.bcsymbolmap' -type f -exec mv {} \"${CONFIGURATION_BUILD_DIR}\" \\;\nelse\n# Delete *.bcsymbolmap files from framework bundle unless archiving\nfind . -name '*.bcsymbolmap' -type f -exec rm -rf \"{}\" +\\;\nfi\n\necho \"Stripping frameworks\"\n\nfor file in $(find . -type f -perm +111); do\n# Skip non-dynamic libraries\nif ! [[ \"$(file \"$file\")\" == *\"dynamically linked shared library\"* ]]; then\ncontinue\nfi\n# Get architectures for current file\narchs=\"$(lipo -info \"${file}\" | rev | cut -d ':' -f1 | rev)\"\nstripped=\"\"\nfor arch in $archs; do\nif ! [[ \"${VALID_ARCHS}\" == *\"$arch\"* ]]; then\n# Strip non-valid architectures in-place\nlipo -remove \"$arch\" -output \"$file\" \"$file\" || exit 1\nstripped=\"$stripped $arch\"\nfi\ndone\nif [[ \"$stripped\" != \"\" ]]; then\necho \"Stripped $file of architectures:$stripped\"\nif [ \"${CODE_SIGNING_REQUIRED}\" == \"YES\" ]; then\ncode_sign \"${file}\"\nfi\nfi\ndone\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9C1BFFDE2021C6260077CC26 /* Sources */ = {
@@ -212,6 +242,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -219,6 +250,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -267,6 +299,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -274,6 +307,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

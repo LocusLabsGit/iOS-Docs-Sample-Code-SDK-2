@@ -12,7 +12,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
 
     // Vars
     var venueDatabase:      LLVenueDatabase!
-    var venue:             LLVenue?
+    var venue:              LLVenue?
     var floor:              LLFloor?
     var mapView:            LLMapView?
     var poiDatabase:        LLPOIDatabase?

@@ -54,7 +54,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         circle.position = position
         circle.fillColor = color
         circle.radius = radius as NSNumber
-        circle.map = mapView?.map()
+        circle.map = mapView?.map
     }
     
     func performANDSearch() {

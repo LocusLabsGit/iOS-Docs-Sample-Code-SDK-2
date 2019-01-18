@@ -62,7 +62,7 @@
 
 - (void)mapViewReady:(LLMapView *)mapView {
     
-    // Show POI 870, which is the Starbucks near gate 60 at LAX - you can find POI IDs using our Venue Management System (VMS) or by imlpementing the "didTapPOI" delegate method
+    // Show POI 870, which is the Starbucks near gate 60 at LAX - you can find POI IDs by implementing the "didTapPOI" delegate method
     [self.mapView showPoiByPoiId:@"870"];
 }
 

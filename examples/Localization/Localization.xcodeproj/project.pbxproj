@@ -13,13 +13,24 @@
 		9C1101AE2028B207009D1ECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C1101AD2028B207009D1ECD /* Assets.xcassets */; };
 		9C1101B12028B207009D1ECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1101AF2028B207009D1ECD /* LaunchScreen.storyboard */; };
 		9C1101B42028B207009D1ECD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1101B32028B207009D1ECD /* main.m */; };
-		9C1101BC2028B219009D1ECD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1101BB2028B219009D1ECD /* SystemConfiguration.framework */; };
-		9C1101BE2028B21E009D1ECD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1101BD2028B21E009D1ECD /* WebKit.framework */; };
-		9CD49983203A7E09000374B3 /* LocusLabsSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9CD49982203A7E09000374B3 /* LocusLabsSDK.bundle */; };
+		9C4B2BF321EF07FF00D4A643 /* LocusLabsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD49984203A7E15000374B3 /* LocusLabsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9CD49985203A7E15000374B3 /* LocusLabsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD49984203A7E15000374B3 /* LocusLabsSDK.framework */; };
 		9CDE1A102031D4C500C25678 /* Localizations.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CDE1A122031D4C500C25678 /* Localizations.strings */; };
-		9CDF3560217E1AA000607F6D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDF355F217E1AA000607F6D /* libz.tbd */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9C4B2BF421EF07FF00D4A643 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9C4B2BF321EF07FF00D4A643 /* LocusLabsSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9C1101A12028B207009D1ECD /* Localization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Localization.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,13 +43,9 @@
 		9C1101B02028B207009D1ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C1101B22028B207009D1ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C1101B32028B207009D1ECD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9C1101BB2028B219009D1ECD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		9C1101BD2028B21E009D1ECD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		9CD49982203A7E09000374B3 /* LocusLabsSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LocusLabsSDK.bundle; path = ../../../LocusLabsSDK.bundle; sourceTree = "<group>"; };
 		9CD49984203A7E15000374B3 /* LocusLabsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocusLabsSDK.framework; path = ../../LocusLabsSDK.framework; sourceTree = "<group>"; };
 		9CDE1A112031D4C500C25678 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizations.strings; sourceTree = "<group>"; };
 		9CDE1A142031D80000C25678 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizations.strings; sourceTree = "<group>"; };
-		9CDF355F217E1AA000607F6D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDF3560217E1AA000607F6D /* libz.tbd in Frameworks */,
 				9CD49985203A7E15000374B3 /* LocusLabsSDK.framework in Frameworks */,
-				9C1101BE2028B21E009D1ECD /* WebKit.framework in Frameworks */,
-				9C1101BC2028B219009D1ECD /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +90,6 @@
 				9C1101B22028B207009D1ECD /* Info.plist */,
 				9C1101B32028B207009D1ECD /* main.m */,
 				9CDE1A122031D4C500C25678 /* Localizations.strings */,
-				9CD49982203A7E09000374B3 /* LocusLabsSDK.bundle */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -94,10 +97,7 @@
 		9C1101BA2028B219009D1ECD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9CDF355F217E1AA000607F6D /* libz.tbd */,
 				9CD49984203A7E15000374B3 /* LocusLabsSDK.framework */,
-				9C1101BD2028B21E009D1ECD /* WebKit.framework */,
-				9C1101BB2028B219009D1ECD /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,6 +112,8 @@
 				9C11019D2028B207009D1ECD /* Sources */,
 				9C11019E2028B207009D1ECD /* Frameworks */,
 				9C11019F2028B207009D1ECD /* Resources */,
+				9C4B2BF121EF07EF00D4A643 /* ShellScript */,
+				9C4B2BF421EF07FF00D4A643 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,7 +130,7 @@
 		9C1101992028B207009D1ECD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = LocusLabs;
 				TargetAttributes = {
 					9C1101A02028B207009D1ECD = {
@@ -164,12 +166,32 @@
 				9CDE1A102031D4C500C25678 /* Localizations.strings in Resources */,
 				9C1101B12028B207009D1ECD /* LaunchScreen.storyboard in Resources */,
 				9C1101AE2028B207009D1ECD /* Assets.xcassets in Resources */,
-				9CD49983203A7E09000374B3 /* LocusLabsSDK.bundle in Resources */,
 				9C1101AC2028B207009D1ECD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C4B2BF121EF07EF00D4A643 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Signs a framework with the provided identity\ncode_sign() {\n# Use the current code_sign_identitiy\necho \"Code Signing $1 with Identity ${EXPANDED_CODE_SIGN_IDENTITY_NAME}\"\necho \"/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements $1\"\n/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"$1\"\n}\n\n# Set working directory to product’s embedded frameworks \ncd \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\nif [ \"$ACTION\" = \"install\" ]; then\necho \"Copy .bcsymbolmap files to .xcarchive\"\nfind . -name '*.bcsymbolmap' -type f -exec mv {} \"${CONFIGURATION_BUILD_DIR}\" \\;\nelse\n# Delete *.bcsymbolmap files from framework bundle unless archiving\nfind . -name '*.bcsymbolmap' -type f -exec rm -rf \"{}\" +\\;\nfi\n\necho \"Stripping frameworks\"\n\nfor file in $(find . -type f -perm +111); do\n# Skip non-dynamic libraries\nif ! [[ \"$(file \"$file\")\" == *\"dynamically linked shared library\"* ]]; then\ncontinue\nfi\n# Get architectures for current file\narchs=\"$(lipo -info \"${file}\" | rev | cut -d ':' -f1 | rev)\"\nstripped=\"\"\nfor arch in $archs; do\nif ! [[ \"${VALID_ARCHS}\" == *\"$arch\"* ]]; then\n# Strip non-valid architectures in-place\nlipo -remove \"$arch\" -output \"$file\" \"$file\" || exit 1\nstripped=\"$stripped $arch\"\nfi\ndone\nif [[ \"$stripped\" != \"\" ]]; then\necho \"Stripped $file of architectures:$stripped\"\nif [ \"${CODE_SIGNING_REQUIRED}\" == \"YES\" ]; then\ncode_sign \"${file}\"\nfi\nfi\ndone\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9C11019D2028B207009D1ECD /* Sources */ = {
@@ -228,6 +250,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -235,6 +258,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -284,6 +308,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -291,6 +316,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
