@@ -1,0 +1,580 @@
+{
+    "colors" : {
+        "white" : { "red" : 1.0, "green" : 1.0, "blue" : 1.0, "alpha" : 1.0 },
+        "black" : { "red" : 0, "green" : 0, "blue" : 0, "alpha" : 1.0 },
+        "darkGray" : { "red" : 0.2, "green" : 0.2, "blue" : 0.2, "alpha" : 1.0 },
+        "gray" : { "red" : 0.4, "green" : 0.4, "blue" : 0.4, "alpha" : 1.0 },
+        "russetRed" : { "red" : 0.78, "green" : 0.27, "blue" : 0.0, "alpha" : 1.0 },
+        "lightGray" : { "red" : 0.6, "green" : 0.6, "blue" : 0.6, "alpha" : 1.0 },
+        "lighterGray" : { "red" : 0.86274509803922, "green" : 0.86274509803922, "blue" : 0.86274509803922, "alpha" : 1.0 },
+        "veryLightGray" : { "red" : 0.94901960784314, "green" : 0.94901960784314, "blue" : 0.94901960784314, "alpha" : 1.0 },
+        "blue" : { "hex" : "#215FEB" },
+        "blueGreen" : { "red" : 0.17254901960784, "green" : 0.56862745098039, "blue" : 0.69803921568627, "alpha" : 1.0 },
+        "lightBlueGreen" : { "red" : 0.86274509803922, "green" : 0.92156862745098, "blue" : 0.94117647058824, "alpha" : 1.0 },
+        "checkInBlue" : { "red" : 0.10, "green" : 0.51, "blue" : 0.81, "alpha" : 1.0 },
+        "checkInButtonBlue" : { "red" : 0.27, "green" : 0.46, "blue" : 0.77, "alpha" : 1.0 },
+        "background" : "@colors.white",
+        "translucentBackground" : { "red" : 1.0, "green" : 1.0, "blue" : 1.0, "alpha" : 0.97 },
+        "text" : "@colors.darkGray",
+        "lightText" : "@colors.gray",
+        "veryLightText" : "@colors.lightGray",
+        "link" : "@colors.blueGreen",
+        "grayBackground" : "@colors.lightGray",
+        "lightGrayBackground" : "@colors.veryLightGray",
+        "whiteText" : "@colors.white",
+        "keywordText" : "@colors.white",
+        "keywordBackground" : "@colors.lightGray",
+        "topBarText" : "@colors.white",
+        "directionsText" : "@colors.white",
+        "directionsBackground" : { "hex": "#202530" },
+        "suggestedResultBackground" : "@colors.lightGrayBackground",
+        "selectedBackground" : "@colors.lightBlueGreen",
+        "russetRedBackground" : "@colors.russetRed",
+        "iconTint" : "@colors.darkGray",
+        "lightIconTint" : "@colors.gray",
+        "veryLightIconTint" : "@colors.lightGray",
+        "russetRedIconTint" : "@colors.russetRed",
+        "placesNearbyText" : "@colors.white",
+        "placesNearbyBackground" : "@colors.blueGreen",
+        "otherPlacesText" : "@colors.white",
+        "otherPlacesBackground" : "@colors.lightGray",
+        "emphasisColor" : { "hex" : "#E2611A" }
+    },
+    "fonts" : {
+        "normal" : { "name" : "HelveticaNeue", "size" : 12 },
+        "light" : { "name" : "HelveticaNeue-Light", "size" : 12 },
+        "semibold" : { "name" : "HelveticaNeue-Medium", "size" : 12 },
+        "bold" : { "name" : "HelveticaNeue-Bold", "size" : 12 },
+        "SFProDisplay-Bold" : { "name" : "SFProDisplay-Bold", "size" : 15 },
+        "SFProDisplay-Regular" : { "name" : "SFProDisplay-Regular", "size" : 15 },
+        "SFProDisplay-Semibold" : { "name" : "SFProDisplay-Semibold", "size" : 15 },
+        "SFProText-Bold" : { "name" : "SFProText-Bold", "size" : 15 },
+        "SFProText-Medium" : { "name" : "SFProText-Medium", "size" : 15 },
+        "SFProText-Regular" : { "name" : "SFProText-Regular", "size" : 15 },
+        "SFProText-Semibold" : { "name" : "SFProText-Semibold", "size" : 15 },
+    },
+    "MapView" : {
+        "DirectionsView" : {
+            "backgroundColor" : "@colors.directionsBackground",
+            "Title" : {
+                "font" : "@fonts.normal",
+                "font.size" : 17.0,
+                "textColor" : "@colors.directionsText"
+            },
+            "CancelButton" : {
+                "font" : "@fonts.normal",
+                "font.size" : 17.0,
+                "textColor" : "@colors.directionsText"
+            },
+            "GoButton" : {
+                "backgroundColor" : "@colors.blue",
+                "font" : "@fonts.SFProText-Semibold",
+                "font.size" : 17.0,
+                "textColor" : "@colors.directionsText",
+                "disabledTextColor" : "@colors.lightText"
+            },
+            "StartField" : {
+                "backgroundColor" : "@colors.background",
+                "atomizedBackgroundColor" : "@colors.blue",
+                "Label" : {
+                    "font" : "@fonts.normal",
+                    "font.size" : 16.0,
+                    "textColor" : "@colors.lightText"
+                },
+                "Text" : {
+                    "font" : "@fonts.normal",
+                    "font.size" : 16.0,
+                    "textColor" : "@colors.text",
+                    "atomizedTextColor" : "@colors.white"
+                }
+            },
+            "EndField" : {
+                "backgroundColor" : "@colors.background",
+                "atomizedBackgroundColor" : "@colors.blue",
+                "Label" : {
+                    "font" : "@fonts.normal",
+                    "font.size" : 16.0,
+                    "textColor" : "@colors.lightText"
+                },
+                "Text" : {
+                    "font" : "@fonts.normal",
+                    "font.size" : 16.0,
+                    "textColor" : "@colors.text",
+                    "atomizedTextColor" : "@colors.white"
+                }
+            },
+            "ReverseButton" : {
+                "tintColor" : "@colors.directionsText"
+            },
+            "ResultsTable" : {
+                "backgroundColor" : "@colors.background",
+                "Title" : {
+                    "font" : "@fonts.normal",
+                    "font.size" : 18.0,
+                    "textColor" : "@colors.text"
+                },
+                "Detail" : {
+                    "font" : "@fonts.normal",
+                    "font.size" : 13.0,
+                    "textColor" : "@colors.lightText"
+                },
+                "Icon" : {
+                    "tintColor" : "@colors.veryLightIconTint"
+                },
+                "CurrentLocation" : {
+                    "backgroundColor" : "@colors.suggestedResultBackground",
+                    "Title" : {
+                        "textColor" : "@colors.link"
+                    }
+                },
+                "UserPOIs" : {
+                    "backgroundColor" : "@colors.suggestedResultBackground"
+                }
+            }
+        },
+        "StepByStepRouteView" : {
+            "backgroundColor" : "@colors.directionsBackground",
+            "SummaryButton" : {
+                "tintColor" : "@colors.directionsText"
+            },
+            "TravelTimeText" : {
+                "font" : "@fonts.normal",
+                "font.size" : 17.0,
+                "textColor" : "@colors.directionsText"
+            },
+            "DestinationText" : {
+                "font" : "@fonts.normal",
+                "font.size" : 23.5,
+                "textColor" : "@colors.directionsText"
+            },
+            "TotalTravelTimeText" : {
+                "font" : "@fonts.normal",
+                "font.size" : 14.0,
+                "textColor" : "@colors.directionsText"
+            }
+        },
+        "RouteSummaryView" : {
+            "TitleBar" : {
+                "backgroundColor" : "@colors.directionsBackground",
+                "BackButton" : {
+                    "font" : "@fonts.normal",
+                    "font.size" : 15.0,
+                    "textColor" : "@colors.directionsText"
+                },
+                "Title" : {
+                    "font" : "@fonts.semibold",
+                    "font.size" : 17.0,
+                    "textColor" : "@colors.directionsText"
+                },
+                "TotalTravelTimeText" : {
+                    "font" : "@fonts.normal",
+                    "font.size" : 14.0,
+                    "textColor" : "@colors.directionsText"
+                }
+            },
+            "Steps" : {
+                "backgroundColor" : "@colors.background",
+                "selectedBackgroundColor" : "@colors.selectedBackground",
+                "Title" : {
+                    "font" : "@fonts.normal",
+                    "font.size" : 21,
+                    "textColor" : "@colors.text"
+                },
+                "Detail" : {
+                    "font" : "@fonts.normal",
+                    "font.size" : 16,
+                    "textColor" : "@colors.lightText"
+                }
+            }
+        },
+        "VoucherView" : {
+            "toolbarColor" : "@colors.checkInBlue",
+            "textColor" : "@colors.white"
+        },
+        "CheckInView" : {
+            "backgroundColor" : "@colors.white",
+            "navBarColor" : "@colors.checkInBlue",
+            "navBarTextColor" : "@colors.white",
+            "Title" : {
+                "font" : "@fonts.bold",
+                "font.size" : 16,
+                "textColor" : "@colors.black"
+            },
+            "Description" : {
+                "font" : "@fonts.normal",
+                "font.size" : 16,
+                "textColor" : "@colors.black"
+            },
+            "LocationHeader" : {
+                "font" : "@fonts.normal",
+                "font.size" : 16,
+                "textColor" : "@colors.black"
+            },
+            "LocationTerminal" : {
+                "font" : "@fonts.normal",
+                "font.size" : 20,
+                "textColor" : "@colors.black"
+            },
+            "LocationGate" : {
+                "font" : "@fonts.normal",
+                "font.size" : 13,
+                "textColor" : "@colors.black"
+            },
+            "GuestHeader" : {
+                "font" : "@fonts.normal",
+                "font.size" : 16,
+                "textColor" : "@colors.black"
+            },
+            "GuestValue" : {
+                "font" : "@fonts.normal",
+                "font.size" : 20,
+                "textColor" : "@colors.checkInBlue"
+            },
+            "CancelButton" : {
+                "font" : "@fonts.normal",
+                "font.size" : 16,
+                "textColor" : "@colors.white"
+            },
+            "SubmitButton" : {
+                "backgroundColor" : "@colors.checkInButtonBlue",
+                "font" : "@fonts.normal",
+                "font.size" : 14,
+                "textColor" : "@colors.white"
+            },
+            "Code" : {
+                "font" : "@fonts.regular",
+                "font.size" : 100,
+                "textColor" : "@colors.black"
+            },
+            "Name" : {
+                "font" : "@fonts.regular",
+                "font.size" : 48,
+                "textColor" : "@colors.black"
+            },
+            "GateDateTime" : {
+                "font" : "@fonts.regular",
+                "font.size" : 24,
+                "textColor" : "@colors.black"
+            }
+        },
+        "POIView" : {
+            "cornerRadius" : 0,
+            "backgroundColor" : "@colors.translucentBackground",
+            "ExpanderView" : {
+                "height" : 20,
+                "IconUp" : {
+                    "name" : "querywin-icon-arrow-up"
+                },
+                "IconDown" : {
+                    "name" : "querywin-icon-arrow-down"
+                }
+            },
+            "HeaderView" : {
+                "backgroundColor" : "@colors.background",
+                "Title" : {
+                    "font" : "@fonts.normal",
+                    "font.size" : 23,
+                    "textColor" : "@colors.text"
+                },
+                "Location" : {
+                    "Title" : {
+                        "font" : "@fonts.light",
+                        "font.size" : 16,
+                        "textColor" : "@colors.lightText"
+                    },
+                    "Icon" : {
+                        "tintColor" : "@colors.veryLightIconTint"
+                    }
+                },
+                "Security" : {
+                    "Title" : {
+                        "font" : "@fonts.light",
+                        "font.size" : 16,
+                        "textColor" : "@colors.lightText"
+                    },
+                    "Icon" : {
+                        "tintColor" : "@colors.veryLightIconTint"
+                    }
+                },
+                "Level" : {
+                    "Title" : {
+                        "font" : "@fonts.light",
+                        "font.size" : 16,
+                        "textColor" : "@colors.lightText"
+                    },
+                    "Icon" : {
+                        "tintColor" : "@colors.veryLightIconTint"
+                    }
+                }
+            },
+            "ImagesView" : {
+                "MessageView" : {
+                    "backgroundColor" : "@colors.lighterGray",
+                    "tintColor" : "@colors.lightGray"
+                }
+            },
+            "ButtonBar" : {
+                "Button" : {
+                    "Icon" : {
+                        "tintColor" : "@colors.link"
+                    },
+                    "Title" : {
+                        "font" : "@fonts.normal",
+                        "textColor" : "@colors.link"
+                    }
+                }
+            },
+            "Description" : {
+                "font" : "@fonts.light",
+                "font.size" : 17,
+                "textColor" : "@colors.lightText"
+            },
+            "KeywordsView" : {
+                "Keyword" : {
+                    "borderWidth": 1,
+                    "borderColor": "@colors.keywordBackground",
+                    "cornerRadius" : 4,
+                    "backgroundColor" : "@colors.keywordBackground",
+                    "font" : "@fonts.normal",
+                    "font.size" : 14.0,
+                    "textColor" : "@colors.keywordText"
+                }
+            },
+            "InfoHeader" : {
+                "backgroundColor" : "@colors.darkGray",
+                "font" : "@fonts.light",
+                "font.size" : 14.0,
+                "textColor" : "@colors.white"
+            },
+            "HoursView" : {
+                "CollapsedHours" : {
+                    "font" : "@fonts.light",
+                    "font.size" : 16.0,
+                    "textColor" : "@colors.darkGray"
+                },
+                "ExpandedHours" : {
+                    "CurrentDay" : {
+                        "font" : "@fonts.bold",
+                        "font.size" : 14.0,
+                        "textColor" : "@colors.darkGray"
+                    },
+                    "OtherDays" : {
+                        "font" : "@fonts.light",
+                        "font.size" : 14.0,
+                        "textColor" : "@colors.darkGray"
+                    }
+                },
+                "Icon" : {
+                    "tintColor" : "@colors.darkGray"
+                },
+                "Sidebar" : {
+                    "backgroundColor" : "@colors.link"
+                }
+            },
+            "PhoneView" : {
+                "Title" : {
+                    "font" : "@fonts.light",
+                    "font.size" : 16.0,
+                    "textColor" : "@colors.darkGray"
+                },
+                "Icon" : {
+                    "tintColor" : "@colors.darkGray"
+                }
+            },
+            "WebsiteView" : {
+                "Title" : {
+                    "font" : "@fonts.light",
+                    "font.size" : 16.0,
+                    "textColor" : "@colors.darkGray"
+                },
+                "Icon" : {
+                    "tintColor" : "@colors.darkGray"
+                }
+            },
+            "AmenityView" : {
+                "Title" : {
+                    "font" : "@fonts.semibold",
+                    "font.size" : 14.0,
+                    "textColor" : "@colors.lightText"
+                },
+                "AmenityItem" : {
+                    "font" : "@fonts.light",
+                    "font.size" : 17.0,
+                    "textColor" : "@colors.lightText",
+                    "iconColor" : "@colors.lightText"
+                }
+            }
+        },
+        "LevelsMenu" : {
+            "overlayColor" : { "red" : 0, "green" : 0, "blue" : 0, "alpha" : 0.5 },
+            "backgroundColor" : { "hex" : "F9F9F9" },
+            "separatorColor" : { "hex" : "EBEBEB" },
+            "Building" : {
+                "backgroundColor" : "@colors.white",
+                "Title" : {
+                    "font" : "@fonts.SFProText-Bold",
+                    "font.size" : 17.0,
+                    "textColor" : { "hex" : "333333" }
+                },
+                "SearchResults" : {
+                    "font" : "@fonts.SFProDisplay-Bold",
+                    "font.size" : 12.0,
+                    "textColor" : "@colors.whiteText",
+                    "backgroundColor" : "@colors.emphasisColor"
+                }
+            },
+            "Level" : {
+                "backgroundColor" : { "hex" : "F9F9F9" },
+                "selectedBackgroundColor" : { "red" : 0.9215686275, "green" : 0.9215686275, "blue" : 0.9215686275, "alpha" : 1 },
+                "selectionIndicatorColor" : { "red" : 0.3058823529, "green" : 0.5882352941, "blue" : 1, "alpha" : 1 },
+                "Title" : {
+                    "font" : "@fonts.SFProText-Semibold",
+                    "font.size" : 17.0,
+                    "textColor" : { "hex" : "333333" }
+                },
+                "Detail" : {
+                    "font" : "@fonts.SFProText-Regular",
+                    "font.size" : 15.0,
+                    "textColor" : { "hex" : "666666" }
+                },
+                "SearchResults" : {
+                    "font" : "@fonts.SFProDisplay-Bold",
+                    "font.size" : 12.0,
+                    "textColor" : "@colors.whiteText",
+                    "backgroundColor" : "@colors.emphasisColor"
+                }
+            }
+        },
+        "TopBar" : {
+            "shadowEnabled": true,
+            "SearchBar" : {
+                "backgroundColor" : "@colors.background",
+                "borderWidth": 0,
+                "borderColor": "@colors.russetRed",
+                "Text" : {
+                    "font" : "@fonts.normal",
+                    "font.size" : 16.0,
+                    "textColor" : "@colors.text",
+                    "placeholderTextColor" : "@colors.veryLightText"
+                },
+                "Icon" : {
+                    "tintColor" : "@colors.lightIconTint"
+                }
+            },
+            "BackButton" : {
+                "Title" : {
+                    "font" : "@fonts.normal",
+                    "font.size" : 16.0,
+                    "textColor" : "@colors.topBarText"
+                }
+            },
+            "CancelButton" : {
+                "Title" : {
+                    "font" : "@fonts.normal",
+                    "font.size" : 16.0,
+                    "textColor" : "@colors.topBarText"
+                }
+            }
+        },
+        "BottomBar" : {
+            "backgroundColor" : "@colors.background",
+            "Button" : {
+                "Icon" : {
+                    "tintColor" : "@colors.gray",
+                    "emphasizedTintColor" : "@colors.emphasisColor"
+                },
+                "Title" : {
+                    "font" : "@fonts.SFProText-Medium",
+                    "font.size" : 12,
+                    "textColor" : "@colors.lightText"
+                }
+            }
+        },
+        "SearchView" : {
+            "SearchSuggestionsView" : {
+                "backgroundColor" : "@colors.lightGrayBackground",
+                "Title" : {
+                    "font" : "@fonts.normal",
+                    "font.size" : 17,
+                    "textColor" : "@colors.text"
+                },
+                "Button" : {
+                    "Title" : {
+                        "font" : "@fonts.normal",
+                        "font.size" : 13,
+                        "textColor" : "@colors.text"
+                    },
+                    "Icon" : {
+                        "tintColor" : "@colors.lightIconTint"
+                    }
+                }
+            },
+            "SearchResultsView" : {
+                "backgroundColor" : "@colors.background",
+                "AutocompleteResult" : {
+                    "Title" : {
+                        "font" : "@fonts.normal",
+                        "font.size" : 18,
+                        "textColor" : "@colors.text"
+                    },
+                    "Icon" : {
+                        "tintColor" : "@colors.veryLightIconTint"
+                    }
+                },
+                "SearchSuggestion" : {
+                    "Title" : {
+                        "font" : "@fonts.normal",
+                        "font.size" : 18,
+                        "textColor" : "@colors.text"
+                    },
+                    "Icon" : {
+                        "tintColor" : "@colors.veryLightIconTint"
+                    }
+                },
+                "POIResult" : {
+                    "Title" : {
+                        "font" : "@fonts.normal",
+                        "font.size" : 18,
+                        "textColor" : "@colors.text"
+                    },
+                    "Detail" : {
+                        "font" : "@fonts.normal",
+                        "font.size" : 13,
+                        "textColor" : "@colors.lightText"
+                    },
+                    "Icon" : {
+                        "tintColor" : "@colors.veryLightIconTint"
+                    }
+                },
+                "SponsoredPOIResult" : {
+                    "backgroundColor" : "@colors.background",
+                    "Title" : {
+                        "font" : "@fonts.normal",
+                        "font.size" : 18,
+                        "textColor" : "@colors.text"
+                    },
+                    "Detail" : {
+                        "font" : "@fonts.normal",
+                        "font.size" : 13,
+                        "textColor" : "@colors.lightText"
+                    },
+                    "Icon" : {
+                        "tintColor" : "@colors.veryLightIconTint"
+                    }
+                },
+                "PlacesNearbyTitle" : {
+                    "backgroundColor" : "@colors.placesNearbyBackground",
+                    "font" : "@fonts.normal",
+                    "font.size" : 12,
+                    "textColor" : "@colors.placesNearbyText"
+                },
+                "OtherPlacesTitle" : {
+                    "backgroundColor" : "@colors.otherPlacesBackground",
+                    "font" : "@fonts.normal",
+                    "font.size" : 12,
+                    "textColor" : "@colors.otherPlacesText"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>places-map-icon-gate</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="32" height="32" rx="4"></rect>
+    </defs>
+    <g id="map-markers---default-set-(JX)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-36.000000, -36.000000)">
+        <g id="places-map-icon-gate" transform="translate(37.000000, 37.000000)">
+            <g id="geometry">
+                <use fill="#8DD119" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <rect stroke="#FFFFFF" stroke-width="1" x="-0.5" y="-0.5" width="33" height="33" rx="4"></rect>
+            </g>
+            <path d="M24,19.0645909 L24,16.8538182 L17.1424,12.5945455 L17.1424,8.09688636 C17.1424,7.49106818 16.6312,7 16,7 C15.3688,7 14.8572,7.49106818 14.8572,8.09688636 L14.8572,12.5945455 L8,16.8538182 L8,19.0645909 L14.8572,16.6845909 L14.8572,21.0964773 L12.5712,22.5947955 L12.5712,24 L16,22.9035 L19.4284,24 L19.4284,22.5947955 L17.1424,21.1007273 L17.1424,16.6845909 L24,19.0645909 Z" id="gate" fill="#FFFFFF"></path>
+        </g>
+    </g>
+</svg>

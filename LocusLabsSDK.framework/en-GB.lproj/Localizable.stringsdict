@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Minutes</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@minutes@</string>
+        <key>minutes</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>d</string>
+            <key>one</key>
+            <string>%d minute</string>
+            <key>other</key>
+            <string>%d minutes</string>
+            <key>zero</key>
+            <string>&lt;1 minute</string>
+        </dict>
+    </dict>
+    <key>MinutesShort</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@minutes@</string>
+        <key>minutes</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>d</string>
+            <key>one</key>
+            <string>%d min</string>
+            <key>other</key>
+            <string>%d mins</string>
+            <key>zero</key>
+            <string>&lt;1 minute</string>
+        </dict>
+    </dict>
+    <key>RouteViaTrainWithStops</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>Take Shuttle %#@stops@ (%@) to</string>
+        <key>stops</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>d</string>
+            <key>one</key>
+            <string>%d stop</string>
+            <key>other</key>
+            <string>%d stops</string>
+        </dict>
+    </dict>
+    <key>RouteViaBusWithStops</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>Take Bus %#@stops@ (%@) to</string>
+        <key>stops</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>d</string>
+            <key>one</key>
+            <string>%d stop</string>
+            <key>other</key>
+            <string>%d stops</string>
+        </dict>
+    </dict>
+</dict>
+</plist>
