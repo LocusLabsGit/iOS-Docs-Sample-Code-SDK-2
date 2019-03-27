@@ -112,8 +112,8 @@
 				9C11019D2028B207009D1ECD /* Sources */,
 				9C11019E2028B207009D1ECD /* Frameworks */,
 				9C11019F2028B207009D1ECD /* Resources */,
-				9C4B2BF121EF07EF00D4A643 /* ShellScript */,
 				9C4B2BF421EF07FF00D4A643 /* Embed Frameworks */,
+				9C4B2BF121EF07EF00D4A643 /* ShellScript */,
 			);
 			buildRules = (
 			);

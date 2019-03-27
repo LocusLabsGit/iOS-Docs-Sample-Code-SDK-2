@@ -57,7 +57,7 @@
     
     // Create a custom Recommended Place to show a POI
 //    LLPlaceUI *ui = [LLPlaceUI defaultUI];
-//    ui.icon = @"bottombar-icon-nav.png"; // Supply any solid fill png. This one chosen as it is already in the bundle - you can supply your own
+//    ui.icon = @"map-icon-airports.png"; // Supply any solid fill png. This one chosen as it is already in the bundle - you can supply your own
 //    ui.normalIconColor = [UIColor whiteColor];
 //    ui.selectedIconColor = [UIColor whiteColor];
 //
@@ -67,7 +67,7 @@
     
     // Create a custom Recommended Place to trigger a search
     LLPlaceUI *uiSearch = [LLPlaceUI defaultUI];
-    uiSearch.icon = @"bottombar-icon-nav.png"; // Supply any solid fill png. This one chosen as it is already in the bundle - you can supply your own
+    uiSearch.icon = @"map-icon-airports.png"; // Supply any solid fill png. This one chosen as it is already in the bundle - you can supply your own
     uiSearch.normalIconColor = [UIColor whiteColor];
     uiSearch.selectedIconColor = [UIColor whiteColor];
     uiSearch.marker = @"images/pin-plane-landing.svg"; // Supply any size-embedded svg of your choice. This ins chosen as it is already in the bundle
@@ -103,13 +103,13 @@
      //return @[places[0]];
 
     // Show default recommended places
-    return places;
+    //return places;
 
     // Show only the tray button (when tapped - it will open the tray showing all recommended places)
      //return [@[[NSNull null]] arrayByAddingObjectsFromArray:places];
 
     // Show custom recommended places
-    // return [self customRecommendedPlaces];
+     return [self customRecommendedPlaces];
 }
 
 - (NSArray<NSString*> *)mapView:(LLMapView *)mapView willPresentSearchSuggestions:(NSArray<NSString*> *)suggestions {

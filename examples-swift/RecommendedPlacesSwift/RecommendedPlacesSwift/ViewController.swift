@@ -50,7 +50,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         
         // Create a custom Recommended Place to show a POI
 //        let ui = LLPlaceUI.default()
-//        ui?.icon = "bottombar-icon-nav.png"  // Supply any solid fill png. This one chosen as it is already in the bundle - you can supply your own
+//        ui?.icon = "map-icon-airports.png"  // Supply any solid fill png. This one chosen as it is already in the bundle - you can supply your own
 //        ui?.normalIconColor = UIColor.white
 //        ui?.selectedIconColor = UIColor.white
 //
@@ -60,7 +60,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         
         // Create a custom Recommended Place to trigger a search
         let uiSearch = LLPlaceUI.default()
-        uiSearch?.icon = "bottombar-icon-nav.png"  // Supply any solid fill png. This one chosen as it is already in the bundle - you can supply your own
+        uiSearch?.icon = "map-icon-airports.png"  // Supply any solid fill png. This one chosen as it is already in the bundle - you can supply your own
         uiSearch?.normalIconColor = UIColor.white
         uiSearch?.selectedIconColor = UIColor.white
         uiSearch?.marker = "images/pin-plane-landing.svg"; // Supply any size-embedded svg of your choice. This ins chosen as it is already in the bundle

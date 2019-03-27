@@ -376,6 +376,11 @@ typedef LLVenueDownloadConstraint LLAirportDownloadConstraint;
  */
 - (void)isVenueAvailableOnDevice:(NSString*)venueId forVersion:(NSString*)version block:(IsVenueAvailableOnDeviceBlock)block;
 
+/**
+ * Returns the Install ID, an identifier associated with server-side event logging for user analytics.
+ */
+- (void)getInstallId:(void (^)(NSString *installId))block;
+
 // "private" in the sense that our customers shouldn't need to call this directly
 - (void) teardown;
 

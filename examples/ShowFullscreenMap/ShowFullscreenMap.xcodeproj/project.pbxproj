@@ -108,8 +108,8 @@
 				9CB2CBCE2021AF50002E8BD7 /* Sources */,
 				9CB2CBCF2021AF50002E8BD7 /* Frameworks */,
 				9CB2CBD02021AF50002E8BD7 /* Resources */,
-				9C05733521EC74D7007BC8A5 /* ShellScript */,
 				9C05733B21EC7670007BC8A5 /* Embed Frameworks */,
+				9C05733521EC74D7007BC8A5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -333,7 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W36QY84WJ3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -353,7 +353,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W36QY84WJ3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

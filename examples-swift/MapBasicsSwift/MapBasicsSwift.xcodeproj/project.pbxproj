@@ -103,8 +103,8 @@
 				9C1B0084202315EA0077CC26 /* Sources */,
 				9C1B0085202315EA0077CC26 /* Frameworks */,
 				9C1B0086202315EA0077CC26 /* Resources */,
-				9C4B2C2121EF0CF900D4A643 /* ShellScript */,
 				9C4B2C2421EF0D0B00D4A643 /* Embed Frameworks */,
+				9C4B2C2121EF0CF900D4A643 /* ShellScript */,
 			);
 			buildRules = (
 			);

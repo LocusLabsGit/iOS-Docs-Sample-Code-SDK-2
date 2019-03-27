@@ -29,6 +29,7 @@
 #import <LocusLabsSDK/LLMap.h>
 #import <LocusLabsSDK/LLMapView.h>
 #import <LocusLabsSDK/LLMapViewDelegate.h>
+#import <LocusLabsSDK/LLMapViewPreferences.h>
 #import <LocusLabsSDK/LLMarker.h>
 #import <LocusLabsSDK/LLMultiTermSearchResults.h>
 #import <LocusLabsSDK/LLMutablePath.h>
