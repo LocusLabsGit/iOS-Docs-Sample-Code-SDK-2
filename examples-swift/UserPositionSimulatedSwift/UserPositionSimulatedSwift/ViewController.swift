@@ -80,9 +80,14 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         let algorithm = NSNumber(value: Int8(LLPositioningSensorAlgorithmExternal.rawValue))
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: NOTIFICATION_SET_POSITIONING_SENSOR_ALGORITHM), object: nil, userInfo: ["positioningSensorAlgorithm": algorithm])
         
+        var locationDict = Dictionary<String, Any>()
+        
         // Position 1 (Initial - DFS Duty Free)
-        var locationDict = self.locationDict(lat: NSNumber(value: 33.941485), lon: NSNumber(value: -118.40195))
-        postUserPosition(locationDict: locationDict)
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
+            
+            locationDict = self.locationDict(lat: NSNumber(value: 33.941485), lon: NSNumber(value: -118.40195))
+            self.postUserPosition(locationDict: locationDict)
+        }
         
         // Position 2 (2 secs later)
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {

@@ -91,7 +91,7 @@
     
     // Position 1 (Initial - DFS Duty Free)
     NSDictionary *locationDict = [self locationDictWithLat:@33.941485 lon:@-118.40195];
-    [self performSelector:@selector(postUserPosition:) withObject:locationDict afterDelay:0.0];
+    [self performSelector:@selector(postUserPosition:) withObject:locationDict afterDelay:1.0];
     
     // Position 2 (2 secs later)
     locationDict = [self locationDictWithLat:@33.941398 lon:@-118.401916];
