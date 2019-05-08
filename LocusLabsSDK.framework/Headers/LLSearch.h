@@ -12,7 +12,7 @@
 
 
 /**
- *  Provides access to the LocusLabs POI search functionality.  This calls should not be created directly, but via the LLAiport search: function.
+ *  Provides access to the LocusLabs POI search functionality.  This calls should not be created directly, but via the LLVenue search: function.
  */
 @interface LLSearch : NSObject
 

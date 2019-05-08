@@ -49,6 +49,8 @@
  */
 @property (nonatomic, readonly) NSString *logFilePath;
 
+- (void)log:(LLLogLevel)logLevel method:(const char*)method fileInfo:(NSString*)info message:(NSString *)message;
+
 /**
  *  Prints out the formatted logs to the console.
  *

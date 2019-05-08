@@ -16,7 +16,6 @@
 @class LLVenue;
 @class LLFlight;
 @class LLFloorView;
-@class LLInternalMapView;
 @class LLMap;
 @class LLPOI;
 @class LLPositionManager;
@@ -205,8 +204,6 @@
  * Programmatically cancel user initiated search.
  */
 - (void)cancelUserSearch;
-
-- (void)initializeInternalMapView:(LLInternalMapView*)internalMapView;
 
 /**
  * **Deprecated**: use initializeVenue:

@@ -51,7 +51,7 @@
         "SFProText-Bold" : { "name" : "SFProText-Bold", "size" : 15 },
         "SFProText-Medium" : { "name" : "SFProText-Medium", "size" : 15 },
         "SFProText-Regular" : { "name" : "SFProText-Regular", "size" : 15 },
-        "SFProText-Semibold" : { "name" : "SFProText-Semibold", "size" : 15 },
+        "SFProText-Semibold" : { "name" : "SFProText-Semibold", "size" : 15 }
     },
     "MapView" : {
         "DirectionsView" : {
@@ -150,7 +150,15 @@
             "TotalTravelTimeText" : {
                 "font" : "@fonts.normal",
                 "font.size" : 14.0,
-                "textColor" : "@colors.directionsText"
+                "textColor" : "@colors.directionsText",
+                "ClosedBadge" : {
+                    "backgroundColor" : { "hex": "#5A7089" },
+                    "Title" : {
+                        "font" : "@fonts.SFProText-Bold",
+                        "font.size" : 13,
+                        "textColor" : "@colors.white"
+                    }
+                }
             }
         },
         "RouteSummaryView" : {
@@ -169,7 +177,15 @@
                 "TotalTravelTimeText" : {
                     "font" : "@fonts.normal",
                     "font.size" : 14.0,
-                    "textColor" : "@colors.directionsText"
+                    "textColor" : "@colors.directionsText",
+                    "ClosedBadge" : {
+                        "backgroundColor" : { "hex": "#5A7089" },
+                        "Title" : {
+                            "font" : "@fonts.SFProText-Bold",
+                            "font.size" : 13,
+                            "textColor" : "@colors.white"
+                        }
+                    }
                 }
             },
             "Steps" : {
@@ -184,6 +200,25 @@
                     "font" : "@fonts.normal",
                     "font.size" : 16,
                     "textColor" : "@colors.lightText"
+                },
+                "TimeBadge" : {
+                    "backgroundColor" : { "hex": "#D83131" },
+                    "Title" : {
+                        "font" : "@fonts.SFProText-Semibold",
+                        "font.size" : 13,
+                        "textColor" : "@colors.white"
+                    },
+                    "Icon" : {
+                        "tintColor": "@colors.white"
+                    }
+                },
+                "ClosedBadge" : {
+                    "backgroundColor" : { "hex": "#5A7089" },
+                    "Title" : {
+                        "font" : "@fonts.SFProText-Bold",
+                        "font.size" : 13,
+                        "textColor" : "@colors.white"
+                    }
                 }
             }
         },
@@ -276,6 +311,25 @@
                     "font.size" : 23,
                     "textColor" : "@colors.text"
                 },
+                "ClosedBadge" : {
+                    "backgroundColor" : { "hex": "#6B829A" },
+                    "Title" : {
+                        "font" : "@fonts.SFProText-Semibold",
+                        "font.size" : 14,
+                        "textColor" : "@colors.white"
+                    }
+                },
+                "TimeBadge" : {
+                    "backgroundColor" : { "hex": "#D83131" },
+                    "Title" : {
+                        "font" : "@fonts.SFProText-Semibold",
+                        "font.size" : 14,
+                        "textColor" : "@colors.white"
+                    },
+                    "Icon" : {
+                        "tintColor": "@colors.white"
+                    }
+                },
                 "Location" : {
                     "Title" : {
                         "font" : "@fonts.light",
@@ -321,6 +375,27 @@
                     "Title" : {
                         "font" : "@fonts.normal",
                         "textColor" : "@colors.link"
+                    }
+                }
+            },
+            "SecurityLanes" : {
+                "backgroundColor" : { "hex" : "F9F9F9" },
+                "Header" : {
+                    "font" : "@fonts.SFProText-Semibold",
+                    "font.size" : 13,
+                    "font.letterSpacing" : -0.45,
+                    "textColor" : { "hex" : "333333" }
+                },
+                "Button" : {
+                    "backgroundColor" : "@colors.white",
+                    "borderWidth": 1,
+                    "borderColor": { "hex" : "EBEBEB" },
+                    "cornerRadius" : 6,
+                    "Title" : {
+                        "font" : "@fonts.SFProText-Semibold",
+                        "font.size" : 15,
+                        "font.letterSpacing" : -0.45,
+                        "textColor" : { "hex" : "333333" }
                     }
                 }
             },

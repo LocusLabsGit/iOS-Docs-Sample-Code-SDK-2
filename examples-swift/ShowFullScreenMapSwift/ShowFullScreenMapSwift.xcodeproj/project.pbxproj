@@ -127,6 +127,7 @@
 				TargetAttributes = {
 					9C1B000C2021E2F30077CC26 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -339,7 +340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.locuslabs.ShowFullScreenMapSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./$PROJECT_NAME/Swift-Bridge.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -357,7 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.locuslabs.ShowFullScreenMapSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./$PROJECT_NAME/Swift-Bridge.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

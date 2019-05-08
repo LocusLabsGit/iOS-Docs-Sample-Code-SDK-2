@@ -3,4 +3,8 @@ framework module LocusLabsSDK {
 
   export *
   module * { export * }
+
+  explicit module Private {
+    header "LLLogger_Private.h"
+  }
 }
