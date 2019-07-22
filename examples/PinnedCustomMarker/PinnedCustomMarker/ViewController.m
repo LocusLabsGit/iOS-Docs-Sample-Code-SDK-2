@@ -72,6 +72,13 @@
     [self.poiDatabase loadPOI:@"870"];
 }
 
+- (BOOL)mapView:(LLMapView *)mapView didTapMarker:(LLMarker *)marker {
+
+    NSLog(@"Marker tapped with ID:%@", ((LLPOI*)(marker.userData)).poiId);
+    // Return no to let the SDK handle the tap. If you would like to handle the tap, return YES
+    return NO;
+}
+
 #pragma mark Delegates - LLPOIDatabase
 
 - (void)poiDatabase:(LLPOIDatabase *)poiDatabase poiLoaded:(LLPOI *)poi {

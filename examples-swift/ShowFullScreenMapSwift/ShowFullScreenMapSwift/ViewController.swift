@@ -32,7 +32,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         // Get an instance of LLVenueDatabase, register as its delegate and load the venue LAX
         venueDatabase = LLVenueDatabase(mapView: mapView)
         venueDatabase.delegate = self
-
+        
         // Load the venue LAX async
         venueDatabase.loadVenueAndMap("lax") { (_venue: LLVenue?, _map: LLMap?, _floor: LLFloor?, _marker: LLMarker?) in
             

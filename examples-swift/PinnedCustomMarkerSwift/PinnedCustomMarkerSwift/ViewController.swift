@@ -64,6 +64,17 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         poiDatabase?.loadPOI("870")
     }
     
+    func mapView(_ mapView: LLMapView!, didTap marker: LLMarker!) -> Bool {
+        
+        if let poi = marker.userData! as? LLPOI {
+        
+            print("Marker tapped with ID:", poi.poiId!)
+        }
+        
+        // Return false to let the SDK handle the tap. If you would like to handle the tap, return true
+        return false
+    }
+    
     // MARK: Delegates - LLPOIDatabase
     func poiDatabase(_ poiDatabase: LLPOIDatabase!, poiLoaded poi: LLPOI!) {
         
