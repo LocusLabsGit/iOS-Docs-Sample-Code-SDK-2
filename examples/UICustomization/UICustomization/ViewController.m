@@ -38,6 +38,12 @@
     
     self.mapView = mapView;
     
+    // Set a custom font
+    // self.mapView.theme = [self themeWithCustomFont:[UIFont fontWithName:@"American Typewriter" size:12.0]];
+    
+    // Change the bottom bar background and button title colors
+     self.mapView.theme = [self themeWithCustomBottomBar];
+    
     // Get an instance of LLVenueDatabase, set it's mapview and register as its delegate
     self.venueDatabase = [LLVenueDatabase venueDatabaseWithMapView:self.mapView];
     self.venueDatabase.delegate = self;
@@ -54,8 +60,7 @@
 - (LLTheme *)themeWithCustomBottomBar {
     
     LLThemeBuilder *themeBuilder = [LLThemeBuilder themeBuilderWithTheme:[LLTheme defaultTheme]];
-    [themeBuilder setProperty:@"MapView.BottomBar.backgroundColor" value:[UIColor orangeColor]];
-    [themeBuilder setProperty:@"MapView.BottomBar.Button.Title.textColor" value:[UIColor blackColor]];
+    [themeBuilder setProperty:@"MapView.BottomBar.backgroundColor" value:[UIColor grayColor]];
     
     return themeBuilder.theme;
 }
@@ -63,7 +68,8 @@
 - (LLTheme *)themeWithCustomFont:(UIFont *)customFont {
     
     LLThemeBuilder *themeBuilder = [LLThemeBuilder themeBuilderWithTheme:[LLTheme defaultTheme]];
-    [themeBuilder setProperty:@"fonts.normal" value:customFont];
+    [themeBuilder setProperty:@"MapView.BottomBar.SearchBar.Text.font" value:customFont];
+    [themeBuilder setProperty:@"MapView.ActionsView.Action.Title.font" value:customFont];
     
     return themeBuilder.theme;
 }
@@ -84,17 +90,6 @@
 
 - (void)mapViewReady:(LLMapView *)mapView {
     
-    // Set a custom font
-    // self.mapView.theme = [self themeWithCustomFont:[UIFont fontWithName:@"American Typewriter" size:12.0]];
-    
-    // Set a custom back button title
-    //self.mapView.backButtonText = NSLocalizedString(@"Back", nil);
-    
-    // Change the search bar background color
-    // [self.mapView setSearchBarBackgroundColor:[UIColor orangeColor]];
-    
-    // Change the bottom bar background and button title colors
-    self.mapView.theme = [self themeWithCustomBottomBar];
 }
 
 @end

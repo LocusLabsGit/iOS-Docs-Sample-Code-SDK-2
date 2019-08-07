@@ -85,7 +85,7 @@
 @property (strong,nonatomic) NSString *navigationDisclaimer;
 
 // TODO [api] document as it's probably used in 1.6
-@property (atomic) BOOL showNavButton;
+@property (nonatomic) BOOL showNavButton;
 
 /**
  * Allows the back button on the Search Header to be removed.
@@ -213,32 +213,15 @@
 
 - (void)teardown;
 
-// TODO [raho] theming !!! or set on LLSearchBarDisplayController
-/**
- * Set the background color of the entire search bar
- */
-- (void)setSearchBarBackgroundColor:(UIColor*)backgroundColor;
+- (void)setSearchBarBackgroundColor:(UIColor*)backgroundColor DEPRECATED_MSG_ATTRIBUTE("not used anymore, use theming for MapView.BottomBar instead");
 
-/**
- * Optional background image to display behind the search bar
- */
-@property (strong,nonatomic) UIImage *searchBarBackgroundImage;
+@property (strong,nonatomic) UIImage *searchBarBackgroundImage DEPRECATED_MSG_ATTRIBUTE("not used anymore");
 
+- (void)setSearchBarCancelButtonColor:(UIColor*)cancelButtonColor DEPRECATED_MSG_ATTRIBUTE("not used anymore, use theming for MapView.BottomBar.SearchBar.CancelButton instead");
 
-/**
- * Set the color of the cancel button in the search bar
- */
-- (void)setSearchBarCancelButtonColor:(UIColor*)cancelButtonColor;
+- (void)setBackButtonText:(NSString*)backButtonText DEPRECATED_MSG_ATTRIBUTE("not used anymore, backButton has no text");
 
-/**
- * Change the back button's text
- */
-- (void)setBackButtonText:(NSString*)backButtonText;
-
-/**
- * Get/set the color of the back button text.
- */
-@property (nonatomic, strong) UIColor *backButtonTextColor;
+@property (nonatomic, strong) UIColor *backButtonTextColor DEPRECATED_MSG_ATTRIBUTE("not used anymore, backButton has no text");
 
 - (void) runMemoryTests;
 
@@ -256,10 +239,7 @@
 @property (nonatomic) BOOL positioningEnabled;
 @property (nonatomic) BOOL shouldShowClosestBeacon;
 
-/**
- * Hide/show the search bar.  Default is NO.
- */
-@property (nonatomic) BOOL searchBarHidden;
+@property (nonatomic) BOOL searchBarHidden DEPRECATED_MSG_ATTRIBUTE("not used anymore, use bottomBarHidden");
 
 /**
  * Hide/show the bottom bar.  Default is NO.
@@ -321,5 +301,15 @@
  * It can take any value from [0, 1], where 0 makes the background black.
  */
 @property (nonatomic, strong) NSNumber *desaturationGreyscale;
+
+
+/**
+ * This property controls whether the security type (lane) selection UI is shown when routing through a security checkpoint.
+ * If set to <code>NO</code> the current user preferences for security categories/types are used (see LLUserPreferences).
+ * If set to <code>YES</code> the selection UI will be shown and user preferences will be updated based on user choices.
+ *
+ * By default it's set to <code>YES</code>.
+ */
+@property (nonatomic) BOOL showSecurityTypeSelectionUI;
 
 @end

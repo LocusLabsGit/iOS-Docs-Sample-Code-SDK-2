@@ -79,7 +79,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     func mapViewReady(_ mapView: LLMapView!) {
         
         search?.search("gate 62")
-        search?.search("Food")
+        search?.search("restaurant")
     }
     
     // MARK: Delegates - LLPOIDatabase
@@ -110,7 +110,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
             }
         }
         // For the "Restaurant" search, get more information for each result from the poiDatabase before displaying
-        else if searchTerm == "Food" {
+        else if searchTerm == "restaurant" {
             
             for searchResult in searchResults.results as! [LLSearchResult] {
                 

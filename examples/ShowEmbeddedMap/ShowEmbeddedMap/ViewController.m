@@ -36,7 +36,6 @@
     self.mapView = mapView;
     
     // Hide selected UI elements - these are likely not required when embedding
-    self.mapView.searchBarHidden = YES;
     self.mapView.bottomBarHidden = YES;
     
     // Get an instance of LLVenueDatabase, set it's mapview and register as its delegate

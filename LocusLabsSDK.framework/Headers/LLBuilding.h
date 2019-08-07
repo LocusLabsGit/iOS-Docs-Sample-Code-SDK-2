@@ -14,7 +14,7 @@
 @class LLFloor;
 
 /**
- *  Delegate to process responses to the asynchonrous methods of a LLBuilding object.
+ *  Delegate to process responses to the asynchronous methods of a LLBuilding object.
  */
 @protocol LLBuildingDelegate <NSObject>
 

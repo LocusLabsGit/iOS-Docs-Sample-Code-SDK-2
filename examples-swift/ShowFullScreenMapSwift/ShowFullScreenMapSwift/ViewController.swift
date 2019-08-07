@@ -22,7 +22,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         
         // Initialize the LocusLabs SDK with the accountId provided by LocusLabs
         LLLocusLabs.setup().accountId = "A11F4Y6SZRXH4X"
-       
+        
         // Create a new LLMapView, register as its delegate and add it as a subview
         mapView = LLMapView(frame: view.bounds)
         mapView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]

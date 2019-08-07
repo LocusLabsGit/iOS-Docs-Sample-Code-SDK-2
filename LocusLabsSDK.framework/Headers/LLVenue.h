@@ -21,6 +21,8 @@
 @class LLPOIDatabase;
 @class LLPosition;
 @class LLNavigationPath;
+@class LLSecurityCategory;
+@class LLDirectionsRequest;
 
 /**
  *  Defines the delegate methods of a Vemue object.  Several methods within the Venue object may require asynchronous calls to the LocusLabs
@@ -264,6 +266,8 @@ typedef enum LLPositioningSensorAlgorithm {
 /**
  *  Update the navigation path from the start position to the end postion.
  *
+ * **Deprecated**: use navigate* methods instead
+ *
  *  @param startPosition the starting point of the navigation
  *  @param endPosition   the end point of the navigation
  */
@@ -278,12 +282,28 @@ typedef enum LLPositioningSensorAlgorithm {
 - (void)navigateFrom:(LLPosition *)startPosition toDestinations:(NSArray *)destinations;
 
 /**
+ * Generate a navigation path for given directionsRequest.
+ *
+ * @param directionsRequest  configuration of LLDirectionsRequest
+ * @param completion    the completion callback that will receive the resulting LLNavigationPath
+ */
+- (void)navigate:(LLDirectionsRequest *)directionsRequest completion:(void (^)(LLNavigationPath *navigationPath, NSError *error))completion;
+
+/**
+ * Calculate the time to travel for given directionsRequest
+ *
+ * @param directionsRequest  configuration of LLDirectionsRequest
+ * @param completion    the completion callback that will receive the resulting time
+ */
+- (void)timeEstimate:(LLDirectionsRequest *)directionsRequest completion:(void (^)(NSNumber *timeEstimate, NSError *error))completion;
+
+/**
  *  Calculate the time to travel from the start position to the end postion.
+ *
+ * **Deprecated**: use the timeEstimateFrom:to:completion: instead"
  *
  *  @param startPosition the starting point
  *  @param endPosition   the end point
- *
- * **Deprecated**: use the timeEstimateFrom:to:completion: instead"
  */
 - (void)timeEstimateFrom:(LLPosition *)startPosition to:(LLPosition *)endPosition __attribute__((deprecated("use the timeEstimateFrom:to:completion: instead")));
 
@@ -309,6 +329,11 @@ typedef enum LLPositioningSensorAlgorithm {
  *  @return the POI database
  */
 - (LLPOIDatabase *)poiDatabase;
+
+/**
+ * An array of LLSecurityCategory supported by this venue.
+ */
+@property (nonatomic, readonly) NSArray<LLSecurityCategory *> *securityCategories;
 
 @property (nonatomic, readonly) NSArray<NSString *> *searchSuggestions;
 

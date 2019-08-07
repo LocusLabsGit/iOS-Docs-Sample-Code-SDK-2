@@ -184,6 +184,26 @@
  */
 @property (nonatomic, readonly) NSNumber *noDirections;
 
+/**
+ * Property denotes if the POI is temporarily closed. Only relevant for security checkpoints.
+ * It's NO by default if no server side data is available (yet).
+ */
+@property (nonatomic, readonly) BOOL isTemporarilyClosed;
+
+/**
+ * Queue time in minutes. Only relevant if isTemporarilyClosed == NO. This property may have a NSNotFound value,
+ * meaning that the data is not available (yet).
+ */
+@property (nonatomic, readonly) NSUInteger queueTime;
+
+/**
+ * Describes if the queueTime is a real time (isQueueTimeDynamic == YES) or is just an estimate (isQueueTimeDynamic == NO).
+ * Only relevant if isTemporarilyClosed == NO.
+ * It's NO by default if no server side data is available (yet).
+ */
+@property (nonatomic, readonly) BOOL isQueueTimeDynamic;
+
+
 - (BOOL)isEqual:(id)object;
 
 @property (nonatomic, readonly) NSUInteger hash;

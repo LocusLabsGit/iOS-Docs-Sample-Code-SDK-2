@@ -16,6 +16,7 @@
 #import <LocusLabsSDK/LLCircle.h>
 #import <LocusLabsSDK/LLConfiguration.h>
 #import <LocusLabsSDK/LLCurvedPath.h>
+#import <LocusLabsSDK/LLDirectionsRequest.h>
 #import <LocusLabsSDK/LLFlight.h>
 #import <LocusLabsSDK/LLFloor.h>
 #import <LocusLabsSDK/LLFloorInfo.h>
@@ -58,8 +59,10 @@
 #import <LocusLabsSDK/LLSearchDelegate.h>
 #import <LocusLabsSDK/LLSearchResult.h>
 #import <LocusLabsSDK/LLSearchResults.h>
+#import <LocusLabsSDK/LLSecurity.h>
 #import <LocusLabsSDK/LLTheme.h>
 #import <LocusLabsSDK/LLThemeBuilder.h>
+#import <LocusLabsSDK/LLUserPreferences.h>
 #import <LocusLabsSDK/LLVenue.h>
 #import <LocusLabsSDK/LLVenueDatabase.h>
 #import <LocusLabsSDK/LLVenueInfo.h>

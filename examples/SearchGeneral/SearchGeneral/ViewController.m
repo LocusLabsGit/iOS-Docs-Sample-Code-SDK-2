@@ -84,7 +84,7 @@
 - (void)mapViewReady:(LLMapView *)mapView {
     
     [self.search search:@"gate 62"];
-    [self.search search:@"Food"];
+    [self.search search:@"restaurant"];
 }
 
 #pragma mark Delegates - LLPOIDatabase
@@ -115,7 +115,7 @@
         }
     }
     // For the "Restaurant" search, get more information for each result from the poiDatabase before displaying
-    else if ([searchTerm isEqualToString:@"Food"]) {
+    else if ([searchTerm isEqualToString:@"restaurant"]) {
     
         for (LLSearchResult *searchResult in searchResults.results) {
             

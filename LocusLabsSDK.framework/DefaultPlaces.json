@@ -6,10 +6,8 @@
          "name":"Coffee",
          "icon":"places-icon-coffee.png",
          "mapMarker":"",
-         "normalColor":"4e9eff",
-         "selectedColor":"8dd119",
+         "normalColor":"8AB249",
 		 "normalIconColor":"ffffff",
-		 "selectedIconColor":"ffffff",
          "cornerRadiusPercent":1
       },
       {
@@ -18,10 +16,8 @@
          "name":"Bars",
          "icon":"places-icon-bar.png",
          "mapMarker":"",
-         "normalColor":"4e9eff",
-         "selectedColor":"8dd119",
+         "normalColor":"8AB249",
 		 "normalIconColor":"ffffff",
-		 "selectedIconColor":"ffffff",
          "cornerRadiusPercent":1
       },
       {
@@ -30,10 +26,8 @@
          "name":"ATMs",
          "icon":"places-icon-atm.png",
          "mapMarker":"",
-         "normalColor":"4e9eff",
-         "selectedColor":"8dd119",
+         "normalColor":"414242",
 		 "normalIconColor":"ffffff",
-		 "selectedIconColor":"ffffff",
          "cornerRadiusPercent":1
       },
       {
@@ -42,10 +36,8 @@
          "name":"Lounges",
          "icon":"places-icon-relax.png",
          "mapMarker":"",
-         "normalColor":"4e9eff",
-         "selectedColor":"8dd119",
+         "normalColor":"D75658",
 		 "normalIconColor":"ffffff",
-		 "selectedIconColor":"ffffff",
          "cornerRadiusPercent":1
       },
       {
@@ -54,10 +46,8 @@
          "name":"Charging Stations",
          "icon":"places-icon-charging.png",
          "mapMarker":"",
-         "normalColor":"4e9eff",
-         "selectedColor":"8dd119",
+         "normalColor":"414242",
 		 "normalIconColor":"ffffff",
-		 "selectedIconColor":"ffffff",
          "cornerRadiusPercent":1
       },
       {
@@ -66,10 +56,8 @@
          "name":"Headphones",
          "icon":"places-icon-shop.png",
          "mapMarker":"",
-         "normalColor":"4e9eff",
-         "selectedColor":"8dd119",
+         "normalColor":"499CDB",
 		 "normalIconColor":"ffffff",
-		 "selectedIconColor":"ffffff",
          "cornerRadiusPercent":1
       },
       {
@@ -78,10 +66,8 @@
          "name":"Restrooms",
          "icon":"places-icon-restroom.png",
          "mapMarker":"",
-         "normalColor":"4e9eff",
-         "selectedColor":"8dd119",
+         "normalColor":"F2A325",
 		 "normalIconColor":"ffffff",
-		 "selectedIconColor":"ffffff",
          "cornerRadiusPercent":1
       },
       {
@@ -90,10 +76,8 @@
          "name":"Baggage Claims",
          "icon":"places-icon-baggage.png",
          "mapMarker":"",
-         "normalColor":"4e9eff",
-         "selectedColor":"8dd119",
+         "normalColor":"D75658",
 		 "normalIconColor":"ffffff",
-		 "selectedIconColor":"ffffff",
          "cornerRadiusPercent":1
       },
       {
@@ -102,20 +86,9 @@
          "name":"Shuttles",
          "icon":"places-icon-bus.png",
          "mapMarker":"",
-         "normalColor":"4e9eff",
-         "selectedColor":"8dd119",
+         "normalColor":"414242",
 		 "normalIconColor":"ffffff",
-		 "selectedIconColor":"ffffff",
          "cornerRadiusPercent":1
       }
-   ],
-   "morePlacesNormalIcon":"places-icon-pin",
-   "morePlacesNormalColor":"4e9eff",
-   "morePlacesNormalIconColor":"ffffff",
-   "morePlacesSelectedColor":"8dd119",
-   "morePlacesSelectedIconColor":"ffffff",
-   "morePlacesCloseButtonColor":"333333",
-   "morePlacesCloseButtonIconColor":"ffffff",
-   "morePlacesCloseButtonIcon":"places-icon-chevron",
-   "morePlacesCornerRadiusPercent":1
+   ]
 }

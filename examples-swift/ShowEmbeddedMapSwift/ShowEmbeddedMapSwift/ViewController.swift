@@ -30,7 +30,6 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         view.addSubview(mapView!)
         
         // Hide selected UI elements - these are likely not required when embedding
-        mapView?.searchBarHidden = true;
         mapView?.bottomBarHidden = true;
 
         // Get an instance of LLVenueDatabase, register as its delegate and load the venue LAX

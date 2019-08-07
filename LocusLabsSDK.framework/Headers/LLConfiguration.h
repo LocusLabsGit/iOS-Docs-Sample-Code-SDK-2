@@ -43,10 +43,7 @@
 @property (nonatomic) NSString *language;
 @property (nonatomic) BOOL hours24format;
 
-/**
- * Enable/disable recommended places feature. The default value is <code>NO</code>
- */
-@property (nonatomic) BOOL recommendedPlacesEnabled;
+@property (nonatomic) BOOL recommendedPlacesEnabled DEPRECATED_MSG_ATTRIBUTE("this attribute is not used anymore");
 
 
 // Remote Assets
@@ -64,19 +61,19 @@
 @property (nonatomic, strong) UIColor *darkTextColor;
 @property (nonatomic, strong) UIColor *lightTextColor;
 @property (nonatomic, strong) UIColor *linkColor;
-@property (nonatomic, strong) UIColor *lightGrayBackgroundColor;
+@property (nonatomic, strong) UIColor *lightGrayBackgroundColor DEPRECATED_MSG_ATTRIBUTE("this attribute is not used anymore");
 @property (nonatomic, strong) UIColor *blueBackgroundColor;
-@property (nonatomic, strong) UIColor *defaultSearchBarBackgroundColor;
+@property (nonatomic, strong) UIColor *defaultSearchBarBackgroundColor DEPRECATED_MSG_ATTRIBUTE("this attribute is not used anymore");
 @property (assign) CGFloat poiAlphaChannel;
-@property (nonatomic, strong) UIColor *sponsoredSearchResultBackgroundColor;
+@property (nonatomic, strong) UIColor *sponsoredSearchResultBackgroundColor DEPRECATED_MSG_ATTRIBUTE("this attribute is not used anymore");
 
 // String & Other Constants
 @property (nonatomic, strong) NSString *cancelButtonLabel;
-@property (nonatomic, strong) NSString *bottomBarNavigateButtonLabel;
-@property (nonatomic, strong) NSString *bottomBarVenuesButtonLabel;
+@property (nonatomic, strong) NSString *bottomBarNavigateButtonLabel DEPRECATED_MSG_ATTRIBUTE("this button has not title");
+@property (nonatomic, strong) NSString *bottomBarVenuesButtonLabel DEPRECATED_MSG_ATTRIBUTE("this button is not used");
 @property (nonatomic, strong) NSString *bottomBarAirportsButtonLabel DEPRECATED_MSG_ATTRIBUTE("use bottomBarVenuesButtonLabel");
-@property (nonatomic, strong) NSString *bottomBarMyPositionButtonLabel;
-@property (nonatomic, strong) NSString *bottomBarLevelsButtonLabel;
+@property (nonatomic, strong) NSString *bottomBarMyPositionButtonLabel DEPRECATED_MSG_ATTRIBUTE("this button has not title");
+@property (nonatomic, strong) NSString *bottomBarLevelsButtonLabel DEPRECATED_MSG_ATTRIBUTE("this button has not title");
 @property (nonatomic, strong) NSString *bottomBarGrabButtonLabel;
 @property (nonatomic, strong) NSString *bottomBarVoucherButtonLabel;
 @property (nonatomic, strong) NSNumber *currentLevelFadeDuration;

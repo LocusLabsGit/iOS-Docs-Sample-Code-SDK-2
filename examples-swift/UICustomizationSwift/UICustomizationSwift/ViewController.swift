@@ -29,6 +29,12 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         mapView?.delegate = self
         view.addSubview(mapView!)
         
+        // Change the font
+        // mapView?.theme = themeWithCustomFont(customFont: UIFont(name: "American Typewriter", size: 12)!)
+        
+        // Change the bottom bar background and button title colors
+        mapView?.theme = themeWithCustomBottomBar()
+        
         // Get an instance of LLVenueDatabase, register as its delegate and load the venue LAX
         venueDatabase = LLVenueDatabase(mapView: mapView)
         venueDatabase.delegate = self
@@ -44,8 +50,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     func themeWithCustomBottomBar() -> LLTheme {
         
         let themeBuilder = LLThemeBuilder(theme: LLTheme.default())
-        themeBuilder.setProperty("MapView.BottomBar.backgroundColor", value: UIColor.orange)
-        themeBuilder.setProperty("MapView.BottomBar.Button.Title.textColor", value: UIColor.black)
+        themeBuilder.setProperty("MapView.BottomBar.backgroundColor", value: UIColor.gray)
         
         return themeBuilder.theme
     }
@@ -53,7 +58,8 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     func themeWithCustomFont(customFont: UIFont) -> LLTheme {
         
         let themeBuilder = LLThemeBuilder(theme: LLTheme.default())
-        themeBuilder.setProperty("fonts.normal", value: customFont)
+        themeBuilder.setProperty("MapView.BottomBar.SearchBar.Text.font", value: customFont)
+        themeBuilder.setProperty("MapView.ActionsView.Action.Title.font", value: customFont)
         
         return themeBuilder.theme
     }
@@ -74,17 +80,6 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     
     func mapViewReady(_ mapView: LLMapView!) {
         
-        // Change the font
-        // mapView?.theme = themeWithCustomFont(customFont: UIFont(name: "American Typewriter", size: 12)!)
-        
-        // Set a custom back button title
-        //mapView?.setBackButtonText(NSLocalizedString("Back", comment: ""))
-        
-        // Change the search bar background color
-        //mapView?.setSearchBarBackgroundColor(UIColor.orange)
-        
-        // Change the bottom bar background and button title colors
-        mapView?.theme = themeWithCustomBottomBar()
     }
 }
 

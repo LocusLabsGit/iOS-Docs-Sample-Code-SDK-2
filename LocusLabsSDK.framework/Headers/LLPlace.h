@@ -5,7 +5,6 @@
 
 #import <UIKit/UIKit.h>
 
-// TODO [api] updated to enum in Swift, so use LLPlaceBehavior.POI instead of LLPlaceBehaviorPOI
 typedef NS_ENUM(NSUInteger, LLPlaceBehavior) {
     LLPlaceBehaviorSearch,
     LLPlaceBehaviorPOI
@@ -19,9 +18,9 @@ typedef NS_ENUM(NSUInteger, LLPlaceBehavior) {
 @property (nonatomic) NSString *marker;
 @property (nonatomic) UIColor *normalColor;
 @property (nonatomic) UIColor *normalIconColor;
-@property (nonatomic) UIColor *selectedColor;
-@property (nonatomic) UIColor *selectedIconColor;
 @property (nonatomic) CGFloat cornerRadiusPercent;
+@property (nonatomic) UIColor *selectedColor DEPRECATED_MSG_ATTRIBUTE("this attribute is not used anymore");
+@property (nonatomic) UIColor *selectedIconColor DEPRECATED_MSG_ATTRIBUTE("this attribute is not used anymore");
 
 @end
 

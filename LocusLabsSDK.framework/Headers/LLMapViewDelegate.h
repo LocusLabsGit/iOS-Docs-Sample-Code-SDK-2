@@ -167,9 +167,6 @@ typedef NS_ENUM(NSInteger, LLMapViewPresentationContext)
  * The <code>places</code> array may be empty or already have <code>LLPlace</code> objects in it. Either way,
  * this method should return the array with any desired modifications, such as additional items
  * or rearranged order.
- * @discussion In addition, an <code>[NSNull null]</code> object as the first item in the array
- * has special meaning; it will prevent the first button from being shown in the list and only display
- * a single menu item.
  * @param mapView the mapView that generated the event
  * @param places the array of <code>LLPlace</code> objects
  * @returns a modified version of the <code>places</code> array, a new array of <code>LLPlace</code> objects, or an empty array
