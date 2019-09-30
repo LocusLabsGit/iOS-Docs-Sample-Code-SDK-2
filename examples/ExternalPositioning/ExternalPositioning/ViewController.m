@@ -66,6 +66,11 @@
 
 #pragma mark Custom
 
+- (void)hideBlueDot {
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_POSITION_CLEAR object:nil];
+}
+
 - (NSDictionary *)locationDictWithLat:(NSNumber *)lat lon:(NSNumber *)lon floorId:(NSString *)floorId heading:(NSNumber *)heading {
 
     if (!heading) heading = @(1);
@@ -105,11 +110,11 @@
     // Position 3 (4 secs later)
     locationDict = @{@"FloorId": @"T48L3", @"Lat": @33.941283, @"Lon": @-118.401863};
     [self performSelector:@selector(didReceiveExternalLocationDict:) withObject:locationDict afterDelay:5.0];
-    
+
     // Position 4 (6 secs later)
     locationDict = @{@"FloorId": @"T48L3", @"Lat": @33.941102, @"Lon": @-118.401902};
     [self performSelector:@selector(didReceiveExternalLocationDict:) withObject:locationDict afterDelay:7.0];
-    
+
     // Position 5 (8 secs later - Destination - Gate 64B)
     locationDict = @{@"FloorId": @"T48L3", @"Lat": @33.940908, @"Lon": @-118.40177};
     [self performSelector:@selector(didReceiveExternalLocationDict:) withObject:locationDict afterDelay:9.0];

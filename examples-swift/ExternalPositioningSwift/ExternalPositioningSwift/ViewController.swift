@@ -54,6 +54,11 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
 
     // MARK: Custom
     
+    func hideBlueDot() {
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: NOTIFICATION_POSITION_CLEAR), object: nil, userInfo: nil)
+    }
+    
     func locationDict(lat: NSNumber!, lon:NSNumber!, floorId:String!, heading:NSNumber?) -> [String: Any]  {
     
         let latLng = LLLatLng(lat: lat, lng: lon)

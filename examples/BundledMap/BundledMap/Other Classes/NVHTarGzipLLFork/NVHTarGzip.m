@@ -45,14 +45,14 @@
                      toPath:(NSString *)destinationPath
                       error:(NSError **)error {
     NSString *temporaryPath = [self temporaryFilePathForPath:sourcePath];
-    NSProgress *progress = [NSProgress progressWithTotalUnitCount:2];
-    [progress becomeCurrentWithPendingUnitCount:1];
+    //NSProgress *progress = [NSProgress progressWithTotalUnitCount:2];
+    //[progress becomeCurrentWithPendingUnitCount:1];
     [self unGzipFileAtPath:sourcePath toPath:temporaryPath error:error];
-    [progress resignCurrent];
+    //[progress resignCurrent];
     if (*error != nil) {
         return NO;
     }
-    [progress becomeCurrentWithPendingUnitCount:1];
+    //[progress becomeCurrentWithPendingUnitCount:1];
     [self unTarFileAtPath:temporaryPath toPath:destinationPath error:error];
     NSError *removeTemporaryFileError = nil;
     [[NSFileManager defaultManager] removeItemAtPath:temporaryPath error:&removeTemporaryFileError];
@@ -63,7 +63,7 @@
         *error = removeTemporaryFileError;
         return NO;
     }
-    [progress resignCurrent];
+    //[progress resignCurrent];
     return YES;
 }
 
@@ -125,19 +125,19 @@
                      toPath:(NSString*)destinationPath
                  completion:(void(^)(NSError *))completion {
     NSString *temporaryPath = [self temporaryFilePathForPath:sourcePath];
-    NSProgress *progress = [NSProgress progressWithTotalUnitCount:2];
-    [progress becomeCurrentWithPendingUnitCount:1];
+    //NSProgress *progress = [NSProgress progressWithTotalUnitCount:2];
+    //[progress becomeCurrentWithPendingUnitCount:1];
     [self unGzipFileAtPath:sourcePath toPath:temporaryPath completion:^(NSError *gzipError) {
-        [progress resignCurrent];
+       // [progress resignCurrent];
         if (gzipError != nil) {
             completion(gzipError);
             return;
         }
-        [progress becomeCurrentWithPendingUnitCount:1];
+        //[progress becomeCurrentWithPendingUnitCount:1];
         [self unTarFileAtPath:temporaryPath toPath:destinationPath completion:^(NSError *tarError) {
             NSError* error = nil;
             [[NSFileManager defaultManager] removeItemAtPath:temporaryPath error:&error];
-            [progress resignCurrent];
+           // [progress resignCurrent];
             if (tarError != nil) {
                 error = tarError;
             }
