@@ -57,7 +57,7 @@
 
 - (void)positionManager:(LLPositionManager *)positionManager positionChanged:(LLPosition *)position {
 
-    NSLog(@"Position Changed: Lat:%@ Lon:%@ FloorID:%@", position.latLng.lat, position.latLng.lng, position.floorId);
+    NSLog(@"Position Changed to Lat:%@ Lon:%@ FloorID:%@", position.latLng.lat, position.latLng.lng, position.floorId);
 }
 
 #pragma mark Delegates - LLVenueDatabase

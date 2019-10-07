@@ -288,6 +288,8 @@
 
 /**
  * Get or set the theme used by this LLMapView.
+ * Please note that setting custom theme is only reflected in the UI if set before the <code>mapViewReady:</code>
+ * delegate method is called.
  */
 @property (strong,nonatomic) LLTheme *theme;
 

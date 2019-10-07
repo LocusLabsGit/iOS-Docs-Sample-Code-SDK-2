@@ -36,6 +36,11 @@
  */
 @property (retain, nonatomic) NSString *locale;
 
+/**
+ * If it's <code>YES</code> it means that POIs in this venue have dynamically updated security queue wait time data
+ */
+@property (nonatomic, readonly) BOOL hasDynamicSecurityWaitTimePOIs;
+
 @end
 
 @compatibility_alias LLAirportInfo LLVenueInfo;

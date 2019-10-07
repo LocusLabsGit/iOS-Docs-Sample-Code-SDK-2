@@ -17,6 +17,11 @@
 + (nonnull instancetype)shared NS_SWIFT_NAME(shared());
 
 /**
+ * Clears all user preferences.
+ */
+- (void)purge;
+
+/**
  * Prefer the wheelchair accessible routes when navigating. NO by default.
  */
 @property (nonatomic) BOOL preferWheelchairAccessibleNavigation;

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+#import <LocusLabsSDK/LLAccessibilityIdentifier.h>
 #import <LocusLabsSDK/LLAirline.h>
 #import <LocusLabsSDK/LLBeacon.h>
 #import <LocusLabsSDK/LLBeaconDetection.h>
@@ -28,6 +29,8 @@
 #import <LocusLabsSDK/LLLocusLabs.h>
 #import <LocusLabsSDK/LLLogger.h>
 #import <LocusLabsSDK/LLMap.h>
+#import <LocusLabsSDK/LLMapPack.h>
+#import <LocusLabsSDK/LLMapPackFinder.h>
 #import <LocusLabsSDK/LLMapView.h>
 #import <LocusLabsSDK/LLMapViewDelegate.h>
 #import <LocusLabsSDK/LLMapViewPreferences.h>

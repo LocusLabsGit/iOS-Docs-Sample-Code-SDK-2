@@ -187,6 +187,11 @@ __attribute__((deprecated("use LLVenueDelegate")))
  */
 @property (nonatomic, readonly) NSString *venueId;
 
+/**
+ * If it's <code>YES</code> it means that POIs in this venue have dynamically updated security queue wait time data
+ */
+@property (nonatomic, readonly) BOOL hasDynamicSecurityWaitTimePOIs;
+
 
 /**
  * The beacon regions for this venue.

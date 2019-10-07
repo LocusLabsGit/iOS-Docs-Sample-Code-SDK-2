@@ -16,7 +16,8 @@
         "neutral_6" : { "hex" : "#FFFFFF" },
         "neutral_6_60%" : { "hex" : "#FFFFFF", "alpha": 0.6 },
         "neutral_6_10%" : { "hex" : "#FFFFFF", "alpha": 0.1 },
-        "status_full_cancelled" : { "hex" : "#D83131" }
+        "status_full_cancelled" : { "hex" : "#D83131" },
+        "status_full_cancelled_15%" : { "hex" : "#D83131", "alpha": 0.15 }
     },
     "fonts" : {
         "H1_Regular" : { "name": "SFProText-Regular", "size": 20 },
@@ -32,7 +33,39 @@
         "H3_Semibold" : { "name": "SFProText-Semibold", "size": 15 },
         "H4_Regular" : { "name": "SFProText-Regular", "size": 14 },
         "H4_Semibold" : { "name": "SFProText-Semibold", "size": 14 },
-        "H5_Medium" : { "name": "SFProText-Medium", "size": 12 },
+        "H5_Medium" : { "name": "SFProText-Medium", "size": 12 }
+    },
+    "buttons" : {
+        "Primary" : {
+            "cornerRadius": 26,
+            "backgroundColor" : "@colors.primary",
+            "highlightedBackgroundColor": "@colors.highlighting_primary",
+            "disabledBackgroundColor" : "@colors.neutral_4",
+            "Title" : {
+                "font" : "@fonts.H2_Semibold",
+                "textColor" : "@colors.neutral_6",
+                "disabledTextColor" : "@colors.neutral_2_40%"
+            },
+            "Icon" : {
+                "tintColor" : "@colors.neutral_6",
+                "disabledTintColor" : "@colors.neutral_2_40%"
+            }
+        },
+        "Secondary" : {
+            "cornerRadius": 26,
+            "backgroundColor": "@colors.neutral_4",
+            "highlightedBackgroundColor": "@colors.highlighting_secondary",
+            "selectedBackgroundColor" : "@colors.accent_secondary",
+            "Title" : {
+                "font" : "@fonts.H2_Semibold",
+                "textColor": "@colors.neutral_1",
+                "selectedTextColor" : "@colors.neutral_6"
+            },
+            "Icon" : {
+                "tintColor": "@colors.neutral_1",
+                "selectedTintColor" : "@colors.neutral_6"
+            }
+        }
     },
     "MapView" : {
         "DirectionsView" : {
@@ -363,28 +396,19 @@
                 }
             },
             "ButtonBar" : {
-                "DirectionsButton" : {
-                    "cornerRadius": 26,
-                    "backgroundColor": "@colors.primary",
-                    "highlightedBackgroundColor":  "@colors.highlighting_primary",
-                    "Icon" : {
-                        "tintColor" : "@colors.neutral_6"
-                    },
-                    "Title" : {
-                        "font" : "@fonts.H2_Semibold",
-                        "textColor" : "@colors.neutral_6"
-                    }
-                },
+                "DirectionsButton" : "@buttons.Primary",
                 "SingleButton" : {
                     "cornerRadius": 26,
                     "backgroundColor": "@colors.neutral_4",
                     "highlightedBackgroundColor": "@colors.highlighting_secondary",
                     "Icon" : {
-                        "tintColor": "@colors.primary"
+                        "tintColor": "@colors.primary",
+                        "disabledTintColor" : "@colors.neutral_2_40%"
                     },
                     "Title" : {
                         "font" : "@fonts.H2_Semibold",
-                        "textColor": "@colors.primary"
+                        "textColor": "@colors.primary",
+                        "disabledTextColor" : "@colors.neutral_2_40%"
                     }
                 },
                 "Button" : {
@@ -392,11 +416,13 @@
                     "backgroundColor": "@colors.neutral_4",
                     "highlightedBackgroundColor": "@colors.highlighting_secondary",
                     "Icon" : {
-                        "tintColor": "@colors.primary"
+                        "tintColor": "@colors.primary",
+                        "disabledTintColor" : "@colors.neutral_2_40%"
                     },
                     "Title" : {
                         "font" : "@fonts.H5_Medium",
-                        "textColor": "@colors.primary"
+                        "textColor": "@colors.primary",
+                        "disabledTextColor" : "@colors.neutral_2_40%"
                     }
                 }
             },
@@ -505,6 +531,65 @@
                     "Icon" : {
                         "tintColor" : "@colors.neutral_1"
                     }
+                }
+            }
+        },
+        "BookingView" : {
+            "cornerRadius" : 12,
+            "backgroundColor" : "@colors.neutral_6",
+            "separatorColor" : "@colors.neutral_4",
+            "ButtonBar" : {
+                "Button" : {
+                    "cornerRadius": 12,
+                    "backgroundColor": "@colors.neutral_4",
+                    "highlightedBackgroundColor": "@colors.highlighting_secondary",
+                    "Icon" : {
+                        "tintColor": "@colors.primary",
+                        "disabledTintColor" : "@colors.neutral_2_40%"
+                    },
+                    "Title" : {
+                        "font" : "@fonts.H5_Medium",
+                        "textColor": "@colors.primary",
+                        "disabledTextColor" : "@colors.neutral_2_40%"
+                    }
+                }
+            },
+            "Label" : {
+                "font": "@fonts.H2_Semibold",
+                "textColor": "@colors.neutral_1"
+            },
+            "DateAndTimeSummaryLabel" : {
+                "font": "@fonts.H3_Medium",
+                "textColor": "@colors.primary"
+            },
+            "SlotsView" : {
+                "CellView" : {
+                    "disabledBackgroundColor": "@colors.neutral_5",
+                    "selectedBackgroundColor": "@colors.primary",
+                    "borderColor": "@colors.primary",
+                    "selectedBorderColor": "@colors.primary",
+                    "disabledBorderColor": "@colors.neutral_2_40%",
+                    "highlightedBorderColor": "@colors.highlighting_primary",
+                    "Title" : {
+                        "font" : "@fonts.H3_Regular",
+                        "textColor": "@colors.neutral_1",
+                        "selectedTextColor" : "@colors.neutral_6",
+                        "disabledTextColor" : "@colors.neutral_2_40%"
+                    }
+                }
+            },
+            "ValidationMessage" : {
+                "font" : "@fonts.H4_Regular",
+                "textColor" : "@colors.status_full_cancelled"
+            },
+            "TextField" : {
+                "backgroundColor" : "@colors.neutral_5",
+                "invalidBackgroundColor" : "@colors.status_full_cancelled_15%",
+                "Text" : {
+                    "font" : "@fonts.H3_Regular",
+                    "textColor" : "@colors.neutral_1",
+                    "invalidTextColor" : "@colors.status_full_cancelled",
+                    "placeholderTextColor" : "@colors.neutral_2_40%"
                 }
             }
         },
@@ -657,19 +742,14 @@
             },
             "Message" : {
                 "font" : "@fonts.H3_Regular",
+                "emphasisedFont" : "@fonts.H3_Semibold",
                 "textColor" : "@colors.neutral_1"
             },
-            "Button" : {
-                "backgroundColor" : "@colors.primary",
-                "highlightedBackgroundColor": "@colors.highlighting_primary",
-                "cornerRadius": 26,
-                "Title" : {
-                    "font" : "@fonts.H3_Semibold",
-                    "textColor" : "@colors.neutral_6"
-                }
-            }
+            "Button" : "@buttons.Primary",
+            "CancelButton" : "@buttons.Secondary"
         },
         "ActionSheet" : {
+            "overlayColor": "@colors.neutral_0_50%",
             "backgroundColor": "@colors.neutral_6",
             "cornerRadius": 12,
             "Title" : {
@@ -681,31 +761,10 @@
                 "font.lineHeight" : 20.0,
                 "textColor" : "@colors.neutral_1"
             },
-            "OptionButton" : {
-                "cornerRadius": 26,
-                "backgroundColor" : "@colors.neutral_4",
-                "highlightedBackgroundColor": "@colors.highlighting_secondary",
-                "selectedBackgroundColor" : "@colors.accent_secondary",
-                "Title" : {
-                    "font" : "@fonts.H2_Semibold",
-                    "textColor" : "@colors.neutral_1",
-                    "selectedTextColor" : "@colors.neutral_6"
-                },
-                "Icon" : {
-                    "selectedTintColor" : "@colors.neutral_6"
-                }
-            },
-            "ActionButton" : {
-                "backgroundColor" : "@colors.primary",
-                "highlightedBackgroundColor":  "@colors.highlighting_primary",
-                "disabledBackgroundColor" : "@colors.neutral_4",
-                "Title" : {
-                    "font" : "@fonts.H2_Semibold",
-                    "textColor" : "@colors.neutral_6",
-                    "disabledTextColor" : "@colors.neutral_2_40%"
-                }
-            }
-
+            "OptionButton" : "@buttons.Secondary",
+            "OptionButton.Icon.tintColor" : null,
+            "ActionButton" : "@buttons.Primary",
+            "ActionButton.cornerRadius" : 0
         }
     }
 }
