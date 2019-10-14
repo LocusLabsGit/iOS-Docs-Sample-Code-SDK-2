@@ -15,17 +15,6 @@
 		9CB2CBDF2021AF50002E8BD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CB2CBDE2021AF50002E8BD7 /* Assets.xcassets */; };
 		9CB2CBE22021AF50002E8BD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB2CBE02021AF50002E8BD7 /* LaunchScreen.storyboard */; };
 		9CB2CBE52021AF50002E8BD7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2CBE42021AF50002E8BD7 /* main.m */; };
-		9CDA83672145192000CAD509 /* LocusLabsMapLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA835D2145191F00CAD509 /* LocusLabsMapLoader.m */; };
-		9CDA83682145192000CAD509 /* LocusLabsMapBackgroundDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA835F2145191F00CAD509 /* LocusLabsMapBackgroundDownloader.m */; };
-		9CDA83692145192000CAD509 /* LocusLabsMapPackFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA83622145192000CAD509 /* LocusLabsMapPackFinder.m */; };
-		9CDA836A2145192000CAD509 /* LocusLabsCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA83632145192000CAD509 /* LocusLabsCache.m */; };
-		9CDA836B2145192000CAD509 /* LocusLabsMapPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA83662145192000CAD509 /* LocusLabsMapPack.m */; };
-		9CDA83792145196F00CAD509 /* NVHProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA836D2145196E00CAD509 /* NVHProgress.m */; };
-		9CDA837A2145196F00CAD509 /* NVHTarFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA836E2145196E00CAD509 /* NVHTarFile.m */; };
-		9CDA837B2145196F00CAD509 /* NSFileManager+NVHFileSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA836F2145196E00CAD509 /* NSFileManager+NVHFileSize.m */; };
-		9CDA837C2145196F00CAD509 /* NVHFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA83712145196E00CAD509 /* NVHFile.m */; };
-		9CDA837D2145196F00CAD509 /* NVHTarGzip.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA83752145196F00CAD509 /* NVHTarGzip.m */; };
-		9CDA837E2145196F00CAD509 /* NVHGzipFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA83782145196F00CAD509 /* NVHGzipFile.m */; };
 		9CDB7DF72144E69000B2EF4D /* LocusLabsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDB7DF62144E69000B2EF4D /* LocusLabsSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,28 +44,6 @@
 		9CB2CBE12021AF50002E8BD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CB2CBE32021AF50002E8BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CB2CBE42021AF50002E8BD7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9CDA835D2145191F00CAD509 /* LocusLabsMapLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocusLabsMapLoader.m; sourceTree = "<group>"; };
-		9CDA835E2145191F00CAD509 /* LocusLabsMapBackgroundDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocusLabsMapBackgroundDownloader.h; sourceTree = "<group>"; };
-		9CDA835F2145191F00CAD509 /* LocusLabsMapBackgroundDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocusLabsMapBackgroundDownloader.m; sourceTree = "<group>"; };
-		9CDA83602145191F00CAD509 /* LocusLabsMapPackFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocusLabsMapPackFinder.h; sourceTree = "<group>"; };
-		9CDA83612145192000CAD509 /* LocusLabsMapPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocusLabsMapPack.h; sourceTree = "<group>"; };
-		9CDA83622145192000CAD509 /* LocusLabsMapPackFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocusLabsMapPackFinder.m; sourceTree = "<group>"; };
-		9CDA83632145192000CAD509 /* LocusLabsCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocusLabsCache.m; sourceTree = "<group>"; };
-		9CDA83642145192000CAD509 /* LocusLabsMapLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocusLabsMapLoader.h; sourceTree = "<group>"; };
-		9CDA83652145192000CAD509 /* LocusLabsCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocusLabsCache.h; sourceTree = "<group>"; };
-		9CDA83662145192000CAD509 /* LocusLabsMapPack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocusLabsMapPack.m; sourceTree = "<group>"; };
-		9CDA836D2145196E00CAD509 /* NVHProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVHProgress.m; sourceTree = "<group>"; };
-		9CDA836E2145196E00CAD509 /* NVHTarFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVHTarFile.m; sourceTree = "<group>"; };
-		9CDA836F2145196E00CAD509 /* NSFileManager+NVHFileSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+NVHFileSize.m"; sourceTree = "<group>"; };
-		9CDA83702145196E00CAD509 /* NVHFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVHFile.h; sourceTree = "<group>"; };
-		9CDA83712145196E00CAD509 /* NVHFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVHFile.m; sourceTree = "<group>"; };
-		9CDA83722145196F00CAD509 /* NSFileManager+NVHFileSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+NVHFileSize.h"; sourceTree = "<group>"; };
-		9CDA83732145196F00CAD509 /* NVHTarFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVHTarFile.h; sourceTree = "<group>"; };
-		9CDA83742145196F00CAD509 /* NVHTarGzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVHTarGzip.h; sourceTree = "<group>"; };
-		9CDA83752145196F00CAD509 /* NVHTarGzip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVHTarGzip.m; sourceTree = "<group>"; };
-		9CDA83762145196F00CAD509 /* NVHGzipFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVHGzipFile.h; sourceTree = "<group>"; };
-		9CDA83772145196F00CAD509 /* NVHProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVHProgress.h; sourceTree = "<group>"; };
-		9CDA83782145196F00CAD509 /* NVHGzipFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVHGzipFile.m; sourceTree = "<group>"; };
 		9CDB7DF62144E69000B2EF4D /* LocusLabsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocusLabsSDK.framework; path = ../../LocusLabsSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,7 +97,6 @@
 				9CB2CBE32021AF50002E8BD7 /* Info.plist */,
 				9CB2CBE42021AF50002E8BD7 /* main.m */,
 				9C3A6E532145164600F0E157 /* BundleMapFiles */,
-				9CDA835B214518F300CAD509 /* Other Classes */,
 			);
 			path = BundledMap;
 			sourceTree = "<group>";
@@ -141,51 +107,6 @@
 				9CDB7DF62144E69000B2EF4D /* LocusLabsSDK.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9CDA835B214518F300CAD509 /* Other Classes */ = {
-			isa = PBXGroup;
-			children = (
-				9CDA835C2145190900CAD509 /* Map Loading */,
-				9CDA836C2145195F00CAD509 /* NVHTarGzipLLFork */,
-			);
-			path = "Other Classes";
-			sourceTree = "<group>";
-		};
-		9CDA835C2145190900CAD509 /* Map Loading */ = {
-			isa = PBXGroup;
-			children = (
-				9CDA83652145192000CAD509 /* LocusLabsCache.h */,
-				9CDA83632145192000CAD509 /* LocusLabsCache.m */,
-				9CDA835E2145191F00CAD509 /* LocusLabsMapBackgroundDownloader.h */,
-				9CDA835F2145191F00CAD509 /* LocusLabsMapBackgroundDownloader.m */,
-				9CDA83642145192000CAD509 /* LocusLabsMapLoader.h */,
-				9CDA835D2145191F00CAD509 /* LocusLabsMapLoader.m */,
-				9CDA83612145192000CAD509 /* LocusLabsMapPack.h */,
-				9CDA83662145192000CAD509 /* LocusLabsMapPack.m */,
-				9CDA83602145191F00CAD509 /* LocusLabsMapPackFinder.h */,
-				9CDA83622145192000CAD509 /* LocusLabsMapPackFinder.m */,
-			);
-			path = "Map Loading";
-			sourceTree = "<group>";
-		};
-		9CDA836C2145195F00CAD509 /* NVHTarGzipLLFork */ = {
-			isa = PBXGroup;
-			children = (
-				9CDA83722145196F00CAD509 /* NSFileManager+NVHFileSize.h */,
-				9CDA836F2145196E00CAD509 /* NSFileManager+NVHFileSize.m */,
-				9CDA83702145196E00CAD509 /* NVHFile.h */,
-				9CDA83712145196E00CAD509 /* NVHFile.m */,
-				9CDA83762145196F00CAD509 /* NVHGzipFile.h */,
-				9CDA83782145196F00CAD509 /* NVHGzipFile.m */,
-				9CDA83772145196F00CAD509 /* NVHProgress.h */,
-				9CDA836D2145196E00CAD509 /* NVHProgress.m */,
-				9CDA83732145196F00CAD509 /* NVHTarFile.h */,
-				9CDA836E2145196E00CAD509 /* NVHTarFile.m */,
-				9CDA83742145196F00CAD509 /* NVHTarGzip.h */,
-				9CDA83752145196F00CAD509 /* NVHTarGzip.m */,
-			);
-			path = NVHTarGzipLLFork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,20 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDA837A2145196F00CAD509 /* NVHTarFile.m in Sources */,
-				9CDA83692145192000CAD509 /* LocusLabsMapPackFinder.m in Sources */,
-				9CDA837B2145196F00CAD509 /* NSFileManager+NVHFileSize.m in Sources */,
-				9CDA83672145192000CAD509 /* LocusLabsMapLoader.m in Sources */,
-				9CDA837E2145196F00CAD509 /* NVHGzipFile.m in Sources */,
-				9CDA836B2145192000CAD509 /* LocusLabsMapPack.m in Sources */,
 				9CB2CBDA2021AF50002E8BD7 /* ViewController.m in Sources */,
-				9CDA837D2145196F00CAD509 /* NVHTarGzip.m in Sources */,
 				9CB2CBE52021AF50002E8BD7 /* main.m in Sources */,
-				9CDA836A2145192000CAD509 /* LocusLabsCache.m in Sources */,
-				9CDA837C2145196F00CAD509 /* NVHFile.m in Sources */,
 				9CB2CBD72021AF50002E8BD7 /* AppDelegate.m in Sources */,
-				9CDA83682145192000CAD509 /* LocusLabsMapBackgroundDownloader.m in Sources */,
-				9CDA83792145196F00CAD509 /* NVHProgress.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

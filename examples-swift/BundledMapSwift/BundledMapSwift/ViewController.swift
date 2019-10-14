@@ -32,8 +32,8 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         // Get an instance of LLVenueDatabase, register as its delegate and load the venue LAX
         venueDatabase = LLVenueDatabase(mapView: mapView)
         venueDatabase.delegate = self
-
-        LocusLabsMapPack.mapPackInstall { (didInstall, error) in
+        
+        LLMapPack.mapPackInstall { (didInstall, error) in
             
             if error != nil {
                 

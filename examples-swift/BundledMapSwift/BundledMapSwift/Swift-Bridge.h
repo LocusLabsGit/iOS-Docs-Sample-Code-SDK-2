@@ -7,7 +7,6 @@
 //
 
 #import <LocusLabsSDK/LocusLabsSDK.h>
-#import "LocusLabsMapPack.h"
 
 #ifndef Swift_Bridge_h
 #define Swift_Bridge_h

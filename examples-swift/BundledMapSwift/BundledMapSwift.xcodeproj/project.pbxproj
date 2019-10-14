@@ -15,17 +15,6 @@
 		9C1B00282021E3200077CC26 /* LocusLabsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B00272021E3200077CC26 /* LocusLabsSDK.framework */; };
 		9C4B2C0721EF09C800D4A643 /* LocusLabsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B00272021E3200077CC26 /* LocusLabsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9CDA833B214516F200CAD509 /* ios-A11F4Y6SZRXH4X-2018-09-02T15:45:05.tar.gz in Resources */ = {isa = PBXBuildFile; fileRef = 9CDA833A214516F200CAD509 /* ios-A11F4Y6SZRXH4X-2018-09-02T15:45:05.tar.gz */; };
-		9CDA838E214519F900CAD509 /* NVHProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA8382214519F700CAD509 /* NVHProgress.m */; };
-		9CDA838F214519F900CAD509 /* NVHTarFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA8383214519F700CAD509 /* NVHTarFile.m */; };
-		9CDA8390214519F900CAD509 /* NSFileManager+NVHFileSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA8384214519F700CAD509 /* NSFileManager+NVHFileSize.m */; };
-		9CDA8391214519F900CAD509 /* NVHFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA8386214519F800CAD509 /* NVHFile.m */; };
-		9CDA8392214519F900CAD509 /* NVHTarGzip.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA838A214519F800CAD509 /* NVHTarGzip.m */; };
-		9CDA8393214519F900CAD509 /* NVHGzipFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA838D214519F900CAD509 /* NVHGzipFile.m */; };
-		9CDA839E21451A1000CAD509 /* LocusLabsMapPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA839621451A1000CAD509 /* LocusLabsMapPack.m */; };
-		9CDA839F21451A1000CAD509 /* LocusLabsMapLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA839721451A1000CAD509 /* LocusLabsMapLoader.m */; };
-		9CDA83A021451A1000CAD509 /* LocusLabsCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA839921451A1000CAD509 /* LocusLabsCache.m */; };
-		9CDA83A121451A1000CAD509 /* LocusLabsMapPackFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA839A21451A1000CAD509 /* LocusLabsMapPackFinder.m */; };
-		9CDA83A221451A1000CAD509 /* LocusLabsMapBackgroundDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CDA839D21451A1000CAD509 /* LocusLabsMapBackgroundDownloader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,28 +42,6 @@
 		9C1B00272021E3200077CC26 /* LocusLabsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocusLabsSDK.framework; path = ../../LocusLabsSDK.framework; sourceTree = "<group>"; };
 		9C1B002B2021E3A70077CC26 /* Swift-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridge.h"; sourceTree = "<group>"; };
 		9CDA833A214516F200CAD509 /* ios-A11F4Y6SZRXH4X-2018-09-02T15:45:05.tar.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = "ios-A11F4Y6SZRXH4X-2018-09-02T15:45:05.tar.gz"; sourceTree = "<group>"; };
-		9CDA8382214519F700CAD509 /* NVHProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVHProgress.m; sourceTree = "<group>"; };
-		9CDA8383214519F700CAD509 /* NVHTarFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVHTarFile.m; sourceTree = "<group>"; };
-		9CDA8384214519F700CAD509 /* NSFileManager+NVHFileSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+NVHFileSize.m"; sourceTree = "<group>"; };
-		9CDA8385214519F700CAD509 /* NVHFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVHFile.h; sourceTree = "<group>"; };
-		9CDA8386214519F800CAD509 /* NVHFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVHFile.m; sourceTree = "<group>"; };
-		9CDA8387214519F800CAD509 /* NSFileManager+NVHFileSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+NVHFileSize.h"; sourceTree = "<group>"; };
-		9CDA8388214519F800CAD509 /* NVHTarFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVHTarFile.h; sourceTree = "<group>"; };
-		9CDA8389214519F800CAD509 /* NVHTarGzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVHTarGzip.h; sourceTree = "<group>"; };
-		9CDA838A214519F800CAD509 /* NVHTarGzip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVHTarGzip.m; sourceTree = "<group>"; };
-		9CDA838B214519F800CAD509 /* NVHGzipFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVHGzipFile.h; sourceTree = "<group>"; };
-		9CDA838C214519F800CAD509 /* NVHProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVHProgress.h; sourceTree = "<group>"; };
-		9CDA838D214519F900CAD509 /* NVHGzipFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVHGzipFile.m; sourceTree = "<group>"; };
-		9CDA839421451A0F00CAD509 /* LocusLabsMapBackgroundDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocusLabsMapBackgroundDownloader.h; path = "../../../../../examples/BundledMap/BundledMap/Other Classes/Map Loading/LocusLabsMapBackgroundDownloader.h"; sourceTree = "<group>"; };
-		9CDA839521451A0F00CAD509 /* LocusLabsMapPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocusLabsMapPack.h; path = "../../../../../examples/BundledMap/BundledMap/Other Classes/Map Loading/LocusLabsMapPack.h"; sourceTree = "<group>"; };
-		9CDA839621451A1000CAD509 /* LocusLabsMapPack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocusLabsMapPack.m; path = "../../../../../examples/BundledMap/BundledMap/Other Classes/Map Loading/LocusLabsMapPack.m"; sourceTree = "<group>"; };
-		9CDA839721451A1000CAD509 /* LocusLabsMapLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocusLabsMapLoader.m; path = "../../../../../examples/BundledMap/BundledMap/Other Classes/Map Loading/LocusLabsMapLoader.m"; sourceTree = "<group>"; };
-		9CDA839821451A1000CAD509 /* LocusLabsMapPackFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocusLabsMapPackFinder.h; path = "../../../../../examples/BundledMap/BundledMap/Other Classes/Map Loading/LocusLabsMapPackFinder.h"; sourceTree = "<group>"; };
-		9CDA839921451A1000CAD509 /* LocusLabsCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocusLabsCache.m; path = "../../../../../examples/BundledMap/BundledMap/Other Classes/Map Loading/LocusLabsCache.m"; sourceTree = "<group>"; };
-		9CDA839A21451A1000CAD509 /* LocusLabsMapPackFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocusLabsMapPackFinder.m; path = "../../../../../examples/BundledMap/BundledMap/Other Classes/Map Loading/LocusLabsMapPackFinder.m"; sourceTree = "<group>"; };
-		9CDA839B21451A1000CAD509 /* LocusLabsMapLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocusLabsMapLoader.h; path = "../../../../../examples/BundledMap/BundledMap/Other Classes/Map Loading/LocusLabsMapLoader.h"; sourceTree = "<group>"; };
-		9CDA839C21451A1000CAD509 /* LocusLabsCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocusLabsCache.h; path = "../../../../../examples/BundledMap/BundledMap/Other Classes/Map Loading/LocusLabsCache.h"; sourceTree = "<group>"; };
-		9CDA839D21451A1000CAD509 /* LocusLabsMapBackgroundDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocusLabsMapBackgroundDownloader.m; path = "../../../../../examples/BundledMap/BundledMap/Other Classes/Map Loading/LocusLabsMapBackgroundDownloader.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +83,6 @@
 				9C1B00192021E2F30077CC26 /* LaunchScreen.storyboard */,
 				9C1B001C2021E2F30077CC26 /* Info.plist */,
 				9CDA8339214516E400CAD509 /* BundledMapFiles */,
-				9CDA837F214519DD00CAD509 /* Other Classes */,
 				9C1B002B2021E3A70077CC26 /* Swift-Bridge.h */,
 			);
 			path = BundledMapSwift;
@@ -136,51 +102,6 @@
 				9CDA833A214516F200CAD509 /* ios-A11F4Y6SZRXH4X-2018-09-02T15:45:05.tar.gz */,
 			);
 			path = BundledMapFiles;
-			sourceTree = "<group>";
-		};
-		9CDA837F214519DD00CAD509 /* Other Classes */ = {
-			isa = PBXGroup;
-			children = (
-				9CDA8380214519E500CAD509 /* Map Loading */,
-				9CDA8381214519EA00CAD509 /* NVHTarGzipLLFork */,
-			);
-			path = "Other Classes";
-			sourceTree = "<group>";
-		};
-		9CDA8380214519E500CAD509 /* Map Loading */ = {
-			isa = PBXGroup;
-			children = (
-				9CDA839C21451A1000CAD509 /* LocusLabsCache.h */,
-				9CDA839921451A1000CAD509 /* LocusLabsCache.m */,
-				9CDA839421451A0F00CAD509 /* LocusLabsMapBackgroundDownloader.h */,
-				9CDA839D21451A1000CAD509 /* LocusLabsMapBackgroundDownloader.m */,
-				9CDA839B21451A1000CAD509 /* LocusLabsMapLoader.h */,
-				9CDA839721451A1000CAD509 /* LocusLabsMapLoader.m */,
-				9CDA839521451A0F00CAD509 /* LocusLabsMapPack.h */,
-				9CDA839621451A1000CAD509 /* LocusLabsMapPack.m */,
-				9CDA839821451A1000CAD509 /* LocusLabsMapPackFinder.h */,
-				9CDA839A21451A1000CAD509 /* LocusLabsMapPackFinder.m */,
-			);
-			path = "Map Loading";
-			sourceTree = "<group>";
-		};
-		9CDA8381214519EA00CAD509 /* NVHTarGzipLLFork */ = {
-			isa = PBXGroup;
-			children = (
-				9CDA8387214519F800CAD509 /* NSFileManager+NVHFileSize.h */,
-				9CDA8384214519F700CAD509 /* NSFileManager+NVHFileSize.m */,
-				9CDA8385214519F700CAD509 /* NVHFile.h */,
-				9CDA8386214519F800CAD509 /* NVHFile.m */,
-				9CDA838B214519F800CAD509 /* NVHGzipFile.h */,
-				9CDA838D214519F900CAD509 /* NVHGzipFile.m */,
-				9CDA838C214519F800CAD509 /* NVHProgress.h */,
-				9CDA8382214519F700CAD509 /* NVHProgress.m */,
-				9CDA8388214519F800CAD509 /* NVHTarFile.h */,
-				9CDA8383214519F700CAD509 /* NVHTarFile.m */,
-				9CDA8389214519F800CAD509 /* NVHTarGzip.h */,
-				9CDA838A214519F800CAD509 /* NVHTarGzip.m */,
-			);
-			path = NVHTarGzipLLFork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,19 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CDA83A121451A1000CAD509 /* LocusLabsMapPackFinder.m in Sources */,
-				9CDA839E21451A1000CAD509 /* LocusLabsMapPack.m in Sources */,
 				9C1B00132021E2F30077CC26 /* ViewController.swift in Sources */,
 				9C1B00112021E2F30077CC26 /* AppDelegate.swift in Sources */,
-				9CDA8391214519F900CAD509 /* NVHFile.m in Sources */,
-				9CDA83A021451A1000CAD509 /* LocusLabsCache.m in Sources */,
-				9CDA838F214519F900CAD509 /* NVHTarFile.m in Sources */,
-				9CDA838E214519F900CAD509 /* NVHProgress.m in Sources */,
-				9CDA839F21451A1000CAD509 /* LocusLabsMapLoader.m in Sources */,
-				9CDA8392214519F900CAD509 /* NVHTarGzip.m in Sources */,
-				9CDA83A221451A1000CAD509 /* LocusLabsMapBackgroundDownloader.m in Sources */,
-				9CDA8393214519F900CAD509 /* NVHGzipFile.m in Sources */,
-				9CDA8390214519F900CAD509 /* NSFileManager+NVHFileSize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

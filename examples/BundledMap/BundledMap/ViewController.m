@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "LocusLabsMapPack.h"
 
 @interface ViewController ()
 
@@ -40,7 +39,7 @@
     self.venueDatabase = [LLVenueDatabase venueDatabaseWithMapView:self.mapView];
     self.venueDatabase.delegate = self;
     
-    [LocusLabsMapPack mapPackInstallWithCompletionBlock:^void (BOOL didInstall, NSError *err) {
+    [LLMapPack mapPackInstallWithCompletionBlock:^void (BOOL didInstall, NSError *err) {
         
         if (err) {
             
