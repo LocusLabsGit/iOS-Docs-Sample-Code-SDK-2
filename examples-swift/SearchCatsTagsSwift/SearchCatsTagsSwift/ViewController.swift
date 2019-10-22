@@ -15,6 +15,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     var venue:              LLVenue?
     var mapView:            LLMapView?
     var search:             LLSearch?
+    var customMarkers =     [LLMarker]()
     
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -67,13 +68,27 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         // The user tapped the "Cancel" button while the map was loading. Dismiss the app or take other appropriate action here
     }
     
+    func mapView(_ mapView: LLMapView!, didTap marker: LLMarker!) -> Bool {
+        
+        if let poi = marker.userData! as? LLPOI {
+        
+            print("Marker tapped with ID:", poi.poiId!)
+        }
+        
+        // Return false to let the SDK handle the tap. If you would like to handle the tap, return true
+        return false
+    }
+    
     func mapViewReady(_ mapView: LLMapView!) {
         
         // Seach for all POIs in the "eat" category
-        search?.search("category:eat")
+        //search?.search("category:eat")
+        
+        // Search for gate 64A in the "gate" subcategory
+        search?.search("gate:64A")
         
         // Search for all POIs tagged "chocolate"
-        search?.search("chocolate")
+        //search?.search("chocolate")
     }
     
     // MARK: Delegates - LLSearch
@@ -89,6 +104,25 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
                 // Each result contains general information about the poi in addition to its location
                 print("Name: "+searchResult.name+" POIID: "+searchResult.poiId)
                 print("Terminal: "+searchResult.terminal+" Gate: "+searchResult.gate)
+            }
+        }
+        // For the gate search, get poi info and add a marker to the map
+        else if searchTerm == "gate:64A" {
+    
+            if searchResults.results.count > 0 {
+                
+                let firstResult = searchResults.results[0] as! LLSearchResult
+                venue?.poiDatabase()?.loadPOI(firstResult.poiId, completion: { poi in
+                    
+                    let marker = LLMarker()
+                    marker.position = poi?.position
+                    marker.iconUrl = Bundle.main.path(forResource: "gate_marker", ofType: "svg")
+                    marker.userData = poi
+                    marker.map = self.mapView?.map
+                    
+                    // Keep a reference to the marker so you can remove it when necessary
+                    self.customMarkers.append(marker)
+                })
             }
         }
         // For the tag search, draw results on the map

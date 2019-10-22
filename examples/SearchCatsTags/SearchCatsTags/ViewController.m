@@ -14,6 +14,7 @@
 @property (nonatomic, strong) LLVenueDatabase   *venueDatabase;
 @property (nonatomic, weak)   LLMapView         *mapView;
 @property (nonatomic, strong) LLSearch          *search;
+@property (nonatomic, strong) NSMutableArray    *customMarkers;
 
 - (void)createCircleWithPosition:(LLPosition *)position withRadius:(NSNumber*)radius andColor:(UIColor*)color;
 
@@ -76,13 +77,23 @@
     // The user tapped the "Cancel" button while the map was loading. Dismiss the app or take other appropriate action here
 }
 
+- (BOOL)mapView:(LLMapView *)mapView didTapMarker:(LLMarker *)marker {
+
+    NSLog(@"Marker tapped with ID:%@", ((LLPOI*)(marker.userData)).poiId);
+    // Return no to let the SDK handle the tap. If you would like to handle the tap, return YES
+    return NO;
+}
+
 - (void)mapViewReady:(LLMapView *)mapView {
     
-    // Seach for all POIs in the "eat" category
-    [self.search search:@"category:eat"];
+    // Search for all POIs in the "eat" category
+   // [self.search search:@"category:eat"];
+    
+    // Search for gate 64A in the "gate" subcategory
+    [self.search search:@"gate:64A"];
     
     // Search for all POIs tagged "chocolate"
-    [self.search search:@"chocolate"];
+    //[self.search search:@"chocolate"];
 }
 
 #pragma mark Delegates - LLSearch
@@ -100,9 +111,29 @@
             NSLog(@"%@ %@ %@ %@", searchResult.name, searchResult.poiId, searchResult.terminal, searchResult.gate);
         }
     }
+    // For the gate search, get poi info and add a marker to the map
+    else if ([searchTerm isEqualToString:@"gate:64A"]) {
+        
+        if ([searchResults.results count] > 0){
+        
+            LLSearchResult *firstResult = searchResults.results[0];
+            [self.venue.poiDatabase loadPOI:firstResult.poiId completion:^(LLPOI *poi) {
+                
+                // Add a custom marker
+                LLMarker *marker = [LLMarker new];
+                marker.position = poi.position;
+                marker.iconUrl = [[NSBundle mainBundle] pathForResource:@"gate_marker" ofType:@"svg"];
+                marker.userData = poi;
+                marker.map = self.mapView.map;
+                
+                // Keep a reference to the marker so you can remove it when necessary
+                if (!self.customMarkers) self.customMarkers = [NSMutableArray array];
+                [self.customMarkers addObject:marker];
+            }];
+        }
+    }
     // For the tag search, draw results on the map
     else if ([searchTerm isEqualToString:@"chocolate"]) {
-    
         for (LLSearchResult *searchResult in searchResults.results) {
             
             // Mark all chocolate results on the map

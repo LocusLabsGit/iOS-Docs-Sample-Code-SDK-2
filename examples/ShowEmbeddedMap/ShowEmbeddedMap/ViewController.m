@@ -37,6 +37,7 @@
     
     // Hide selected UI elements - these are likely not required when embedding
     self.mapView.bottomBarHidden = YES;
+    self.mapView.showBackButton = NO;
     
     // Get an instance of LLVenueDatabase, set it's mapview and register as its delegate
     self.venueDatabase = [LLVenueDatabase venueDatabaseWithMapView:self.mapView];
@@ -65,7 +66,6 @@
 
 - (void)mapViewReady:(LLMapView *)mapView {
     
-    // The map is ready to be used in calls e.g. zooming, showing poi, etc.
 }
 
 @end

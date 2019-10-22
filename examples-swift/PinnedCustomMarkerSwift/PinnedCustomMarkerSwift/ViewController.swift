@@ -83,7 +83,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
             // Add a custom marker
             let marker = LLMarker()
             marker.position = poi.position
-            marker.iconUrl = Bundle.main.path(forResource: "starbucks_selected.svg", ofType: nil)
+            marker.iconUrl = Bundle.main.path(forResource: "starbucks_selected", ofType: "svg")
             marker.userData = poi
             marker.map = mapView?.map
             

@@ -88,7 +88,7 @@
         // Add a custom marker
         LLMarker *marker = [[LLMarker alloc] init];
         marker.position = poi.position;
-        marker.iconUrl = [[NSBundle mainBundle] pathForResource:@"starbucks_selected.svg" ofType:nil];
+        marker.iconUrl = [[NSBundle mainBundle] pathForResource:@"starbucks_selected" ofType:@"svg"];
         marker.userData = poi;
         marker.map = self.mapView.map;
         

@@ -14,6 +14,7 @@
 		9C1B001B2021E2F30077CC26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1B00192021E2F30077CC26 /* LaunchScreen.storyboard */; };
 		9C1B00282021E3200077CC26 /* LocusLabsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B00272021E3200077CC26 /* LocusLabsSDK.framework */; };
 		9C4B2C2F21EF0DE200D4A643 /* LocusLabsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B00272021E3200077CC26 /* LocusLabsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9CB466EE235F2AE0004080BE /* gate_marker.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9CB466ED235F2AE0004080BE /* gate_marker.svg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,7 @@
 		9C1B001C2021E2F30077CC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C1B00272021E3200077CC26 /* LocusLabsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocusLabsSDK.framework; path = ../../LocusLabsSDK.framework; sourceTree = "<group>"; };
 		9C1B002B2021E3A70077CC26 /* Swift-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridge.h"; sourceTree = "<group>"; };
+		9CB466ED235F2AE0004080BE /* gate_marker.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gate_marker.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				9C1B00192021E2F30077CC26 /* LaunchScreen.storyboard */,
 				9C1B001C2021E2F30077CC26 /* Info.plist */,
 				9C1B002B2021E3A70077CC26 /* Swift-Bridge.h */,
+				9CB466ED235F2AE0004080BE /* gate_marker.svg */,
 			);
 			path = SearchCatsTagsSwift;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				9C1B001B2021E2F30077CC26 /* LaunchScreen.storyboard in Resources */,
 				9C1B00182021E2F30077CC26 /* Assets.xcassets in Resources */,
 				9C1B00162021E2F30077CC26 /* Main.storyboard in Resources */,
+				9CB466EE235F2AE0004080BE /* gate_marker.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
