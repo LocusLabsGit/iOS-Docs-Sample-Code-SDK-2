@@ -31,6 +31,14 @@
 @property (nonatomic, retain) NSString *accountId;
 
 /**
+ * Returns the Install ID, an identifier associated with server-side event logging for user analytics.
+ *
+ * Please note that installId depends on the currently set <code>accountId</code>.
+ * Please also note that installId might not be available right after assigning accountId as this value if provided by the server-side.s
+ */
+@property (nonatomic, readonly) NSString *installId;
+
+/**
  * The user's IDFA for analytics tracking.
  */
 @property (nonatomic, retain) NSUUID *idfa;

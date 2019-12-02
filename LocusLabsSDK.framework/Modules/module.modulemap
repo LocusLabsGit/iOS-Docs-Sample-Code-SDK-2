@@ -6,5 +6,6 @@ framework module LocusLabsSDK {
 
   explicit module Private {
     header "LLLogger_Private.h"
+    header "LLPositionManager_Private.h"
   }
 }

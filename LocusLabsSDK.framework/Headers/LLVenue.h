@@ -200,9 +200,9 @@ __attribute__((deprecated("use LLVenueDelegate")))
 
 @property (nonatomic, readonly) LLPosition *position;
 
-@property (nonatomic, readonly) NSString *positionState;
+@property (nonatomic, readonly) NSString *positionState __attribute__((deprecated("not used anymore")));
 
-@property (nonatomic, readonly) LLBeacon *closestBeacon;
+@property (nonatomic, readonly) LLBeacon *closestBeacon __attribute__((deprecated("not used anymore")));
 
 @property (nonatomic, readonly) NSString *assetVersion;
 
@@ -223,16 +223,17 @@ __attribute__((deprecated("use LLVenueDelegate")))
 */
 typedef enum LLPositioningSensorAlgorithm {
     LLPositioningSensorAlgorithmInternal = 0, // default: use our own positioning
-    LLPositioningSensorAlgorithmHybrid,       // combine our own positioning with a third party's positioning
+    LLPositioningSensorAlgorithmHybrid __attribute__((deprecated)), // not supported anymore
     LLPositioningSensorAlgorithmExternal      // use a third party's positioning instead of our own
 } LLPositioningSensorAlgorithm;
 
-@property (nonatomic) LLPositioningSensorAlgorithm positioningSensorAlgorithm;
+@property (nonatomic) LLPositioningSensorAlgorithm positioningSensorAlgorithm __attribute__((deprecated("not used anymore")));
 
-@property (nonatomic) double beaconReadingLifespan;
-@property (nonatomic) double bonusForBeingNearest;
-@property (nonatomic) NSInteger minimumReadingCount;
-@property (nonatomic, readonly) NSArray *positionManagerRollingCarpetRegionAlgorithmParameters;
+@property (nonatomic) double beaconReadingLifespan __attribute__((deprecated("not used anymore")));
+@property (nonatomic) double bonusForBeingNearest __attribute__((deprecated("not used anymore")));
+@property (nonatomic) NSInteger minimumReadingCount __attribute__((deprecated("not used anymore")));
+
+@property (nonatomic, readonly) NSArray *positionManagerRollingCarpetRegionAlgorithmParameters __attribute__((deprecated("not supported anymore")));;
 
 /**
  *  Loads the navigation graph used to compute navigation paths.
@@ -303,7 +304,7 @@ typedef enum LLPositioningSensorAlgorithm {
 - (void)timeEstimate:(LLDirectionsRequest *)directionsRequest completion:(void (^)(NSNumber *timeEstimate, NSError *error))completion;
 
 /**
- *  Calculate the time to travel from the start position to the end postion.
+ *  Calculate the time to travel from the start position to the end position.
  *
  * **Deprecated**: use the timeEstimateFrom:to:completion: instead"
  *
@@ -313,7 +314,7 @@ typedef enum LLPositioningSensorAlgorithm {
 - (void)timeEstimateFrom:(LLPosition *)startPosition to:(LLPosition *)endPosition __attribute__((deprecated("use the timeEstimateFrom:to:completion: instead")));
 
 /**
- *  Calculate the time to travel from the start position to the end postion.
+ *  Calculate the time to travel from the start position to the end position.
  *
  *  @param startPosition the starting point
  *  @param endPosition   the end point
@@ -342,15 +343,15 @@ typedef enum LLPositioningSensorAlgorithm {
 
 @property (nonatomic, readonly) NSArray<NSString *> *searchSuggestions;
 
-- (void)processBeaconReadings:(NSArray *)beacons;
+- (void)processBeaconReadings:(NSArray *)beacons __attribute__((deprecated("not supported anymore")));
 
-- (void)recordPositionSensorReading:(LLLatLng *)latLng errorRadius:(float)errorRadius floorId:(NSString *)floorId;
+- (void)recordPositionSensorReading:(LLLatLng *)latLng errorRadius:(float)errorRadius floorId:(NSString *)floorId  __attribute__((deprecated("not supported anymore")));
 
-- (void)recordPositionSensorReading:(LLLatLng *)latLng errorRadius:(float)errorRadius floorId:(NSString *)floorId heading:(NSNumber *)heading;
+- (void)recordPositionSensorReading:(LLLatLng *)latLng errorRadius:(float)errorRadius floorId:(NSString *)floorId heading:(NSNumber *)heading  __attribute__((deprecated("not supported anymore")));
 
-- (void)recordPositionSensorServiceInterruption:(NSString *)description;
+- (void)recordPositionSensorServiceInterruption:(NSString *)description  __attribute__((deprecated("not supported anymore")));
 
-- (void)recordHeadingSensorReading:(NSNumber *)heading;
+- (void)recordHeadingSensorReading:(NSNumber *)heading  __attribute__((deprecated("not supported anymore")));
 
 - (void)clearPosition;
 

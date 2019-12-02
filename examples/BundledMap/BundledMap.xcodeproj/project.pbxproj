@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C3A6E552145165200F0E157 /* ios-A11F4Y6SZRXH4X-2018-09-02T15:45:05.tar.gz in Resources */ = {isa = PBXBuildFile; fileRef = 9C3A6E542145165200F0E157 /* ios-A11F4Y6SZRXH4X-2018-09-02T15:45:05.tar.gz */; };
+		9C3A6E552145165200F0E157 /* ios-A11F4Y6SZRXH4X-2018-09-02T15-45-05.tar.gz in Resources */ = {isa = PBXBuildFile; fileRef = 9C3A6E542145165200F0E157 /* ios-A11F4Y6SZRXH4X-2018-09-02T15-45-05.tar.gz */; };
 		9C4B2C0321EF095800D4A643 /* LocusLabsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9CDB7DF62144E69000B2EF4D /* LocusLabsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9CB2CBD72021AF50002E8BD7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2CBD62021AF50002E8BD7 /* AppDelegate.m */; };
 		9CB2CBDA2021AF50002E8BD7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2CBD92021AF50002E8BD7 /* ViewController.m */; };
@@ -33,7 +33,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9C3A6E542145165200F0E157 /* ios-A11F4Y6SZRXH4X-2018-09-02T15:45:05.tar.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = "ios-A11F4Y6SZRXH4X-2018-09-02T15:45:05.tar.gz"; sourceTree = "<group>"; };
+		9C3A6E542145165200F0E157 /* ios-A11F4Y6SZRXH4X-2018-09-02T15-45-05.tar.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = "ios-A11F4Y6SZRXH4X-2018-09-02T15-45-05.tar.gz"; sourceTree = "<group>"; };
 		9CB2CBD22021AF50002E8BD7 /* BundledMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BundledMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB2CBD52021AF50002E8BD7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9CB2CBD62021AF50002E8BD7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 		9C3A6E532145164600F0E157 /* BundleMapFiles */ = {
 			isa = PBXGroup;
 			children = (
-				9C3A6E542145165200F0E157 /* ios-A11F4Y6SZRXH4X-2018-09-02T15:45:05.tar.gz */,
+				9C3A6E542145165200F0E157 /* ios-A11F4Y6SZRXH4X-2018-09-02T15-45-05.tar.gz */,
 			);
 			path = BundleMapFiles;
 			sourceTree = "<group>";
@@ -171,7 +171,7 @@
 			files = (
 				9CB2CBE22021AF50002E8BD7 /* LaunchScreen.storyboard in Resources */,
 				9CB2CBDF2021AF50002E8BD7 /* Assets.xcassets in Resources */,
-				9C3A6E552145165200F0E157 /* ios-A11F4Y6SZRXH4X-2018-09-02T15:45:05.tar.gz in Resources */,
+				9C3A6E552145165200F0E157 /* ios-A11F4Y6SZRXH4X-2018-09-02T15-45-05.tar.gz in Resources */,
 				9CB2CBDD2021AF50002E8BD7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

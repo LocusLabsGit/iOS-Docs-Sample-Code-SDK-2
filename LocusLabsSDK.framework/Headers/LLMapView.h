@@ -95,6 +95,12 @@
 @property (nonatomic) BOOL showBackButton;
 
 /**
+ * Allow to show/hide the overlay covering the top safe area of the map view.
+ * Default value: YES
+ */
+@property (nonatomic) BOOL showTopSafeAreaOverlay;
+
+/**
  * Changes the POI window behavior to omit any missing information fields rather than printing "Unknown".
  * Deprecated. This value no longer affects anything and missing fields are always omitted.
  */
@@ -313,5 +319,11 @@
  * By default it's set to <code>YES</code>.
  */
 @property (nonatomic) BOOL showSecurityTypeSelectionUI;
+
+/**
+ * Programmatically perform the function that the UI uses when you hit 'enter' to search in the search screen.
+ * As a result all found POIs are highlighted and listed in the bottom search results list, and the searchTerm in displayed in the search bar.
+ */
+- (void)smartSearch:(NSString *)searchTerm;
 
 @end

@@ -35,7 +35,4 @@
  */
 - (void)positionManager:(LLPositionManager *)positionManager positioningAvailable:(BOOL)positioningAvailable;
 
-- (void)positionManager:(LLPositionManager *)positionManager closestBeacon:(LLBeacon *)beacon;
-- (void)positionManager:(LLPositionManager *)positionManager beaconReadings:(NSArray *)readings;
-
 @end

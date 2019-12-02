@@ -14,6 +14,12 @@ locuslabs.setupIOS = function (callback) {
                     var eventString = JSON.stringify(event);
                     window.webkit.messageHandlers.event.postMessage(eventString)
                 }
+            },
+            sessionRelay : {
+                event: function(data) {
+                    var dataString = JSON.stringify(data);
+                    window.webkit.messageHandlers.session.postMessage(dataString)
+                }
             }
         };
     }

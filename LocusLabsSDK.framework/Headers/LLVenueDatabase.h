@@ -378,8 +378,10 @@ typedef LLVenueDownloadConstraint LLAirportDownloadConstraint;
 
 /**
  * Returns the Install ID, an identifier associated with server-side event logging for user analytics.
+ *
+ * **Deprecated**: use LLLocusLabs installId property instead
  */
-- (void)getInstallId:(void (^)(NSString *installId))block;
+- (void)getInstallId:(void (^)(NSString *installId))block __attribute__((deprecated("use LLLocusLabs installId property instead ")));
 
 // "private" in the sense that our customers shouldn't need to call this directly
 - (void) teardown;

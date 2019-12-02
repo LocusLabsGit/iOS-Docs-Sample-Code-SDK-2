@@ -10,7 +10,7 @@
 
 @class LLLatLng;
 
-@interface LLBeacon : NSObject
+@interface LLBeacon : NSObject <NSCopying>
 
 - (instancetype)initWithUUID:(NSString *)uuid majorId:(NSNumber *)majorId minorId:(NSNumber *)minorId rssi:(NSNumber *)rssi;
 

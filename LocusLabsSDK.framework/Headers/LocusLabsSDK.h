@@ -57,7 +57,6 @@
 #import <LocusLabsSDK/LLPosition.h>
 #import <LocusLabsSDK/LLPositionManager.h>
 #import <LocusLabsSDK/LLPositionManagerDelegate.h>
-#import <LocusLabsSDK/LLPositionManagerRollingCarpetRegionAlgorithm.h>
 #import <LocusLabsSDK/LLSearch.h>
 #import <LocusLabsSDK/LLSearchDelegate.h>
 #import <LocusLabsSDK/LLSearchResult.h>

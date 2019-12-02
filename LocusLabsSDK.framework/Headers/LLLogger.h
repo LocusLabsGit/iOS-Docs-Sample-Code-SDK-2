@@ -52,6 +52,11 @@ typedef NS_ENUM(NSInteger, LLLogTopic) {
 @property (atomic, assign) LLLogTopic logTopics;
 
 /**
+ * Each message can be prefixed with this optional string, by default it's nil
+ */
+@property (nonatomic, copy) NSString *logMessagePrefix;
+
+/**
  *  Returns the shared logger object.
  *
  *  @return The shared logger object.

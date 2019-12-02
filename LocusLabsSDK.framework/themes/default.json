@@ -17,7 +17,9 @@
         "neutral_6_60%" : { "hex" : "#FFFFFF", "alpha": 0.6 },
         "neutral_6_10%" : { "hex" : "#FFFFFF", "alpha": 0.1 },
         "status_full_cancelled" : { "hex" : "#D83131" },
-        "status_full_cancelled_15%" : { "hex" : "#D83131", "alpha": 0.15 }
+        "status_full_cancelled_15%" : { "hex" : "#D83131", "alpha": 0.15 },
+        "status_ontime_open" : { "hex" : "#219653" },
+        "status_closed_occupied" : { "hex" : "#EBEBEB" }
     },
     "fonts" : {
         "H1_Regular" : { "name": "SFProText-Regular", "size": 20 },
@@ -64,6 +66,22 @@
             "Icon" : {
                 "tintColor": "@colors.neutral_1",
                 "selectedTintColor" : "@colors.neutral_6"
+            }
+        }
+    },
+    "views" : {
+        "POIBookingOpenBadge" : {
+            "backgroundColor" : "@colors.status_ontime_open",
+            "Title" : {
+                "font" : "@fonts.H4_Semibold",
+                "textColor" : "@colors.neutral_6"
+            }
+        },
+        "POIBookingOccupiedBadge" : {
+            "backgroundColor" : "@colors.status_closed_occupied",
+            "Title" : {
+                "font" : "@fonts.H4_Semibold",
+                "textColor" : "@colors.neutral_2"
             }
         }
     },
@@ -131,7 +149,9 @@
                     "Detail" : {
                         "font" : "@fonts.H3_Regular",
                         "textColor" : "@colors.neutral_2"
-                    }
+                    },
+                    "POIBookingOpenBadge" : "@views.POIBookingOpenBadge",
+                    "POIBookingOccupiedBadge" : "@views.POIBookingOccupiedBadge"
                 },
                 "SearchSuggestion" : {
                     "backgroundColor" : "@colors.neutral_6",
@@ -170,10 +190,10 @@
                 "font" : "@fonts.H3_Medium",
                 "textColor" : "@colors.neutral_6",
                 "ClosedBadge" : {
-                    "backgroundColor" : "@colors.accent_secondary",
+                    "backgroundColor" : "@colors.status_closed_occupied",
                     "Title" : {
                         "font" : "@fonts.H4_Semibold",
-                        "textColor" : "@colors.neutral_6"
+                        "textColor" : "@colors.neutral_2"
                     }
                 }
             }
@@ -228,10 +248,10 @@
                     }
                 },
                 "ClosedBadge" : {
-                    "backgroundColor" : "@colors.accent_secondary",
+                    "backgroundColor" : "@colors.status_closed_occupied",
                     "Title" : {
                         "font" : "@fonts.H4_Semibold",
-                        "textColor" : "@colors.neutral_6"
+                        "textColor" : "@colors.neutral_2"
                     }
                 }
             },
@@ -258,10 +278,10 @@
                     }
                 },
                 "ClosedBadge" : {
-                    "backgroundColor" : "@colors.accent_secondary",
+                    "backgroundColor" : "@colors.status_closed_occupied",
                     "Title" : {
                         "font" : "@fonts.H4_Semibold",
-                        "textColor" : "@colors.neutral_6"
+                        "textColor" : "@colors.neutral_2"
                     }
                 }
             }
@@ -339,10 +359,10 @@
                     "textColor" : "@colors.neutral_1"
                 },
                 "ClosedBadge" : {
-                    "backgroundColor" : "@colors.accent_secondary",
+                    "backgroundColor" : "@colors.status_closed_occupied",
                     "Title" : {
                         "font" : "@fonts.H4_Semibold",
-                        "textColor" : "@colors.neutral_6"
+                        "textColor" : "@colors.neutral_2"
                     }
                 },
                 "TimeBadge" : {
@@ -725,7 +745,9 @@
                 "Detail" : {
                     "font" : "@fonts.H3_Regular",
                     "textColor" : "@colors.neutral_2"
-                }
+                },
+                "POIBookingOpenBadge" : "@views.POIBookingOpenBadge",
+                "POIBookingOccupiedBadge" : "@views.POIBookingOccupiedBadge"
             },
             "Header" : {
                 "font" : "@fonts.H4_Semibold",
