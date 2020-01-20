@@ -26,6 +26,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         // Create a new LLMapView, register as its delegate and add it as a subview
         mapView = LLMapView(frame: view.bounds)
         mapView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView?.showTopSafeAreaOverlay = false
         mapView?.delegate = self
         view.addSubview(mapView!)
         

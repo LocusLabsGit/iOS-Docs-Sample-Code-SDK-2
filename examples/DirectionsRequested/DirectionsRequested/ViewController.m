@@ -35,6 +35,7 @@
     [self.view addSubview:mapView];
     
     self.mapView = mapView;
+    self.mapView.showTopSafeAreaOverlay = NO;
     
     // Get an instance of LLVenueDatabase, set it's mapview and register as its delegate
     self.venueDatabase = [LLVenueDatabase venueDatabaseWithMapView:self.mapView];

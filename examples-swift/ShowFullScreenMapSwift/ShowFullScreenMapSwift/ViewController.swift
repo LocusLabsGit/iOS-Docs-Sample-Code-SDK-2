@@ -27,6 +27,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         mapView = LLMapView(frame: view.bounds)
         mapView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView?.delegate = self
+        mapView?.showTopSafeAreaOverlay = false
         view.addSubview(mapView!)
         
         // Get an instance of LLVenueDatabase, register as its delegate and load the venue LAX

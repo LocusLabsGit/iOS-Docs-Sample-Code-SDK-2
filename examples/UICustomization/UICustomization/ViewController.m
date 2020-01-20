@@ -37,6 +37,7 @@
     [self.view addSubview:mapView];
     
     self.mapView = mapView;
+    self.mapView.showTopSafeAreaOverlay = NO;
     
     // Set a custom font
     // self.mapView.theme = [self themeWithCustomFont:[UIFont fontWithName:@"American Typewriter" size:12.0]];

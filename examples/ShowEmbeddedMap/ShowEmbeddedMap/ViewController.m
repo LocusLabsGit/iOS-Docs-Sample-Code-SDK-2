@@ -34,6 +34,7 @@
     [self.view addSubview:mapView];
     
     self.mapView = mapView;
+    self.mapView.showTopSafeAreaOverlay = NO;
     
     // Hide selected UI elements - these are likely not required when embedding
     self.mapView.bottomBarHidden = YES;
