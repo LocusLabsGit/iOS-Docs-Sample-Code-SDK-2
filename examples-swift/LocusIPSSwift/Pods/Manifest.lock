@@ -1,0 +1,16 @@
+PODS:
+  - IndoorAtlas (3.1.3)
+
+DEPENDENCIES:
+  - IndoorAtlas
+
+SPEC REPOS:
+  trunk:
+    - IndoorAtlas
+
+SPEC CHECKSUMS:
+  IndoorAtlas: 65374af166c75e6f1e2035d9d54bffe19f7fe61d
+
+PODFILE CHECKSUM: 0a7371fe41d31fd490094179a353220ea82c3d2b
+
+COCOAPODS: 1.8.4

@@ -88,10 +88,10 @@
 - (void)mapViewReady:(LLMapView *)mapView {
     
     // Search for all POIs in the "eat" category
-   // [self.search search:@"category:eat"];
+    [self.search search:@"category:eat"];
     
     // Search for gate 64A in the "gate" subcategory
-    [self.search search:@"gate:64A"];
+   // [self.search search:@"gate:64A"];
     
     // Search for all POIs tagged "chocolate"
     //[self.search search:@"chocolate"];

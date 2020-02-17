@@ -1,0 +1,4 @@
+use_frameworks!
+target 'LocusIPSSwift' do
+  pod 'IndoorAtlas'
+end

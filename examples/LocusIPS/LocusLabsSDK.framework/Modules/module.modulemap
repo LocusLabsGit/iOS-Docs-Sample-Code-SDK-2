@@ -1,0 +1,11 @@
+framework module LocusLabsSDK {
+  umbrella header "LocusLabsSDK.h"
+
+  export *
+  module * { export * }
+
+  explicit module Private {
+    header "LLLogger_Private.h"
+    header "LLPositionManager_Private.h"
+  }
+}
