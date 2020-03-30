@@ -98,6 +98,11 @@
     //[self performANDSearch];
 }
 
+- (UIViewController *)presentingControllerForMapView:(LLMapView *)mapView forContext:(LLMapViewPresentationContext)context {
+    
+    return self;
+}
+
 #pragma mark Delegates - LLSearch
 
 - (void)search:(LLSearch *)search multiTermSearchResults:(LLMultiTermSearchResults *)searchResults {

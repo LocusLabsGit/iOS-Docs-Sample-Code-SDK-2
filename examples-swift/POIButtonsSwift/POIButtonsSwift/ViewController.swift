@@ -60,6 +60,11 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         mapView?.showPoi(byPoiId: "870")
     }
     
+    func presentingController(for mapView: LLMapView!, for context: LLMapViewPresentationContext) -> UIViewController! {
+        
+        return self
+    }
+    
     func mapView(_ mapView: LLMapView!, additionalViewsForPOI poiId: String!) -> [Any]! {
         
         var additionalViews = [Any]()

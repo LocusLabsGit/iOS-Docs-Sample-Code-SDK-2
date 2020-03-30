@@ -113,5 +113,11 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         
         showSampleRoute()
     }
+    
+    func presentingController(for mapView: LLMapView!, for context: LLMapViewPresentationContext) -> UIViewController! {
+        
+        return self
+    }
 }
+
 

@@ -83,6 +83,11 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         search?.search("restaurant")
     }
     
+    func presentingController(for mapView: LLMapView!, for context: LLMapViewPresentationContext) -> UIViewController! {
+        
+        return self
+    }
+    
     // MARK: Delegates - LLPOIDatabase
     
     func poiDatabase(_ poiDatabase: LLPOIDatabase!, poiLoaded poi: LLPOI!) {

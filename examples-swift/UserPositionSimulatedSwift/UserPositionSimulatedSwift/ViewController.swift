@@ -118,5 +118,10 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
             self.postUserPosition(locationDict: locationDict)
         }
     }
+    
+    func presentingController(for mapView: LLMapView!, for context: LLMapViewPresentationContext) -> UIViewController! {
+        
+        return self
+    }
 }
 

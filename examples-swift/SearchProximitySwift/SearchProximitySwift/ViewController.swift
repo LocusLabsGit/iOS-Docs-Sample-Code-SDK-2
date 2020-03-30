@@ -73,6 +73,11 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         search?.proximitySearch(withTerms: ["Starbucks"], floorId: "lax-south-departures", lat: NSNumber(value:33.94221), lng: NSNumber(value:-118.402057))
     }
     
+    func presentingController(for mapView: LLMapView!, for context: LLMapViewPresentationContext) -> UIViewController! {
+        
+        return self
+    }
+    
     // MARK: Delegates - LLSearch
     func proximitySearch(withTerms search: LLSearch!, results searchResults: LLSearchResults!) {
         

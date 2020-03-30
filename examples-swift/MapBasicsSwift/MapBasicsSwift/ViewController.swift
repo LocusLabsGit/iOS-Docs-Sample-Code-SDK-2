@@ -73,5 +73,10 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         
         positionAndZoomMap()
     }
+    
+    func presentingController(for mapView: LLMapView!, for context: LLMapViewPresentationContext) -> UIViewController! {
+        
+        return self
+    }
 }
 

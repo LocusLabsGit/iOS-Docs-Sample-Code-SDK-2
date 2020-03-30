@@ -14,7 +14,7 @@
 		9C1B001B2021E2F30077CC26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C1B00192021E2F30077CC26 /* LaunchScreen.storyboard */; };
 		9C1B00282021E3200077CC26 /* LocusLabsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B00272021E3200077CC26 /* LocusLabsSDK.framework */; };
 		9C4B2C1F21EF0C9B00D4A643 /* LocusLabsSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1B00272021E3200077CC26 /* LocusLabsSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9CD49998203ADD0B000374B3 /* starbucks_selected.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9CD49996203ADD0B000374B3 /* starbucks_selected.svg */; };
+		9CBAC5832416734500001676 /* starbucks.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBAC5822416734500001676 /* starbucks.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,7 +41,7 @@
 		9C1B001C2021E2F30077CC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C1B00272021E3200077CC26 /* LocusLabsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocusLabsSDK.framework; path = ../../LocusLabsSDK.framework; sourceTree = "<group>"; };
 		9C1B002B2021E3A70077CC26 /* Swift-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridge.h"; sourceTree = "<group>"; };
-		9CD49996203ADD0B000374B3 /* starbucks_selected.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = starbucks_selected.svg; sourceTree = "<group>"; };
+		9CBAC5822416734500001676 /* starbucks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starbucks.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 				9C1B00192021E2F30077CC26 /* LaunchScreen.storyboard */,
 				9C1B001C2021E2F30077CC26 /* Info.plist */,
 				9C1B002B2021E3A70077CC26 /* Swift-Bridge.h */,
-				9CD49996203ADD0B000374B3 /* starbucks_selected.svg */,
+				9CBAC5822416734500001676 /* starbucks.png */,
 			);
 			path = PinnedCustomMarkerSwift;
 			sourceTree = "<group>";
@@ -160,7 +160,7 @@
 			files = (
 				9C1B001B2021E2F30077CC26 /* LaunchScreen.storyboard in Resources */,
 				9C1B00182021E2F30077CC26 /* Assets.xcassets in Resources */,
-				9CD49998203ADD0B000374B3 /* starbucks_selected.svg in Resources */,
+				9CBAC5832416734500001676 /* starbucks.png in Resources */,
 				9C1B00162021E2F30077CC26 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

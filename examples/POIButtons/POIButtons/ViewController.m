@@ -88,4 +88,9 @@
     NSLog(@"Custom POI Button tapped");
 }
 
+- (UIViewController *)presentingControllerForMapView:(LLMapView *)mapView forContext:(LLMapViewPresentationContext)context {
+    
+    return self;
+}
+
 @end

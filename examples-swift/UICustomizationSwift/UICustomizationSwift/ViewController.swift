@@ -82,5 +82,10 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
     func mapViewReady(_ mapView: LLMapView!) {
         
     }
+    
+    func presentingController(for mapView: LLMapView!, for context: LLMapViewPresentationContext) -> UIViewController! {
+        
+        return self
+    }
 }
 

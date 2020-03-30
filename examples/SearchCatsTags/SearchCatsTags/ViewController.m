@@ -97,6 +97,11 @@
     //[self.search search:@"chocolate"];
 }
 
+- (UIViewController *)presentingControllerForMapView:(LLMapView *)mapView forContext:(LLMapViewPresentationContext)context {
+    
+    return self;
+}
+
 #pragma mark Delegates - LLSearch
 
 - (void)search:(LLSearch *)search results:(LLSearchResults *)searchResults {

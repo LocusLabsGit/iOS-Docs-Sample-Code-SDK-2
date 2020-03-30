@@ -67,4 +67,9 @@
     [self.mapView smartSearch:@"coffee"];
 }
 
+- (UIViewController *)presentingControllerForMapView:(LLMapView *)mapView forContext:(LLMapViewPresentationContext)context {
+    
+    return self;
+}
+
 @end

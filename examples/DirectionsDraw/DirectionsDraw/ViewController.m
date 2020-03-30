@@ -131,4 +131,9 @@
     [self showSampleRoute];
 }
 
+- (UIViewController *)presentingControllerForMapView:(LLMapView *)mapView forContext:(LLMapViewPresentationContext)context {
+    
+    return self;
+}
+
 @end

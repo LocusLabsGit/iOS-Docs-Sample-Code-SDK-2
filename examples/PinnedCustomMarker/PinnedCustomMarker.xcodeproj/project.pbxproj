@@ -15,7 +15,7 @@
 		9CB2CBE22021AF50002E8BD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB2CBE02021AF50002E8BD7 /* LaunchScreen.storyboard */; };
 		9CB2CBE52021AF50002E8BD7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB2CBE42021AF50002E8BD7 /* main.m */; };
 		9CB2CBF12021AF80002E8BD7 /* LocusLabsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB2CBF02021AF80002E8BD7 /* LocusLabsSDK.framework */; };
-		9CD49995203ACB6D000374B3 /* starbucks_selected.svg in Resources */ = {isa = PBXBuildFile; fileRef = 9CD49994203ACB6D000374B3 /* starbucks_selected.svg */; };
+		9CBAC5812416730E00001676 /* starbucks.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBAC5802416730E00001676 /* starbucks.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,7 +44,7 @@
 		9CB2CBE32021AF50002E8BD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CB2CBE42021AF50002E8BD7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CB2CBF02021AF80002E8BD7 /* LocusLabsSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocusLabsSDK.framework; path = ../../LocusLabsSDK.framework; sourceTree = "<group>"; };
-		9CD49994203ACB6D000374B3 /* starbucks_selected.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = starbucks_selected.svg; sourceTree = "<group>"; };
+		9CBAC5802416730E00001676 /* starbucks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starbucks.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +83,11 @@
 				9CB2CBD62021AF50002E8BD7 /* AppDelegate.m */,
 				9CB2CBD82021AF50002E8BD7 /* ViewController.h */,
 				9CB2CBD92021AF50002E8BD7 /* ViewController.m */,
-				9CD49994203ACB6D000374B3 /* starbucks_selected.svg */,
 				9CB2CBDB2021AF50002E8BD7 /* Main.storyboard */,
 				9CB2CBDE2021AF50002E8BD7 /* Assets.xcassets */,
 				9CB2CBE02021AF50002E8BD7 /* LaunchScreen.storyboard */,
 				9CB2CBE32021AF50002E8BD7 /* Info.plist */,
+				9CBAC5802416730E00001676 /* starbucks.png */,
 				9CB2CBE42021AF50002E8BD7 /* main.m */,
 			);
 			path = PinnedCustomMarker;
@@ -163,7 +163,7 @@
 			files = (
 				9CB2CBE22021AF50002E8BD7 /* LaunchScreen.storyboard in Resources */,
 				9CB2CBDF2021AF50002E8BD7 /* Assets.xcassets in Resources */,
-				9CD49995203ACB6D000374B3 /* starbucks_selected.svg in Resources */,
+				9CBAC5812416730E00001676 /* starbucks.png in Resources */,
 				9CB2CBDD2021AF50002E8BD7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

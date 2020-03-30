@@ -63,5 +63,10 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         
         return ["Restaurants", "Bars", "Pharmacies", "Baggage"]
     }
+    
+    func presentingController(for mapView: LLMapView!, for context: LLMapViewPresentationContext) -> UIViewController! {
+        
+        return self
+    }
 }
 

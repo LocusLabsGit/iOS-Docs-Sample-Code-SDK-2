@@ -32,8 +32,10 @@
 #define LLLogVerbose_(FMT, ...) [[LLLogger defaultLogger] log:LLLogLevelVerbose method:LLLogFileInfo_ fileInfo:nil format:FMT, ##__VA_ARGS__]
 #define LLLogFixMe_(  FMT, ...) [[LLLogger defaultLogger] log:LLLogLevelDebug   method:LLLogFileInfo_ fileInfo:nil format:FMT, ##__VA_ARGS__]
 
-#define LLLogDebugTopic_(TOPIC, FMT, ...) [[LLLogger defaultLogger] log:LLLogLevelDebug   method:LLLogFileInfo_ fileInfo:nil topic:TOPIC format:FMT, ##__VA_ARGS__]
-#define LLLogWarnTopic_( TOPIC, FMT, ...) [[LLLogger defaultLogger] log:LLLogLevelWarn    method:LLLogFileInfo_ fileInfo:nil topic:TOPIC format:FMT, ##__VA_ARGS__]
+#define LLLogErrorTopic_( TOPIC, FMT, ...)   [[LLLogger defaultLogger] log:LLLogLevelError   method:nil fileInfo:nil topic:TOPIC format:FMT, ##__VA_ARGS__]
+#define LLLogWarnTopic_( TOPIC, FMT, ...)    [[LLLogger defaultLogger] log:LLLogLevelWarn    method:nil fileInfo:nil topic:TOPIC format:FMT, ##__VA_ARGS__]
+#define LLLogDebugTopic_(TOPIC, FMT, ...)    [[LLLogger defaultLogger] log:LLLogLevelDebug   method:nil fileInfo:nil topic:TOPIC format:FMT, ##__VA_ARGS__]
+#define LLLogVerboseTopic_( TOPIC, FMT, ...) [[LLLogger defaultLogger] log:LLLogLevelVerbose method:nil fileInfo:nil topic:TOPIC format:FMT, ##__VA_ARGS__]
 
 
 @interface LLLogger ()
@@ -62,6 +64,6 @@
 /**
  * Log on a specific topic and log level
  */
-- (void)log:(LLLogLevel)logLevel method:(const char*)method fileInfo:(NSString*)info topic:(LLLogTopic)topic format:(NSString *)fmt, ...;
+- (void)log:(LLLogLevel)logLevel method:(const char*)method fileInfo:(NSString*)fileInfo topic:(LLLogTopic)topic format:(NSString *)fmt, ...;
 
 @end

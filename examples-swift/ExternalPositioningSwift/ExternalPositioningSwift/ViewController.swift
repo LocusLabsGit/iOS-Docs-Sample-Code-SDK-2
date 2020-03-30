@@ -188,5 +188,10 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         // Simulate receiving external location data
         mockExternalLocationData()
     }
+    
+    func presentingController(for mapView: LLMapView!, for context: LLMapViewPresentationContext) -> UIViewController! {
+        
+        return self
+    }
 }
 

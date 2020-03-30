@@ -67,4 +67,9 @@
     [self.mapView showPoiByPoiId:@"870"];
 }
 
+- (UIViewController *)presentingControllerForMapView:(LLMapView *)mapView forContext:(LLMapViewPresentationContext)context {
+    
+    return self;
+}
+
 @end

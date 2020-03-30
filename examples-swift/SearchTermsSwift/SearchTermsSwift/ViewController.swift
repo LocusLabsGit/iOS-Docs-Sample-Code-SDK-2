@@ -91,6 +91,11 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         //performANDSearch()
     }
     
+    func presentingController(for mapView: LLMapView!, for context: LLMapViewPresentationContext) -> UIViewController! {
+        
+        return self
+    }
+    
     // MARK: Delegates - LLSearch
     func search(_ search: LLSearch!, multiTermSearchResults searchResults: LLMultiTermSearchResults!) {
         

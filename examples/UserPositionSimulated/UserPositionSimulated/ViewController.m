@@ -111,4 +111,9 @@
     [self performSelector:@selector(postUserPosition:) withObject:locationDict afterDelay:8.0];
 }
 
+- (UIViewController *)presentingControllerForMapView:(LLMapView *)mapView forContext:(LLMapViewPresentationContext)context {
+    
+    return self;
+}
+
 @end

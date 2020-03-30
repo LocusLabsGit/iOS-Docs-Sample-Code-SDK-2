@@ -59,5 +59,10 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         // Show POI 870, which is the Starbucks near gate 60 at LAX - you can find POI IDs by implementing the "didTapPOI" delegate method
         mapView?.showPoi(byPoiId: "870")
     }
+    
+    func presentingController(for mapView: LLMapView!, for context: LLMapViewPresentationContext) -> UIViewController! {
+        
+        return self
+    }
 }
 

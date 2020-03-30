@@ -202,6 +202,7 @@
             "backgroundColor" : "@colors.neutral_6",
             "Button" : {
                 "backgroundColor" : "@colors.neutral_4",
+                "cornerRadius": 20,
                 "highlightedBackgroundColor": "@colors.highlighting_secondary",
                 "Title" : {
                     "font" : "@fonts.H2_Semibold",
@@ -215,6 +216,7 @@
             },
             "GoButton" : {
                 "backgroundColor" : "@colors.primary",
+                "cornerRadius": 20,
                 "highlightedBackgroundColor": "@colors.highlighting_primary",
                 "Title" : {
                     "font" : "@fonts.H2_Semibold",

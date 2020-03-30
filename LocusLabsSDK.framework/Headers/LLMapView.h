@@ -81,6 +81,7 @@
 
 /**
  * A disclaimer to presented to the user before showing them the result of the navigation.
+ * To show the alert with a disclaimer LLMapViewDelegate must provide a presentation controller for LLMapViewPresentationContextAlert
  */
 @property (strong,nonatomic) NSString *navigationDisclaimer;
 

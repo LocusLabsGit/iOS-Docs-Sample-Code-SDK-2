@@ -88,6 +88,11 @@
     [self.search search:@"restaurant"];
 }
 
+- (UIViewController *)presentingControllerForMapView:(LLMapView *)mapView forContext:(LLMapViewPresentationContext)context {
+    
+    return self;
+}
+
 #pragma mark Delegates - LLPOIDatabase
 
 - (void)poiDatabase:(LLPOIDatabase *)poiDatabase poiLoaded:(LLPOI *)poi {
@@ -99,6 +104,7 @@
         [self createCircleWithPosition:position withRadius:@10 andColor:[UIColor blueColor]];
     }
 }
+
 
 #pragma mark Delegates - LLSearch
 

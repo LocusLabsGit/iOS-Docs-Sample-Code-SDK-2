@@ -65,6 +65,10 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         poiDatabase?.loadPOI("870")
     }
     
+    func presentingController(for mapView: LLMapView!, for context: LLMapViewPresentationContext) -> UIViewController! {
+        
+        return self
+    }
     func mapView(_ mapView: LLMapView!, didTap marker: LLMarker!) -> Bool {
         
         if let poi = marker.userData! as? LLPOI {
@@ -84,7 +88,7 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
             // Add a custom marker
             let marker = LLMarker()
             marker.position = poi.position
-            marker.iconUrl = Bundle.main.path(forResource: "starbucks_selected", ofType: "svg")
+            marker.iconUrl = Bundle.main.path(forResource: "starbucks", ofType: "png")
             marker.userData = poi
             marker.map = mapView?.map
             

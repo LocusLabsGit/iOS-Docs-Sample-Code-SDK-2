@@ -85,6 +85,11 @@ class ViewController: UIViewController, LLVenueDatabaseDelegate, LLMapViewDelega
         // The map is ready to be used in calls e.g. zooming, showing poi, etc.
     }
     
+    func presentingController(for mapView: LLMapView!, for context: LLMapViewPresentationContext) -> UIViewController! {
+        
+        return self
+    }
+    
     func mapView(_ mapView: LLMapView!, willPresentPlaces places: [Any]!) -> [Any]! {
         
         // Show only 1 action

@@ -86,6 +86,11 @@
                                       lng:@-118.402057];
 }
 
+- (UIViewController *)presentingControllerForMapView:(LLMapView *)mapView forContext:(LLMapViewPresentationContext)context {
+    
+    return self;
+}
+
 #pragma mark Delegates - LLSearch
 
 - (void)proximitySearchWithTerms:(LLSearch *)search results:(LLSearchResults *)searchResults {

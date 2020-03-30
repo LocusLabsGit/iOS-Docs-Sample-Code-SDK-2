@@ -29,7 +29,7 @@
 /**
  *  Search the database for the given search string.  To search for a gate,
  *  prefix the gate with "gate:", such as "gate:D16".  To search a category use the "category:" prefix, such
- *  as "category:services".  To search a tag use the "tag:" prefix, such as "tag:food".
+ *  as "category:services".
  *
  *  @param query the query string
  */

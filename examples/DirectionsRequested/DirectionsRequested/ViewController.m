@@ -78,4 +78,9 @@
     NSLog(@"End point %@ ", endPoint.name);
 }
 
+- (UIViewController *)presentingControllerForMapView:(LLMapView *)mapView forContext:(LLMapViewPresentationContext)context {
+    
+    return self;
+}
+
 @end

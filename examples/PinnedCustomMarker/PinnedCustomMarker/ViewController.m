@@ -89,7 +89,7 @@
         // Add a custom marker
         LLMarker *marker = [[LLMarker alloc] init];
         marker.position = poi.position;
-        marker.iconUrl = [[NSBundle mainBundle] pathForResource:@"starbucks_selected" ofType:@"svg"];
+        marker.iconUrl = [[NSBundle mainBundle] pathForResource:@"starbucks" ofType:@"png"];
         marker.userData = poi;
         marker.map = self.mapView.map;
         
@@ -97,6 +97,11 @@
         if (!self.customMarkers) self.customMarkers = [NSMutableArray array];
         [self.customMarkers addObject:marker];
     }
+}
+
+- (UIViewController *)presentingControllerForMapView:(LLMapView *)mapView forContext:(LLMapViewPresentationContext)context {
+    
+    return self;
 }
 
 @end
