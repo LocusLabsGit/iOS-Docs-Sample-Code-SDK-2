@@ -74,7 +74,7 @@
     }
     
     LLVenueInfo *venueInfo = self.venues[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", venueInfo.name, [venueInfo.venueId uppercaseString]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", venueInfo.name, [venueInfo.airportCode uppercaseString]];
     
     return cell;
 }

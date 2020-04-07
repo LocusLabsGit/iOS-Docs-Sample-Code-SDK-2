@@ -67,7 +67,7 @@ class ViewController: UITableViewController, LLVenueDatabaseDelegate  {
         if (cell == nil) {cell = UITableViewCell(style: .default, reuseIdentifier: "Cell")}
         
         let venueInfo = venues[indexPath.row]
-        cell?.textLabel?.text = String.init(format: "%@ (%@)", venueInfo.name, venueInfo.venueId.uppercased())
+        cell?.textLabel?.text = String.init(format: "%@ (%@)", venueInfo.name, venueInfo.airportCode.uppercased())
         
         return cell!
     }
